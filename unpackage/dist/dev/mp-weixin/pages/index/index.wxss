@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content.data-v-57280228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+video.data-v-57280228 {
+  width: 100%;
+  height: 431rpx;
+}
+.top.data-v-57280228 {
+  padding: 0 22rpx;
+  overflow: hidden;
+}
+.main_bar.data-v-57280228 {
+  width: 100%;
+  padding-top: 19rpx;
+  padding-left: 22rpx;
+  padding-right: 22rpx;
+}
+.imput_search.data-v-57280228 {
+  height: 224rpx;
+  width: 711rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 19rpx;
+}
+.top_img.data-v-57280228 {
+  height: 110rpx;
+  width: 85rpx;
+  float: left;
+  margin-right: 12rpx;
+}
+.top_images.data-v-57280228 {
+  height: 110rpx;
+  width: 85rpx;
+  margin: 0 auto;
+}
+.top_img2.data-v-57280228 {
+  height: 100%;
+  width: 100%;
+}
+.img.data-v-57280228 {
+  height: 100%;
+  width: 100%;
+}
+.img_bar.data-v-57280228 {
+  height: 58rpx;
+  width: 209rpx;
+  position: absolute;
+  top: 38rpx;
+  right: 21rpx;
+}
+.content_bar.data-v-57280228 {
+  position: relative;
+  height: 563rpx;
+  width: 711rpx;
+  margin: 0 auto;
+  margin-top: 12rpx;
+}
+.contens.data-v-57280228 {
+  position: absolute;
+  top: 121rpx;
+  left: 56rpx;
+}
+.img_left.data-v-57280228 {
+  width: 484rpx;
+  height: 136rpx;
+  margin-right: 9rpx;
+}
+.img_right.data-v-57280228 {
+  height: 136rpx;
+  width: 107rpx;
+}
+swiper.data-v-57280228 {
+  width: 600rpx;
+  height: 221rpx;
+  position: absolute;
+  top: 288rpx;
+  left: 56rpx;
+}
+swiper swiper-item.data-v-57280228 {
+  width: 100%;
+  height: 100%;
+}
+swiper swiper-item image.data-v-57280228 {
+  height: 100%;
+  width: 100%;
+}
+.pic_content.data-v-57280228 {
+  height: 43rpx;
+  width: 145rpx;
+  position: absolute;
+  top: 88rpx;
+  line-height: 43rpx;
+  left: 170rpx;
+  border-radius: 20rpx;
+  z-index: 9999;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAkCAMAAAC+ASjXAAAA9lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFAUAAAAYGAoAAAAcHAkgHAkgGwlqYCVoXyiAci2djjmfjjmfkDuyoEGzokG0okKzoULFs0jGs0jHtEnWwU7WwU/VwU7XwU7Xwk7cxlHdxlHdyFHdx1HeyVLfyVLeyFHeyFLgylPhy1PgylLgy1Lhy1MRDrxOAAAAUXRSTlMAAQIDBAUGBwgJCgsMDQ8QERITFBUWGBkbHB0eHyAhIiMkJigpKy4vMDEzNDQ1NTY3NzhSU2B4eHqRkZKTtLS129vd3d3u7/Hy9PT19v39/v4KigW/AAABzUlEQVRYw82Y6VbCMBBGSdM1FkoXoIAULIuCoCibuCCgsrjn/V/GAHqooH+TuS+QeybbfBOLbUEISRhjmSNsOYktG/uLlY2sarpBDjhCDF1T5ZXVvpCEFZ3EraTjel6KE57nOkkrTnSFOe0WiPmYlpv284Vi6YgbpWIh76ddy2ROv8qEJFklCc8Pwmqt3jhttc650GqdNuq1ahj4XoKocqRMTEgz7UxQaffvpst3ypGP5fSu364EGdvUIkqICTnZsDl8okJ4GjbDrMOUfowQVk0nV+6MqTDGnXLOMVWMvvdMIXa23JtTgcx75axNlM2+IawnMmFnQYWy6ISZhL4pkqSYXnA2oYKZnAWeqUibEll+5YYK56biW+siIZm4QXsm3mh2Gbhkdd2QGk+HfQqAqzAdV5mRpFl+dQTB6L7qWxo7SFhP5mtTCEYPtXxSx8zIsA9PXiEYvZwc2sbayCnUIQjRt3rBMWDWCNw5gnfX4L1H6zf7AtSbvf7XbgH9a/D+fij9UXfbH8HrIX/67K7APnvSjfbZ2yxyLSqLXO9kkUheG4wenz95ynw+P44G+3ktmmmPeWfa478yLcDcvzMbSXHj/9kIxPkRwBkbGL4Au4F9kDZRBAEAAAAASUVORK5CYII=);
+}
+.footer.data-v-57280228 {
+  width: 711rpx;
+  height: 576rpx;
+  margin: 0 auto;
+  margin-top: 24rpx;
+  position: relative;
+}
+.footer .footer_img.data-v-57280228 {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.footer .footer_one.data-v-57280228 {
+  width: 600rpx;
+  height: 107rpx;
+  position: absolute;
+  top: 111rpx;
+  left: 56rpx;
+}
+.footer .footer_two.data-v-57280228 {
+  width: 600rpx;
+  height: 107rpx;
+  position: absolute;
+  top: 292rpx;
+  left: 56rpx;
+}
+.mation.data-v-57280228 {
+  line-height: 63rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.bottom_swiper.data-v-57280228 {
+  position: absolute;
+  top: 473rpx;
+  left: 56rpx;
+  width: 600rpx !important;
+  height: 63rpx !important;
+  background-color: #D9BB92;
+  border-radius: 20rpx;
+  font-size: 18rpx;
+  font-family: SourceHanSansCN-Regular;
+  color: #FFFCFE;
+  height: 100%;
+  width: 100%;
+  background-color: #D9BB92;
+}
+.jiantou.data-v-57280228 {
+  z-index: 9999999;
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  top: -40rpx;
+  right: 80rpx;
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+}
+.tanchu_img.data-v-57280228 {
+  width: 433rpx;
+  height: 123rpx;
+  z-index: -1;
+}
+.tanchu_bar.data-v-57280228 {
+  margin-left: 20%;
+  position: relative;
+}
+.close.data-v-57280228 {
+  position: absolute;
+  left: 48%;
+  top: 20%;
+  color: #ffffff;
+  z-index: 999;
+}
+

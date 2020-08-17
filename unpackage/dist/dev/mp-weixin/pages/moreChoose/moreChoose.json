@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "simple-address": "/components/simple-address/simple-address",
+    "h-mfilter-dropdown": "/components/HM-filterDropdown/HM-filterDropdown"
+  }
+}

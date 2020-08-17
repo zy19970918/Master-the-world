@@ -1,0 +1,102 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "一手天下"
+			}
+		}, {
+			"path": "pages/Attention/Attention",
+			"style": {}
+		}, {
+			"path": "pages/customerService/customerService",
+			"style": {}
+		}, {
+			"path": "pages/mine/mine",
+			"style": {}
+		}, {
+			"path": "pages/moreChoose/moreChoose",
+			"style": {}
+		}, {
+			"path": "pages/Renxun/Renxun",
+			"style": {}
+		}, {
+			"path": "pages/detail/detail",
+			"style": {}
+		}, {
+			"path": "pages/Renxundetail/Renxundetail",
+			"style": {}
+		},
+		{
+			"path": "pages/advertisement/advertisement",
+			"style": {}
+		}
+
+		, {
+			"path": "pages/login/login",
+			"style": {}
+		},
+		{
+			"path": "pages/Dishonest/Dishonest",
+			"style": {}
+		}, {
+			"path": "pages/componydetail/componydetail",
+			"style": {}
+		}, {
+			"path": "pages/newdetails/newdetails",
+			"style": {}
+		},
+		{
+			"path": "pages/robt/robt",
+			"style": {
+				"app-plus": {
+					"softinputNavBar": "none"
+				},
+				"navigationStyle": "default",
+				"navigationBarTitleText": "客服-娜娜",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#f9f9f9"
+			}
+		}, {
+			"path": "pages/webview/webview",
+			"style": {}
+		}, {
+			"path": "pages/newlist/newlist",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "一手天下",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/images/icon_shouye.png",
+				"selectedIconPath": "static/images/icon_sshouye.png"
+			},
+			{
+				"pagePath": "pages/Attention/Attention",
+				"text": "敬告",
+				"iconPath": "static/images/icon_tongzhi.png",
+				"selectedIconPath": "./static/images/icon_jingao.png"
+			},
+			{
+				"pagePath": "pages/customerService/customerService",
+				"text": "客服",
+				"iconPath": "static/images/icon_kefu.png",
+				"selectedIconPath": "./static/images/icon_skefu.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/images/icon_wode.png",
+				"selectedIconPath": "static/images/icon_swode.png"
+			}
+		],
+		"selectedColor":"#666666"
+	}
+	
+}

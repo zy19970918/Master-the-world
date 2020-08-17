@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Attention/Attention",
+    "pages/customerService/customerService",
+    "pages/mine/mine",
+    "pages/moreChoose/moreChoose",
+    "pages/Renxun/Renxun",
+    "pages/detail/detail",
+    "pages/Renxundetail/Renxundetail",
+    "pages/advertisement/advertisement",
+    "pages/login/login",
+    "pages/Dishonest/Dishonest",
+    "pages/componydetail/componydetail",
+    "pages/newdetails/newdetails",
+    "pages/robt/robt",
+    "pages/webview/webview",
+    "pages/newlist/newlist"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "一手天下",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/icon_shouye.png",
+        "selectedIconPath": "static/images/icon_sshouye.png"
+      },
+      {
+        "pagePath": "pages/Attention/Attention",
+        "text": "敬告",
+        "iconPath": "static/images/icon_tongzhi.png",
+        "selectedIconPath": "./static/images/icon_jingao.png"
+      },
+      {
+        "pagePath": "pages/customerService/customerService",
+        "text": "客服",
+        "iconPath": "static/images/icon_kefu.png",
+        "selectedIconPath": "./static/images/icon_skefu.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/images/icon_wode.png",
+        "selectedIconPath": "static/images/icon_swode.png"
+      }
+    ],
+    "selectedColor": "#666666"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于规划路线"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap87.json"
+}
