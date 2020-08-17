@@ -149,7 +149,10 @@ var _default =
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    add: function add(e) {
+      console.log(e);
+    } } };exports.default = _default;
 
 /***/ }),
 

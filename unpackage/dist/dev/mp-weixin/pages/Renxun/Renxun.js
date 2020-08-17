@@ -170,7 +170,7 @@ var _default =
     getRen: function getRen() {
       var that = this;
       uni.request({
-        url: "http://118.178.89.161:9999/person/queryResource", //人资列表
+        url: "http://192.168.101.13:8080/person/queryResource", //人资列表
         method: 'POST',
         header: {
           "Content-Type": "application/json" },

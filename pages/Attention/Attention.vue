@@ -158,6 +158,7 @@
 				  // 示例 url，并非真实存在
 				  url:str, //下载的文件地址
 				  success: function (res) {
+					  console.log("下载")
 					  uni.hideLoading()
 					  uni.showToast({
 					  	title:"下载完成"

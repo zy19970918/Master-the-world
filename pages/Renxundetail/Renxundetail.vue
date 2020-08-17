@@ -64,7 +64,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url:"http://192.168.101.13:9999/person/queryDetail",
+					url:"http://192.168.101.13:8080/person/queryDetail",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"
@@ -73,6 +73,8 @@
 						resourceId:that.resourceId
 					},
 					success(res) {
+						console.log("地图")
+						console.log(res)
 						if(res.data.status==200) {
 							uni.hideLoading()
 							that.detailInfo=res.data.data[0]

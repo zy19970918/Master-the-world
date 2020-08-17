@@ -290,6 +290,7 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
         // 示例 url，并非真实存在
         url: str, //下载的文件地址
         success: function success(res) {
+          console.log("下载");
           uni.hideLoading();
           uni.showToast({
             title: "下载完成" });

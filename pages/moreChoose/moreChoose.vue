@@ -15,9 +15,9 @@
 				</view>
 			</view>
 			<view class="conytent_bar" v-if="flag" v-for="(item,index) in listDetail" :key="index" style="margin-top: 0;">
-				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrEE7fc9QYVmPyCvbIr50*.U9Lcym*WHBuWiQ*sYQKGR5ZURyE*EwFXyv1GCKood522vvyKFBJ1ieL3uZbITzYk4A!/b&bo=wQJbAQAAAAADF6s!&rf=viewer_4" mode=""></image>
-				<image class="portrait" :src="item.imgAddr"
+				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrEE7fc9QYVmPyCvbIr50*.U9Lcym*WHBuWiQ*sYQKGR5ZURyE*EwFXyv1GCKood522vvyKFBJ1ieL3uZbITzYk4A!/b&bo=wQJbAQAAAAADF6s!&rf=viewer_4"
 				 mode=""></image>
+				<image class="portrait" :src="item.imgAddr" mode=""></image>
 				<view class="conten_center">
 					<view class="top_text" style="max-width: 189rpx; min-width: 189rpx; white-space: nowrap;">{{item.companyName}}</view>
 					<view class="text">代理费:<text class="text_defult">{{item.agencyFee}}元/天</text></view>
@@ -42,14 +42,17 @@
 					<view class="" v-if="item.ageOne==1&&item.ageTwo==0&&item.ageThree==1">
 						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18-35岁&ensp;&ensp;50岁以上</text></view>
 					</view>
-					<view class="imgs"><image src="../../static/images/chakangengduoanniu_.png" mode="" @click="todetail(item.companyId)"></image></view>
+					<view class="imgs">
+						<image src="../../static/images/chakangengduoanniu_.png" mode="" @click="todetail(item.companyId)"></image>
+					</view>
 				</view>
 				<view class="bottom_txt">
-					红星
+					{{item.companyName}}
 				</view>
 			</view>
 			<view class="img_bars" v-if="!flag">
-				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/bqQfVz5yrrGYSXMvKr.cqbZ7w71YmUB1ZFw9LkwXpUtXb86JYJ1IxYkNV2ve0J6ADKiHlLLMfV6ZlnBhgpyWerXzcr1vZllcV3I4RUxbvis!/b&bo=ygJjAwAAAAADB4o!&rf=viewer_4" mode=""></image>
+				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/bqQfVz5yrrGYSXMvKr.cqbZ7w71YmUB1ZFw9LkwXpUtXb86JYJ1IxYkNV2ve0J6ADKiHlLLMfV6ZlnBhgpyWerXzcr1vZllcV3I4RUxbvis!/b&bo=ygJjAwAAAAADB4o!&rf=viewer_4"
+				 mode=""></image>
 			</view>
 			<view class="tips" v-if="flag">
 				*想要更多一手单，请点击页首地区选择和条件筛选进行查找
@@ -73,7 +76,9 @@
 				val: '', //搜索关键词
 				listDetail: [], //搜索列表
 				city: '', //选择城市
-				flag:false
+				flag: false,
+				addr: '', //地区选择，
+				case: '' //条件筛选
 			}
 		},
 		methods: {
@@ -105,7 +110,7 @@
 						if (res.data.status == 200 && res.data.data.length !== 0) {
 							uni.hideLoading()
 							that.listDetail = res.data.data
-							that.flag=true
+							that.flag = true
 						} else {
 							that.listDetail = ""
 							uni.showToast({
@@ -117,226 +122,609 @@
 				})
 			},
 			onConfirm(e) { //地区选择
+				this.addr = e
 				this.city = e.labelArr[1]
 				var that = this
-				uni.showLoading({
-					title: "加载中"
-				})
-				uni.request({
-					url: "http://118.178.89.161:9999/company/condition",
-					method: 'POST',
-					header: {
-						"Content-Type": "application/json"
-					},
-					data: {
-						city: e.labelArr[1]
-					},
-					success(res) {
-						console.log(res)
-						uni.hideLoading()
-						if (res.data.status == 200 && res.data.data.length !== 0) {
-							that.listDetail = res.data.data
-							that.flag=true
-						} else {						
-							that.listDetail = ""
-							uni.showToast({
-								title: "未搜索到结果",
-								icon: 'none'
-							})
+				if (that.case) {
+					console.log("存在")
+					console.log(that.case)
+					var count = 0
+					var ageOne
+					var ageTwo
+					var ageThree
+					var arrAge = that.case.value[0][0]
+					arrAge.forEach((item, index) => {
+						console.log(index)
+						if (item == "2") {
+							ageOne = 1
+						} else {
+							ageOne = 0
 						}
-					}
-				})
+						if (item == "1") {
+							ageTwo = 1
+						} else {
+							ageTwo = 0
+						}
+						if (item == "0") {
+							ageThree = 1
+						} else {
+							ageThree = 0
+						}
+					})
+
+					var sex
+					var sexMan
+					var sexWoman
+					var sexArr = that.case.value[0][1]
+					sexArr.forEach(item => {
+						if (item == "0") {
+							sexMan = 1
+						} else {
+							sexMan = 0
+						}
+						if (item == "1") {
+							sexWoman = 1
+						} else {
+							sexWoman = 0
+						}
+						if (item == "2") {
+							sex = 1
+						} else {
+							sex = 0
+						}
+					})
+					var manageFee
+					var manageFeeOne
+					var Feearr = that.case.value[0][2]
+					Feearr.forEach(item => {
+						if (item == "0") {
+							manageFee = 1
+						} else {
+							manageFee = 0
+						}
+						if (item = "1") {
+							manageFeeOne = 1
+						} else {
+							manageFeeOne = 0
+						}
+					})
+					var workType
+					var workTypeDay
+					var workarr = that.case.value[0][3]
+					workarr.forEach(item => {
+						if (item == 0) {
+							workType = 1
+						} else {
+							workType = 0
+						}
+						if (item == 1) {
+							workTypeDay = 1
+						} else {
+							workTypeDay = 0
+						}
+					})
+					var spouseHouse
+					var spouseHouseHusband
+					var spouseArr = that.case.value[0][4]
+					spouseArr.forEach(item => {
+						if (item == 0) {
+							spouseHouse = 1
+						} else {
+							spouseHouse = 0
+						}
+						if (item == 1) {
+							spouseHouseHusband = 1
+						} else {
+							spouseHouseHusband = 0
+						}
+					})
+					var workRequire
+					var workRequireLong
+					var workAyy = that.case.value[0][5]
+					workAyy.forEach(item => {
+						if (item == 0) {
+							workRequireLong = 1
+						} else {
+							workRequireLong = 0
+						}
+						if (item == 1) {
+							workRequire = 1
+						} else {
+							workRequire = 0
+						}
+					})
+					var studentWorker
+					var studentNotWorker
+					var studebtArr = that.case.value[0][6]
+					studebtArr.forEach(item => {
+						if (item == 0) {
+							studentWorker = 1
+						} else {
+							studentWorker = 0
+						}
+						if (item == 1) {
+							studentNotWorker = 1
+						} else {
+							studentNotWorker = 0
+						}
+					})
+					var nationals
+					var nationalsNot
+					var natArry = that.case.value[0][7]
+					natArry.forEach(item => {
+						if (item == 0) {
+							nationals = 1
+						} else {
+							nationals = 0
+						}
+						if (item == 1) {
+							nationalsNot = 1
+						} else {
+							nationalsNot = 0
+						}
+					})
+					uni.showLoading({
+						title: "加载中"
+					})
+					uni.request({
+						url: "http://118.178.89.161:9999/company/query",
+						method: 'POST',
+						header: {
+							"Content-Type": "application/json"
+						},
+						data: {
+							ageOne,
+							ageTwo,
+							ageThree,
+							sex,
+							sexMan,
+							sexWoman,
+							manageFee,
+							manageFeeOne,
+							workType,
+							workTypeDay,
+							spouseHouse,
+							spouseHouseHusband,
+							workRequire,
+							workRequireLong,
+							studentWorker,
+							studentNotWorker,
+							nationals,
+							nationalsNot,
+							city: e.labelArr[1]
+						},
+						success(res) {
+							console.log(res)
+							uni.hideLoading()
+							if (res.data.status == 200 && res.data.data.length !== 0) {
+								that.listDetail = res.data.data
+								that.flag = true
+							} else {
+								that.listDetail = ""
+								uni.showToast({
+									title: "未搜索到结果",
+									icon: 'none'
+								})
+							}
+						}
+					})
+				} else {
+					console.log("不存在")
+					uni.showLoading({
+						title: "加载中"
+					})
+					uni.request({
+						url: "http://192.168.101.13:8080/company/query",
+						method: 'POST',
+						header: {
+							"Content-Type": "application/json"
+						},
+						data: {
+							city: e.labelArr[1]
+						},
+						success(res) {
+							console.log(res)
+							uni.hideLoading()
+							if (res.data.status == 200 && res.data.data.length !== 0) {
+								that.listDetail = res.data.data
+								that.flag = true
+							} else {
+								that.listDetail = ""
+								uni.showToast({
+									title: "未搜索到结果",
+									icon: 'none'
+								})
+							}
+						}
+					})
+				}
+
+
+
 			},
 			duaiyong() {
 				this.$refs.child.togglePage(0)
 			},
 			confirm(e) { //条件筛选
-			var count=0
-			  for (var i=0; i<e.index[0].length;i++) {
-                  count+=e.index[0][i].length
-			  }
-			  if(count==0) {
-				  return false
-			  }
+				this.case = e
 				var that = this
-				var arry = e.value[0][1].toString()
-				var ageOne
-				var ageTwo
-				var ageThree
-				var arrAge = e.value[0][0]
-				arrAge.forEach((item, index) => {
-					console.log(index)
-					if (item == "2") {
-						ageOne = 1
-					}else {
-						ageOne=0
+				if (!that.addr) {
+					console.log("不存在")
+					var count = 0
+					for (var i = 0; i < e.index[0].length; i++) {
+						count += e.index[0][i].length
 					}
-					if (item == "1") {
-						ageTwo = 1
-					}else {
-						ageTwo=0
+					if (count == 0) {
+						return false
 					}
-					if (item == "0") {
-						ageThree = 1
-					} else {
-						ageThree=0
-					}
-				})
-
-				var sex
-				var sexMan
-				var sexWoman
-				var sexArr = e.value[0][1]
-				sexArr.forEach(item => {
-					if (item == "0") {
-						sexMan = 1
-					} else {
-						sexMan = 0
-					}
-					if (item == "1") {
-						sexWoman = 1
-					} else {
-						sexWoman = 0
-					}
-					if (item == "2") {
-						sex =1
-					} else {
-						sex =0
-					}
-				})
-				var manageFee
-				var manageFeeOne
-				var Feearr = e.value[0][2]
-				Feearr.forEach(item => {
-					if (item == "0") {
-						manageFee = 1
-					} else {
-						manageFee = 0
-					}
-					if (item = "1") {
-						manageFeeOne = 1
-					} else {
-						manageFeeOne = 0
-					}
-				})
-				var workType
-				var workTypeDay
-				var workarr = e.value[0][3]
-				workarr.forEach(item => {
-					if (item == 0) {
-						workType = 1
-					} else {
-						workType = 0
-					}
-					if (item == 1) {
-						workTypeDay = 1
-					} else {
-						workTypeDay = 0
-					}
-				})
-				var spouseHouse
-				var spouseHouseHusband
-				var spouseArr = e.value[0][4]
-				spouseArr.forEach(item => {
-					if (item == 0) {
-						spouseHouse = 1
-					} else {
-						spouseHouse = 0
-					}
-					if (item == 1) {
-						spouseHouseHusband = 1
-					} else {
-						spouseHouseHusband = 0
-					}
-				})
-				var workRequire
-				var workRequireLong
-				var workAyy = e.value[0][5]
-				workAyy.forEach(item => {
-					if (item == 0) {
-						workRequireLong = 1
-					} else {
-						workRequireLong = 0
-					}
-					if (item == 1) {
-						workRequire = 1
-					} else {
-						workRequire = 0
-					}
-				})
-				var studentWorker
-				var studentNotWorker
-				var studebtArr = e.value[0][6]
-				studebtArr.forEach(item => {
-					if (item == 0) {
-						studentWorker = 1
-					} else {
-						studentWorker = 0
-					}
-					if (item == 1) {
-						studentNotWorker = 1
-					} else {
-						studentNotWorker = 0
-					}
-				})
-				var nationals
-				var nationalsNot
-				var natArry = e.value[0][7]
-				natArry.forEach(item => {
-					if (item == 0) {
-						nationals = 1
-					} else {
-						nationals = 0
-					}
-					if (item == 1) {
-						nationalsNot = 1
-					} else {
-						nationalsNot = 0
-					}
-				})
-				uni.showLoading({
-					title: "加载中"
-				})
-				uni.request({
-					url: "http://118.178.89.161:9999/company/query",
-					method: 'POST',
-					header: {
-						"Content-Type": "application/json"
-					},
-					data: {
-						ageOne,
-						ageTwo,
-						ageThree,
-						sex,
-						sexMan,
-						sexWoman,
-						manageFee,
-						manageFeeOne,
-						workType,
-						workTypeDay,
-						spouseHouse,
-						spouseHouseHusband,
-						workRequire,
-						workRequireLong,
-						studentWorker,
-						studentNotWorker,
-						nationals,
-						nationalsNot
-					},
-					success(res) {
-						if (res.data.status == 200 && res.data.data.length !== 0) {
-							uni.hideLoading()
-							that.listDetail = res.data.data
-							that.flag=true
+					var arry = e.value[0][1].toString()
+					var ageOne
+					var ageTwo
+					var ageThree
+					var arrAge = e.value[0][0]
+					arrAge.forEach((item, index) => {
+						console.log(index)
+						if (item == "2") {
+							ageOne = 1
 						} else {
-							that.listDetail = ""
-							uni.showToast({
-								title: "未搜索到结果",
-								icon: "none"
-							})
+							ageOne = 0
 						}
+						if (item == "1") {
+							ageTwo = 1
+						} else {
+							ageTwo = 0
+						}
+						if (item == "0") {
+							ageThree = 1
+						} else {
+							ageThree = 0
+						}
+					})
+
+					var sex
+					var sexMan
+					var sexWoman
+					var sexArr = e.value[0][1]
+					sexArr.forEach(item => {
+						if (item == "0") {
+							sexMan = 1
+						} else {
+							sexMan = 0
+						}
+						if (item == "1") {
+							sexWoman = 1
+						} else {
+							sexWoman = 0
+						}
+						if (item == "2") {
+							sex = 1
+						} else {
+							sex = 0
+						}
+					})
+					var manageFee
+					var manageFeeOne
+					var Feearr = e.value[0][2]
+					Feearr.forEach(item => {
+						if (item == "0") {
+							manageFee = 1
+						} else {
+							manageFee = 0
+						}
+						if (item = "1") {
+							manageFeeOne = 1
+						} else {
+							manageFeeOne = 0
+						}
+					})
+					var workType
+					var workTypeDay
+					var workarr = e.value[0][3]
+					workarr.forEach(item => {
+						if (item == 0) {
+							workType = 1
+						} else {
+							workType = 0
+						}
+						if (item == 1) {
+							workTypeDay = 1
+						} else {
+							workTypeDay = 0
+						}
+					})
+					var spouseHouse
+					var spouseHouseHusband
+					var spouseArr = e.value[0][4]
+					spouseArr.forEach(item => {
+						if (item == 0) {
+							spouseHouse = 1
+						} else {
+							spouseHouse = 0
+						}
+						if (item == 1) {
+							spouseHouseHusband = 1
+						} else {
+							spouseHouseHusband = 0
+						}
+					})
+					var workRequire
+					var workRequireLong
+					var workAyy = e.value[0][5]
+					workAyy.forEach(item => {
+						if (item == 0) {
+							workRequireLong = 1
+						} else {
+							workRequireLong = 0
+						}
+						if (item == 1) {
+							workRequire = 1
+						} else {
+							workRequire = 0
+						}
+					})
+					var studentWorker
+					var studentNotWorker
+					var studebtArr = e.value[0][6]
+					studebtArr.forEach(item => {
+						if (item == 0) {
+							studentWorker = 1
+						} else {
+							studentWorker = 0
+						}
+						if (item == 1) {
+							studentNotWorker = 1
+						} else {
+							studentNotWorker = 0
+						}
+					})
+					var nationals
+					var nationalsNot
+					var natArry = e.value[0][7]
+					natArry.forEach(item => {
+						if (item == 0) {
+							nationals = 1
+						} else {
+							nationals = 0
+						}
+						if (item == 1) {
+							nationalsNot = 1
+						} else {
+							nationalsNot = 0
+						}
+					})
+					uni.showLoading({
+						title: "加载中"
+					})
+					uni.request({
+						url: "http://192.168.101.13:8080/company/query",
+						method: 'POST',
+						header: {
+							"Content-Type": "application/json"
+						},
+						data: {
+							ageOne,
+							ageTwo,
+							ageThree,
+							sex,
+							sexMan,
+							sexWoman,
+							manageFee,
+							manageFeeOne,
+							workType,
+							workTypeDay,
+							spouseHouse,
+							spouseHouseHusband,
+							workRequire,
+							workRequireLong,
+							studentWorker,
+							studentNotWorker,
+							nationals,
+							nationalsNot
+						},
+						success(res) {
+							if (res.data.status == 200 && res.data.data.length !== 0) {
+								uni.hideLoading()
+								that.listDetail = res.data.data
+								that.flag = true
+							} else {
+								that.listDetail = ""
+								uni.showToast({
+									title: "未搜索到结果",
+									icon: "none"
+								})
+							}
+						}
+					})
+				} else {
+					console.log("存在")
+					var count = 0
+					for (var i = 0; i < e.index[0].length; i++) {
+						count += e.index[0][i].length
 					}
-				})
+					if (count == 0) {
+						return false
+					}
+					var arry = e.value[0][1].toString()
+					var ageOne
+					var ageTwo
+					var ageThree
+					var arrAge = e.value[0][0]
+					arrAge.forEach((item, index) => {
+						console.log(index)
+						if (item == "2") {
+							ageOne = 1
+						} else {
+							ageOne = 0
+						}
+						if (item == "1") {
+							ageTwo = 1
+						} else {
+							ageTwo = 0
+						}
+						if (item == "0") {
+							ageThree = 1
+						} else {
+							ageThree = 0
+						}
+					})
+
+					var sex
+					var sexMan
+					var sexWoman
+					var sexArr = e.value[0][1]
+					sexArr.forEach(item => {
+						if (item == "0") {
+							sexMan = 1
+						} else {
+							sexMan = 0
+						}
+						if (item == "1") {
+							sexWoman = 1
+						} else {
+							sexWoman = 0
+						}
+						if (item == "2") {
+							sex = 1
+						} else {
+							sex = 0
+						}
+					})
+					var manageFee
+					var manageFeeOne
+					var Feearr = e.value[0][2]
+					Feearr.forEach(item => {
+						if (item == "0") {
+							manageFee = 1
+						} else {
+							manageFee = 0
+						}
+						if (item = "1") {
+							manageFeeOne = 1
+						} else {
+							manageFeeOne = 0
+						}
+					})
+					var workType
+					var workTypeDay
+					var workarr = e.value[0][3]
+					workarr.forEach(item => {
+						if (item == 0) {
+							workType = 1
+						} else {
+							workType = 0
+						}
+						if (item == 1) {
+							workTypeDay = 1
+						} else {
+							workTypeDay = 0
+						}
+					})
+					var spouseHouse
+					var spouseHouseHusband
+					var spouseArr = e.value[0][4]
+					spouseArr.forEach(item => {
+						if (item == 0) {
+							spouseHouse = 1
+						} else {
+							spouseHouse = 0
+						}
+						if (item == 1) {
+							spouseHouseHusband = 1
+						} else {
+							spouseHouseHusband = 0
+						}
+					})
+					var workRequire
+					var workRequireLong
+					var workAyy = e.value[0][5]
+					workAyy.forEach(item => {
+						if (item == 0) {
+							workRequireLong = 1
+						} else {
+							workRequireLong = 0
+						}
+						if (item == 1) {
+							workRequire = 1
+						} else {
+							workRequire = 0
+						}
+					})
+					var studentWorker
+					var studentNotWorker
+					var studebtArr = e.value[0][6]
+					studebtArr.forEach(item => {
+						if (item == 0) {
+							studentWorker = 1
+						} else {
+							studentWorker = 0
+						}
+						if (item == 1) {
+							studentNotWorker = 1
+						} else {
+							studentNotWorker = 0
+						}
+					})
+					var nationals
+					var nationalsNot
+					var natArry = e.value[0][7]
+					natArry.forEach(item => {
+						if (item == 0) {
+							nationals = 1
+						} else {
+							nationals = 0
+						}
+						if (item == 1) {
+							nationalsNot = 1
+						} else {
+							nationalsNot = 0
+						}
+					})
+					uni.showLoading({
+						title: "加载中"
+					})
+					uni.request({
+						url: "http://192.168.101.13:8080/company/query",
+						method: 'POST',
+						header: {
+							"Content-Type": "application/json"
+						},
+						data: {
+							ageOne,
+							ageTwo,
+							ageThree,
+							sex,
+							sexMan,
+							sexWoman,
+							manageFee,
+							manageFeeOne,
+							workType,
+							workTypeDay,
+							spouseHouse,
+							spouseHouseHusband,
+							workRequire,
+							workRequireLong,
+							studentWorker,
+							studentNotWorker,
+							nationals,
+							nationalsNot,
+							city:that.city
+						},
+						success(res) {
+							if (res.data.status == 200 && res.data.data.length !== 0) {
+								uni.hideLoading()
+								that.listDetail = res.data.data
+								that.flag = true
+							} else {
+								that.listDetail = ""
+								uni.showToast({
+									title: "未搜索到结果",
+									icon: "none"
+								})
+							}
+						}
+					})
+				}
+
 			},
 			getsearch() { //搜索到的工厂信息
 				if (this.val == undefined) {
@@ -360,7 +748,7 @@
 						if (res.data.status == 200 && res.data.data.length !== 0) {
 							uni.hideLoading()
 							that.listDetail = res.data.data
-							that.flag=true
+							that.flag = true
 						} else {
 							uni.showToast({
 								title: "未搜索到结果",
@@ -375,10 +763,10 @@
 			simpleAddress,
 			'HMfilterDropdown': HMfilterDropdown
 		},
-		watch:{
-			'listDetail':function(val) {
-				if(val.length==0) {
-					this.flag=false
+		watch: {
+			'listDetail': function(val) {
+				if (val.length == 0) {
+					this.flag = false
 				}
 			}
 		},
@@ -433,6 +821,7 @@
 		margin-top: 28rpx;
 		width: 705rpx;
 		height: 343rpx;
+
 		image {
 			height: 100%;
 			width: 100%;
@@ -504,23 +893,27 @@
 		right: 122rpx;
 		bottom: 84rpx;
 	}
-	.imgs{
+
+	.imgs {
 		width: 200rpx;
 		height: 54rpx;
 		margin-left: 24rpx;
 		position: absolute;
 		bottom: 20rpx;
+
 		image {
 			height: 100%;
 			width: 100%;
 		}
 	}
-	.img_bars{
+
+	.img_bars {
 		height: 867rpx;
 		width: 714rpx;
 		padding-top: 48rpx;
 		padding-bottom: 48rpx;
-		image{
+
+		image {
 			width: 100%;
 			height: 100%;
 		}

@@ -199,6 +199,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 181));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 191));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
 var _default = {
   data: function data() {
@@ -209,8 +212,10 @@ var _default = {
       val: '', //搜索关键词
       listDetail: [], //搜索列表
       city: '', //选择城市
-      flag: false };
-
+      flag: false,
+      addr: '', //地区选择，
+      case: '' //条件筛选
+    };
   },
   methods: {
     add: function add() {
@@ -253,225 +258,608 @@ var _default = {
 
     },
     onConfirm: function onConfirm(e) {//地区选择
+      this.addr = e;
       this.city = e.labelArr[1];
       var that = this;
-      uni.showLoading({
-        title: "加载中" });
-
-      uni.request({
-        url: "http://118.178.89.161:9999/company/condition",
-        method: 'POST',
-        header: {
-          "Content-Type": "application/json" },
-
-        data: {
-          city: e.labelArr[1] },
-
-        success: function success(res) {
-          console.log(res);
-          uni.hideLoading();
-          if (res.data.status == 200 && res.data.data.length !== 0) {
-            that.listDetail = res.data.data;
-            that.flag = true;
+      if (that.case) {
+        console.log("存在");
+        console.log(that.case);
+        var count = 0;
+        var ageOne;
+        var ageTwo;
+        var ageThree;
+        var arrAge = that.case.value[0][0];
+        arrAge.forEach(function (item, index) {
+          console.log(index);
+          if (item == "2") {
+            ageOne = 1;
           } else {
-            that.listDetail = "";
-            uni.showToast({
-              title: "未搜索到结果",
-              icon: 'none' });
-
+            ageOne = 0;
           }
-        } });
+          if (item == "1") {
+            ageTwo = 1;
+          } else {
+            ageTwo = 0;
+          }
+          if (item == "0") {
+            ageThree = 1;
+          } else {
+            ageThree = 0;
+          }
+        });
+
+        var sex;
+        var sexMan;
+        var sexWoman;
+        var sexArr = that.case.value[0][1];
+        sexArr.forEach(function (item) {
+          if (item == "0") {
+            sexMan = 1;
+          } else {
+            sexMan = 0;
+          }
+          if (item == "1") {
+            sexWoman = 1;
+          } else {
+            sexWoman = 0;
+          }
+          if (item == "2") {
+            sex = 1;
+          } else {
+            sex = 0;
+          }
+        });
+        var manageFee;
+        var manageFeeOne;
+        var Feearr = that.case.value[0][2];
+        Feearr.forEach(function (item) {
+          if (item == "0") {
+            manageFee = 1;
+          } else {
+            manageFee = 0;
+          }
+          if (item = "1") {
+            manageFeeOne = 1;
+          } else {
+            manageFeeOne = 0;
+          }
+        });
+        var workType;
+        var workTypeDay;
+        var workarr = that.case.value[0][3];
+        workarr.forEach(function (item) {
+          if (item == 0) {
+            workType = 1;
+          } else {
+            workType = 0;
+          }
+          if (item == 1) {
+            workTypeDay = 1;
+          } else {
+            workTypeDay = 0;
+          }
+        });
+        var spouseHouse;
+        var spouseHouseHusband;
+        var spouseArr = that.case.value[0][4];
+        spouseArr.forEach(function (item) {
+          if (item == 0) {
+            spouseHouse = 1;
+          } else {
+            spouseHouse = 0;
+          }
+          if (item == 1) {
+            spouseHouseHusband = 1;
+          } else {
+            spouseHouseHusband = 0;
+          }
+        });
+        var workRequire;
+        var workRequireLong;
+        var workAyy = that.case.value[0][5];
+        workAyy.forEach(function (item) {
+          if (item == 0) {
+            workRequireLong = 1;
+          } else {
+            workRequireLong = 0;
+          }
+          if (item == 1) {
+            workRequire = 1;
+          } else {
+            workRequire = 0;
+          }
+        });
+        var studentWorker;
+        var studentNotWorker;
+        var studebtArr = that.case.value[0][6];
+        studebtArr.forEach(function (item) {
+          if (item == 0) {
+            studentWorker = 1;
+          } else {
+            studentWorker = 0;
+          }
+          if (item == 1) {
+            studentNotWorker = 1;
+          } else {
+            studentNotWorker = 0;
+          }
+        });
+        var nationals;
+        var nationalsNot;
+        var natArry = that.case.value[0][7];
+        natArry.forEach(function (item) {
+          if (item == 0) {
+            nationals = 1;
+          } else {
+            nationals = 0;
+          }
+          if (item == 1) {
+            nationalsNot = 1;
+          } else {
+            nationalsNot = 0;
+          }
+        });
+        uni.showLoading({
+          title: "加载中" });
+
+        uni.request({
+          url: "http://118.178.89.161:9999/company/query",
+          method: 'POST',
+          header: {
+            "Content-Type": "application/json" },
+
+          data: {
+            ageOne: ageOne,
+            ageTwo: ageTwo,
+            ageThree: ageThree,
+            sex: sex,
+            sexMan: sexMan,
+            sexWoman: sexWoman,
+            manageFee: manageFee,
+            manageFeeOne: manageFeeOne,
+            workType: workType,
+            workTypeDay: workTypeDay,
+            spouseHouse: spouseHouse,
+            spouseHouseHusband: spouseHouseHusband,
+            workRequire: workRequire,
+            workRequireLong: workRequireLong,
+            studentWorker: studentWorker,
+            studentNotWorker: studentNotWorker,
+            nationals: nationals,
+            nationalsNot: nationalsNot,
+            city: e.labelArr[1] },
+
+          success: function success(res) {
+            console.log(res);
+            uni.hideLoading();
+            if (res.data.status == 200 && res.data.data.length !== 0) {
+              that.listDetail = res.data.data;
+              that.flag = true;
+            } else {
+              that.listDetail = "";
+              uni.showToast({
+                title: "未搜索到结果",
+                icon: 'none' });
+
+            }
+          } });
+
+      } else {
+        console.log("不存在");
+        uni.showLoading({
+          title: "加载中" });
+
+        uni.request({
+          url: "http://192.168.101.13:8080/company/query",
+          method: 'POST',
+          header: {
+            "Content-Type": "application/json" },
+
+          data: {
+            city: e.labelArr[1] },
+
+          success: function success(res) {
+            console.log(res);
+            uni.hideLoading();
+            if (res.data.status == 200 && res.data.data.length !== 0) {
+              that.listDetail = res.data.data;
+              that.flag = true;
+            } else {
+              that.listDetail = "";
+              uni.showToast({
+                title: "未搜索到结果",
+                icon: 'none' });
+
+            }
+          } });
+
+      }
+
+
 
     },
     duaiyong: function duaiyong() {
       this.$refs.child.togglePage(0);
     },
     confirm: function confirm(e) {//条件筛选
-      var count = 0;
-      for (var i = 0; i < e.index[0].length; i++) {
-        count += e.index[0][i].length;
-      }
-      if (count == 0) {
-        return false;
-      }
+      this.case = e;
       var that = this;
-      var arry = e.value[0][1].toString();
-      var ageOne;
-      var ageTwo;
-      var ageThree;
-      var arrAge = e.value[0][0];
-      arrAge.forEach(function (item, index) {
-        console.log(index);
-        if (item == "2") {
-          ageOne = 1;
-        } else {
-          ageOne = 0;
+      if (!that.addr) {
+        console.log("不存在");
+        var count = 0;
+        for (var i = 0; i < e.index[0].length; i++) {
+          count += e.index[0][i].length;
         }
-        if (item == "1") {
-          ageTwo = 1;
-        } else {
-          ageTwo = 0;
+        if (count == 0) {
+          return false;
         }
-        if (item == "0") {
-          ageThree = 1;
-        } else {
-          ageThree = 0;
-        }
-      });
-
-      var sex;
-      var sexMan;
-      var sexWoman;
-      var sexArr = e.value[0][1];
-      sexArr.forEach(function (item) {
-        if (item == "0") {
-          sexMan = 1;
-        } else {
-          sexMan = 0;
-        }
-        if (item == "1") {
-          sexWoman = 1;
-        } else {
-          sexWoman = 0;
-        }
-        if (item == "2") {
-          sex = 1;
-        } else {
-          sex = 0;
-        }
-      });
-      var manageFee;
-      var manageFeeOne;
-      var Feearr = e.value[0][2];
-      Feearr.forEach(function (item) {
-        if (item == "0") {
-          manageFee = 1;
-        } else {
-          manageFee = 0;
-        }
-        if (item = "1") {
-          manageFeeOne = 1;
-        } else {
-          manageFeeOne = 0;
-        }
-      });
-      var workType;
-      var workTypeDay;
-      var workarr = e.value[0][3];
-      workarr.forEach(function (item) {
-        if (item == 0) {
-          workType = 1;
-        } else {
-          workType = 0;
-        }
-        if (item == 1) {
-          workTypeDay = 1;
-        } else {
-          workTypeDay = 0;
-        }
-      });
-      var spouseHouse;
-      var spouseHouseHusband;
-      var spouseArr = e.value[0][4];
-      spouseArr.forEach(function (item) {
-        if (item == 0) {
-          spouseHouse = 1;
-        } else {
-          spouseHouse = 0;
-        }
-        if (item == 1) {
-          spouseHouseHusband = 1;
-        } else {
-          spouseHouseHusband = 0;
-        }
-      });
-      var workRequire;
-      var workRequireLong;
-      var workAyy = e.value[0][5];
-      workAyy.forEach(function (item) {
-        if (item == 0) {
-          workRequireLong = 1;
-        } else {
-          workRequireLong = 0;
-        }
-        if (item == 1) {
-          workRequire = 1;
-        } else {
-          workRequire = 0;
-        }
-      });
-      var studentWorker;
-      var studentNotWorker;
-      var studebtArr = e.value[0][6];
-      studebtArr.forEach(function (item) {
-        if (item == 0) {
-          studentWorker = 1;
-        } else {
-          studentWorker = 0;
-        }
-        if (item == 1) {
-          studentNotWorker = 1;
-        } else {
-          studentNotWorker = 0;
-        }
-      });
-      var nationals;
-      var nationalsNot;
-      var natArry = e.value[0][7];
-      natArry.forEach(function (item) {
-        if (item == 0) {
-          nationals = 1;
-        } else {
-          nationals = 0;
-        }
-        if (item == 1) {
-          nationalsNot = 1;
-        } else {
-          nationalsNot = 0;
-        }
-      });
-      uni.showLoading({
-        title: "加载中" });
-
-      uni.request({
-        url: "http://118.178.89.161:9999/company/query",
-        method: 'POST',
-        header: {
-          "Content-Type": "application/json" },
-
-        data: {
-          ageOne: ageOne,
-          ageTwo: ageTwo,
-          ageThree: ageThree,
-          sex: sex,
-          sexMan: sexMan,
-          sexWoman: sexWoman,
-          manageFee: manageFee,
-          manageFeeOne: manageFeeOne,
-          workType: workType,
-          workTypeDay: workTypeDay,
-          spouseHouse: spouseHouse,
-          spouseHouseHusband: spouseHouseHusband,
-          workRequire: workRequire,
-          workRequireLong: workRequireLong,
-          studentWorker: studentWorker,
-          studentNotWorker: studentNotWorker,
-          nationals: nationals,
-          nationalsNot: nationalsNot },
-
-        success: function success(res) {
-          if (res.data.status == 200 && res.data.data.length !== 0) {
-            uni.hideLoading();
-            that.listDetail = res.data.data;
-            that.flag = true;
+        var arry = e.value[0][1].toString();
+        var ageOne;
+        var ageTwo;
+        var ageThree;
+        var arrAge = e.value[0][0];
+        arrAge.forEach(function (item, index) {
+          console.log(index);
+          if (item == "2") {
+            ageOne = 1;
           } else {
-            that.listDetail = "";
-            uni.showToast({
-              title: "未搜索到结果",
-              icon: "none" });
-
+            ageOne = 0;
           }
-        } });
+          if (item == "1") {
+            ageTwo = 1;
+          } else {
+            ageTwo = 0;
+          }
+          if (item == "0") {
+            ageThree = 1;
+          } else {
+            ageThree = 0;
+          }
+        });
+
+        var sex;
+        var sexMan;
+        var sexWoman;
+        var sexArr = e.value[0][1];
+        sexArr.forEach(function (item) {
+          if (item == "0") {
+            sexMan = 1;
+          } else {
+            sexMan = 0;
+          }
+          if (item == "1") {
+            sexWoman = 1;
+          } else {
+            sexWoman = 0;
+          }
+          if (item == "2") {
+            sex = 1;
+          } else {
+            sex = 0;
+          }
+        });
+        var manageFee;
+        var manageFeeOne;
+        var Feearr = e.value[0][2];
+        Feearr.forEach(function (item) {
+          if (item == "0") {
+            manageFee = 1;
+          } else {
+            manageFee = 0;
+          }
+          if (item = "1") {
+            manageFeeOne = 1;
+          } else {
+            manageFeeOne = 0;
+          }
+        });
+        var workType;
+        var workTypeDay;
+        var workarr = e.value[0][3];
+        workarr.forEach(function (item) {
+          if (item == 0) {
+            workType = 1;
+          } else {
+            workType = 0;
+          }
+          if (item == 1) {
+            workTypeDay = 1;
+          } else {
+            workTypeDay = 0;
+          }
+        });
+        var spouseHouse;
+        var spouseHouseHusband;
+        var spouseArr = e.value[0][4];
+        spouseArr.forEach(function (item) {
+          if (item == 0) {
+            spouseHouse = 1;
+          } else {
+            spouseHouse = 0;
+          }
+          if (item == 1) {
+            spouseHouseHusband = 1;
+          } else {
+            spouseHouseHusband = 0;
+          }
+        });
+        var workRequire;
+        var workRequireLong;
+        var workAyy = e.value[0][5];
+        workAyy.forEach(function (item) {
+          if (item == 0) {
+            workRequireLong = 1;
+          } else {
+            workRequireLong = 0;
+          }
+          if (item == 1) {
+            workRequire = 1;
+          } else {
+            workRequire = 0;
+          }
+        });
+        var studentWorker;
+        var studentNotWorker;
+        var studebtArr = e.value[0][6];
+        studebtArr.forEach(function (item) {
+          if (item == 0) {
+            studentWorker = 1;
+          } else {
+            studentWorker = 0;
+          }
+          if (item == 1) {
+            studentNotWorker = 1;
+          } else {
+            studentNotWorker = 0;
+          }
+        });
+        var nationals;
+        var nationalsNot;
+        var natArry = e.value[0][7];
+        natArry.forEach(function (item) {
+          if (item == 0) {
+            nationals = 1;
+          } else {
+            nationals = 0;
+          }
+          if (item == 1) {
+            nationalsNot = 1;
+          } else {
+            nationalsNot = 0;
+          }
+        });
+        uni.showLoading({
+          title: "加载中" });
+
+        uni.request({
+          url: "http://192.168.101.13:8080/company/query",
+          method: 'POST',
+          header: {
+            "Content-Type": "application/json" },
+
+          data: {
+            ageOne: ageOne,
+            ageTwo: ageTwo,
+            ageThree: ageThree,
+            sex: sex,
+            sexMan: sexMan,
+            sexWoman: sexWoman,
+            manageFee: manageFee,
+            manageFeeOne: manageFeeOne,
+            workType: workType,
+            workTypeDay: workTypeDay,
+            spouseHouse: spouseHouse,
+            spouseHouseHusband: spouseHouseHusband,
+            workRequire: workRequire,
+            workRequireLong: workRequireLong,
+            studentWorker: studentWorker,
+            studentNotWorker: studentNotWorker,
+            nationals: nationals,
+            nationalsNot: nationalsNot },
+
+          success: function success(res) {
+            if (res.data.status == 200 && res.data.data.length !== 0) {
+              uni.hideLoading();
+              that.listDetail = res.data.data;
+              that.flag = true;
+            } else {
+              that.listDetail = "";
+              uni.showToast({
+                title: "未搜索到结果",
+                icon: "none" });
+
+            }
+          } });
+
+      } else {
+        console.log("存在");
+        var count = 0;
+        for (var i = 0; i < e.index[0].length; i++) {
+          count += e.index[0][i].length;
+        }
+        if (count == 0) {
+          return false;
+        }
+        var arry = e.value[0][1].toString();
+        var ageOne;
+        var ageTwo;
+        var ageThree;
+        var arrAge = e.value[0][0];
+        arrAge.forEach(function (item, index) {
+          console.log(index);
+          if (item == "2") {
+            ageOne = 1;
+          } else {
+            ageOne = 0;
+          }
+          if (item == "1") {
+            ageTwo = 1;
+          } else {
+            ageTwo = 0;
+          }
+          if (item == "0") {
+            ageThree = 1;
+          } else {
+            ageThree = 0;
+          }
+        });
+
+        var sex;
+        var sexMan;
+        var sexWoman;
+        var sexArr = e.value[0][1];
+        sexArr.forEach(function (item) {
+          if (item == "0") {
+            sexMan = 1;
+          } else {
+            sexMan = 0;
+          }
+          if (item == "1") {
+            sexWoman = 1;
+          } else {
+            sexWoman = 0;
+          }
+          if (item == "2") {
+            sex = 1;
+          } else {
+            sex = 0;
+          }
+        });
+        var manageFee;
+        var manageFeeOne;
+        var Feearr = e.value[0][2];
+        Feearr.forEach(function (item) {
+          if (item == "0") {
+            manageFee = 1;
+          } else {
+            manageFee = 0;
+          }
+          if (item = "1") {
+            manageFeeOne = 1;
+          } else {
+            manageFeeOne = 0;
+          }
+        });
+        var workType;
+        var workTypeDay;
+        var workarr = e.value[0][3];
+        workarr.forEach(function (item) {
+          if (item == 0) {
+            workType = 1;
+          } else {
+            workType = 0;
+          }
+          if (item == 1) {
+            workTypeDay = 1;
+          } else {
+            workTypeDay = 0;
+          }
+        });
+        var spouseHouse;
+        var spouseHouseHusband;
+        var spouseArr = e.value[0][4];
+        spouseArr.forEach(function (item) {
+          if (item == 0) {
+            spouseHouse = 1;
+          } else {
+            spouseHouse = 0;
+          }
+          if (item == 1) {
+            spouseHouseHusband = 1;
+          } else {
+            spouseHouseHusband = 0;
+          }
+        });
+        var workRequire;
+        var workRequireLong;
+        var workAyy = e.value[0][5];
+        workAyy.forEach(function (item) {
+          if (item == 0) {
+            workRequireLong = 1;
+          } else {
+            workRequireLong = 0;
+          }
+          if (item == 1) {
+            workRequire = 1;
+          } else {
+            workRequire = 0;
+          }
+        });
+        var studentWorker;
+        var studentNotWorker;
+        var studebtArr = e.value[0][6];
+        studebtArr.forEach(function (item) {
+          if (item == 0) {
+            studentWorker = 1;
+          } else {
+            studentWorker = 0;
+          }
+          if (item == 1) {
+            studentNotWorker = 1;
+          } else {
+            studentNotWorker = 0;
+          }
+        });
+        var nationals;
+        var nationalsNot;
+        var natArry = e.value[0][7];
+        natArry.forEach(function (item) {
+          if (item == 0) {
+            nationals = 1;
+          } else {
+            nationals = 0;
+          }
+          if (item == 1) {
+            nationalsNot = 1;
+          } else {
+            nationalsNot = 0;
+          }
+        });
+        uni.showLoading({
+          title: "加载中" });
+
+        uni.request({
+          url: "http://192.168.101.13:8080/company/query",
+          method: 'POST',
+          header: {
+            "Content-Type": "application/json" },
+
+          data: {
+            ageOne: ageOne,
+            ageTwo: ageTwo,
+            ageThree: ageThree,
+            sex: sex,
+            sexMan: sexMan,
+            sexWoman: sexWoman,
+            manageFee: manageFee,
+            manageFeeOne: manageFeeOne,
+            workType: workType,
+            workTypeDay: workTypeDay,
+            spouseHouse: spouseHouse,
+            spouseHouseHusband: spouseHouseHusband,
+            workRequire: workRequire,
+            workRequireLong: workRequireLong,
+            studentWorker: studentWorker,
+            studentNotWorker: studentNotWorker,
+            nationals: nationals,
+            nationalsNot: nationalsNot,
+            city: that.city },
+
+          success: function success(res) {
+            if (res.data.status == 200 && res.data.data.length !== 0) {
+              uni.hideLoading();
+              that.listDetail = res.data.data;
+              that.flag = true;
+            } else {
+              that.listDetail = "";
+              uni.showToast({
+                title: "未搜索到结果",
+                icon: "none" });
+
+            }
+          } });
+
+      }
 
     },
     getsearch: function getsearch() {//搜索到的工厂信息

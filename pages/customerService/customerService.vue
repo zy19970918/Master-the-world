@@ -5,7 +5,7 @@
 		</view>
 		<view class="btn">
 			<image class="imgs" src="../../static/images/yishoutianxia.png" mode=""></image>
-			<button type="default" class="btns" open-type="contact">联系客服</button>
+			<button type="default" class="btns" open-type="contact" @contact='add'>联系客服</button>
 		</view>
 	</view>
 </template>
@@ -18,7 +18,9 @@
 			}
 		},
 		methods: {
-			
+			add(e) {
+				console.log(e)
+			}
 		}
 	}
 </script>
