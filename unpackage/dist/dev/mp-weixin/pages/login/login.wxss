@@ -51,9 +51,6 @@ page {
   vertical-align: middle;
 }
 .img.data-v-b237504c {
-  border-radius: 50%;
-  border: 1px solid #fff;
-  background-color: #fff;
   margin: 0 0 60rpx;
   display: inline-block;
   width: 200rpx;

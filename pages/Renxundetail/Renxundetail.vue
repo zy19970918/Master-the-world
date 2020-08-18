@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<view class="topbar">
-			<view class="title">
+			<view class="title" style="font-size: 38rpx;">
 				{{detailInfo.personName}}
 			</view>
 			<view class="video">
@@ -64,7 +64,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url:"http://192.168.101.13:8080/person/queryDetail",
+					url:"http://118.178.89.161:9999/person/queryDetail",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"

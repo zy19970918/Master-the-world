@@ -196,7 +196,7 @@ var demo = new QQMapWX({
         title: "加载中" });
 
       uni.request({
-        url: "http://192.168.101.13:8080/person/queryDetail",
+        url: "http://118.178.89.161:9999/person/queryDetail",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },

@@ -29,12 +29,12 @@
 		{
 			"path": "pages/advertisement/advertisement",
 			"style": {}
-		}
-
-		, {
+		},
+		{
 			"path": "pages/login/login",
 			"style": {}
 		},
+
 		{
 			"path": "pages/Dishonest/Dishonest",
 			"style": {}
@@ -96,7 +96,7 @@
 				"selectedIconPath": "static/images/icon_swode.png"
 			}
 		],
-		"selectedColor":"#666666"
+		"selectedColor": "#666666"
 	}
-	
+
 }

@@ -42,12 +42,13 @@
 					<view class="" v-if="item.ageOne==1&&item.ageTwo==0&&item.ageThree==1">
 						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18-35岁&ensp;&ensp;50岁以上</text></view>
 					</view>
+						<view class="text">工价:<text class="text_defult">{{item.wageFee}}</text></view>
 					<view class="imgs">
 						<image src="../../static/images/chakangengduoanniu_.png" mode="" @click="todetail(item.companyId)"></image>
 					</view>
 				</view>
 				<view class="bottom_txt">
-					{{item.companyName}}
+					{{item.shortName}}
 				</view>
 			</view>
 			<view class="img_bars" v-if="!flag">
@@ -314,7 +315,7 @@
 						title: "加载中"
 					})
 					uni.request({
-						url: "http://192.168.101.13:8080/company/query",
+						url: "http://118.178.89.161:9999/company/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"
@@ -496,7 +497,7 @@
 						title: "加载中"
 					})
 					uni.request({
-						url: "http://192.168.101.13:8080/company/query",
+						url: "http://118.178.89.161:9999/company/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"
@@ -683,7 +684,7 @@
 						title: "加载中"
 					})
 					uni.request({
-						url: "http://192.168.101.13:8080/company/query",
+						url: "http://118.178.89.161:9999/company/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"
@@ -854,7 +855,7 @@
 	.text {
 		font-size: 20rpx;
 		color: #D24C1F;
-		margin-top: 21rpx;
+		margin-top: 8rpx;
 		margin-left: 20rpx;
 	}
 
@@ -890,8 +891,14 @@
 		color: #CA0000;
 		font-weight: 900;
 		position: absolute;
-		right: 122rpx;
+		right: 88rpx;
 		bottom: 84rpx;
+		text-align: center;
+		word-break:keep-all;           /* 不换行 */
+		white-space:nowrap;          /* 不换行 */
+		overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+		text-overflow:ellipsis;
+		width: 100rpx;
 	}
 
 	.imgs {

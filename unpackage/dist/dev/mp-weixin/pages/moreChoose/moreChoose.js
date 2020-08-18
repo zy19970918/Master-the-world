@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   simpleAddress: function() {
-    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 181))
+    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 338))
   }
 }
 var render = function() {
@@ -202,7 +202,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 181));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 191));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
+
+var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 338));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 348));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
 var _default = {
   data: function data() {
     return {
@@ -450,7 +451,7 @@ var _default = {
           title: "加载中" });
 
         uni.request({
-          url: "http://192.168.101.13:8080/company/query",
+          url: "http://118.178.89.161:9999/company/query",
           method: 'POST',
           header: {
             "Content-Type": "application/json" },
@@ -632,7 +633,7 @@ var _default = {
           title: "加载中" });
 
         uni.request({
-          url: "http://192.168.101.13:8080/company/query",
+          url: "http://118.178.89.161:9999/company/query",
           method: 'POST',
           header: {
             "Content-Type": "application/json" },
@@ -819,7 +820,7 @@ var _default = {
           title: "加载中" });
 
         uni.request({
-          url: "http://192.168.101.13:8080/company/query",
+          url: "http://118.178.89.161:9999/company/query",
           method: 'POST',
           header: {
             "Content-Type": "application/json" },

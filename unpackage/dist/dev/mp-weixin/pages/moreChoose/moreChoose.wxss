@@ -87,7 +87,7 @@
 .text.data-v-62eed7c6 {
   font-size: 20rpx;
   color: #D24C1F;
-  margin-top: 21rpx;
+  margin-top: 8rpx;
   margin-left: 20rpx;
 }
 .text_defult.data-v-62eed7c6 {
@@ -118,8 +118,17 @@
   color: #CA0000;
   font-weight: 900;
   position: absolute;
-  right: 122rpx;
+  right: 88rpx;
   bottom: 84rpx;
+  text-align: center;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+  width: 100rpx;
 }
 .imgs.data-v-62eed7c6 {
   width: 200rpx;

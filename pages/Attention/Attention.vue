@@ -102,7 +102,6 @@
 				spot_text: "", //驻场考情表，
 				brand: "", //品牌战略
 				content_info:''//
-
 			}
 		},
 		methods: {
@@ -154,8 +153,7 @@
 					str = this.brand
 				}
 				console.log(str)
-			const downloadTask=	wx.downloadFile({
-				  // 示例 url，并非真实存在
+			    const downloadTask=	wx.downloadFile({
 				  url:str, //下载的文件地址
 				  success: function (res) {
 					  console.log("下载")
@@ -168,7 +166,11 @@
 				      filePath: filePath,
 				      success: function (res) {
 				        console.log('打开文档成功')
-				      }
+				      },
+					  fail:function(err) {
+						  console.log("错误的回调")
+						  console.log(err)
+					  }
 				    })
 				  }
 				})
@@ -178,7 +180,7 @@
 					})
 				  console.log('下载进度', res.progress)
 				})
-			},5000) 
+			},2000) 
 		},
 		onLoad() {
 			this.getAttetion()

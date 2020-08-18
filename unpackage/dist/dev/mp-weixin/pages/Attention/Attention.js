@@ -235,7 +235,6 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
       brand: "", //品牌战略
       content_info: '' //
     };
-
   },
   methods: {
     getAttetion: function getAttetion() {
@@ -287,7 +286,6 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
       }
       console.log(str);
       var downloadTask = wx.downloadFile({
-        // 示例 url，并非真实存在
         url: str, //下载的文件地址
         success: function success(res) {
           console.log("下载");
@@ -300,6 +298,10 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
             filePath: filePath,
             success: function success(res) {
               console.log('打开文档成功');
+            },
+            fail: function fail(err) {
+              console.log("错误的回调");
+              console.log(err);
             } });
 
         } });
@@ -310,7 +312,7 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
 
         console.log('下载进度', res.progress);
       });
-    }, 5000) },
+    }, 2000) },
 
   onLoad: function onLoad() {
     this.getAttetion();

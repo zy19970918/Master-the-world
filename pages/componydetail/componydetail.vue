@@ -30,7 +30,7 @@
 			</view>
 			<view class="text">
 				<swiper class="swiper" :indicator-dots="false" acceleration display-multiple-items="2" :autoplay="false" :interval="1000"
-				 circular :duration="8000">
+				  :duration="8000">
 					<swiper-item @click="bigimg(swipertyp2.imgAddrs,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrs" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
@@ -43,7 +43,7 @@
 			</view>
 			<view class="text">
 				<swiper class="swiper" :indicator-dots="false" acceleration display-multiple-items="2" :autoplay="false" :interval="1000"
-				 circular :duration="8000">
+				  :duration="8000">
 					<swiper-item @click="bigimg(swipertyp3.imgAddrs,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrs" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
