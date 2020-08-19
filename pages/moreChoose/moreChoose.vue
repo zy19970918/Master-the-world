@@ -19,7 +19,7 @@
 				 mode=""></image>
 				<image class="portrait" :src="item.imgAddr" mode=""></image>
 				<view class="conten_center">
-					<view class="top_text" style="max-width: 189rpx; min-width: 189rpx; white-space: nowrap;">{{item.companyName}}</view>
+					<view class="top_text" style="width: 208rpx;word-break:keep-all; white-space:nowrap;overflow:hidden; text-overflow:ellipsis;">{{item.companyName}}</view>
 					<view class="text">代理费:<text class="text_defult">{{item.agencyFee}}元/天</text></view>
 					<view class="" v-if="item.ageOne==1&&item.ageTwo==0&&item.ageThree==0">
 						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18岁-50岁</text></view>
@@ -42,7 +42,7 @@
 					<view class="" v-if="item.ageOne==1&&item.ageTwo==0&&item.ageThree==1">
 						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18-35岁&ensp;&ensp;50岁以上</text></view>
 					</view>
-						<view class="text">工价:<text class="text_defult">{{item.wageFee}}</text></view>
+					<view class="text">工&ensp;&ensp;价:<text class="text_defult">{{item.wageFee}}</text></view>
 					<view class="imgs">
 						<image src="../../static/images/chakangengduoanniu_.png" mode="" @click="todetail(item.companyId)"></image>
 					</view>
@@ -708,7 +708,7 @@
 							studentNotWorker,
 							nationals,
 							nationalsNot,
-							city:that.city
+							city: that.city
 						},
 						success(res) {
 							if (res.data.status == 200 && res.data.data.length !== 0) {
@@ -846,10 +846,13 @@
 	}
 
 	.top_text {
-		font-size: 36rpx;
+		font-size: 26rpx;
 		color: #333333;
 		font-weight: 900;
 		text-align: center;
+		margin-top: 10rpx;
+		// width: 362rpx;
+		white-space: nowrap;
 	}
 
 	.text {
@@ -894,10 +897,13 @@
 		right: 88rpx;
 		bottom: 84rpx;
 		text-align: center;
-		word-break:keep-all;           /* 不换行 */
-		white-space:nowrap;          /* 不换行 */
-		overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
-		text-overflow:ellipsis;
+		word-break: keep-all;
+		/* 不换行 */
+		white-space: nowrap;
+		/* 不换行 */
+		overflow: hidden;
+		/* 内容超出宽度时隐藏超出部分的内容 */
+		text-overflow: ellipsis;
 		width: 100rpx;
 	}
 

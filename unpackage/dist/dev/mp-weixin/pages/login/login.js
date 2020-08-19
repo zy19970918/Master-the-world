@@ -190,9 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -204,7 +202,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-var WXBizDataCrypt = __webpack_require__(/*! ../../Node/WXBizDataCrypt.js */ 92);
 var appId = 'wxb31c921feae5104b';var _default =
 {
   data: function data() {
@@ -215,6 +212,7 @@ var appId = 'wxb31c921feae5104b';var _default =
   methods: {
     bindGetUserInfo: function bindGetUserInfo() {
       var that = this;
+      var flag = uni.getStorageSync('flag');
       wx.login({
         success: function success(res) {
           console.log(res);
@@ -229,15 +227,15 @@ var appId = 'wxb31c921feae5104b';var _default =
                 success: function success(res) {
                   console.log("是否执行");
                   console.log(res);
-                  if (res.authSetting['scope.userInfo']) {
+                  if (res.authSetting['scope.userInfo'] && flag) {
                     wx.getUserInfo({
                       success: function success(res) {
                         console.log(res);
+                        console.log("地址");
                         // 可以将 res 发送给后台解码出 unionId
                         wx.setStorageSync('userInfo', res.userInfo);
                         // this.globalData.userInfo = res.userInfo
                         // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                        that.wxadd();
                         // 所以此处加入 callback 以防止这种情况
                         if (that.userInfoReadyCallback) {
                           that.userInfoReadyCallback(res);
@@ -247,48 +245,29 @@ var appId = 'wxb31c921feae5104b';var _default =
                     wx.reLaunch({
                       url: '../index/index' });
 
-                  } else {
-                    console.log("呵呵");
+                  } else if (res.authSetting['scope.userInfo'] && !flag) {
+                    wx.getUserInfo({
+                      success: function success(res) {
+                        console.log(res);
+                        console.log("地址");
+                        // 可以将 res 发送给后台解码出 unionId
+                        wx.setStorageSync('userInfo', res.userInfo);
+                        // this.globalData.userInfo = res.userInfo
+                        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+                        // 所以此处加入 callback 以防止这种情况
+                        if (that.userInfoReadyCallback) {
+                          that.userInfoReadyCallback(res);
+                        }
+                      } });
+
+                    wx.reLaunch({
+                      url: '../getPhone/getPhone' });
+
                   }
                 } });
 
             } });
 
-        } });
-
-    },
-    onGetPhoneNumber: function onGetPhoneNumber(e) {
-
-      var iv = e.detail.iv.toString();
-      var sessionKey = uni.getStorageSync('session_key');
-      var pc = new WXBizDataCrypt(appId, sessionKey);
-      var data = pc.decryptData(e.detail.encryptedData, iv);
-      console.log('解密后 data: ', data);
-    },
-    wxadd: function wxadd() {
-      var nickName = uni.getStorageSync('userInfo').nickName;
-      var picture = uni.getStorageSync('userInfo').avatarUrl;
-      var phone = "11011011011";
-      var wxProvince = uni.getStorageSync('userInfo').province;
-      var wxCity = uni.getStorageSync('userInfo').city;
-      var wxOpenId = uni.getStorageSync('openid');
-      uni.request({
-        url: "http://118.178.89.161:9999/wechat/add",
-        method: 'POST',
-        header: {
-          "Content-Type": "application/json" },
-
-        data: _defineProperty({
-          nickName: nickName,
-          picture: picture,
-          phone: phone,
-          wxProvince: wxProvince,
-          wxCity: wxCity,
-          wxOpenId: wxOpenId }, "picture",
-        picture),
-
-        success: function success(res) {
-          console.log(res);
         } });
 
     } } };exports.default = _default;

@@ -131,11 +131,14 @@
 	}
 	.top_text{
 		width: 210rpx;
-		white-space: nowrap;
 		font-size: 36rpx;
 		color: #333333;
 		font-weight: 900;
 		text-align: center;
+		word-break:keep-all;           /* 不换行 */
+		white-space:nowrap;          /* 不换行 */
+		overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+		text-overflow:ellipsis;
 	}
 	.text{
 		font-size: 20rpx;

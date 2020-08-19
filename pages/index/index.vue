@@ -16,8 +16,9 @@
 				<image class="img" src="../../static/images/kuangjiabeijing.png" mode="scaleToFill"></image>
 				<image class="img_bar" src="../../static/images/gengduoxuanze.png" @click="toChoose" mode="widthFix"></image>
 				<!-- <image class="jiantou" src="" mode=""></image> -->
-				<lv-select class="mSearch" style="position: absolute; top:88rpx; display: flex; justify-content: space-between; left: 140rpx;" @handleSearch="handleSearch" @change="change" placeholder="请输入信息" :infoList="infoList"
-				 :showValue="showValue" :isShowSelect="false"  v-model="searchValue" :loading="loading" type="primary" :uniShadow="true"></lv-select>
+				<lv-select class="mSearch" style="position: absolute; top:88rpx; display: flex; justify-content: space-between; left: 140rpx;"
+				 @handleSearch="handleSearch" @change="change" placeholder="请输入信息" :infoList="infoList" :showValue="showValue"
+				 :isShowSelect="false" v-model="searchValue" :loading="loading" type="primary" :uniShadow="true"></lv-select>
 			</view>
 			<view class="content_bar">
 				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrED3l.bnRL6WL0YDfWJMX1IjCgDhhyZXEBVIO.5uVJLmNvqA4V*.C3LheVOH634bHdMz6dTqykmF30AI8UJKES1w!/b&bo=xwIzAgAAAAADF8Y!&rf=viewer_4"
@@ -74,7 +75,7 @@
 				infoList: []
 			}
 		},
-	onLoad() {
+		onLoad() {
 			this.login()
 			this.getbannerlist()
 			this.getnews()
@@ -84,7 +85,7 @@
 
 		},
 		methods: {
-			containerTap: function(res) {  //动画 待加
+			containerTap: function(res) { //动画 待加
 				console.log("执行一次")
 				var that = this
 				var x = res.touches[0].pageX;
@@ -101,14 +102,14 @@
 				}, 350)
 				// },0)
 			},
-			handleSearch() {  //去搜索
-			if(this.searchValue=="") {
-				uni.showToast({
-					title:"请输入公司名称",
-					icon:'none'
-				})
-				return false
-			}
+			handleSearch() { //去搜索
+				if (this.searchValue == "") {
+					uni.showToast({
+						title: "请输入公司名称",
+						icon: 'none'
+					})
+					return false
+				}
 				uni.navigateTo({
 					url: `../moreChoose/moreChoose?val=${this.searchValue}`
 				})
@@ -134,7 +135,7 @@
 						} else {
 							uni.showToast({
 								title: res.data.message,
-								icon:'none'
+								icon: 'none'
 							})
 						}
 					},
@@ -173,12 +174,14 @@
 							method: 'GET',
 							url: "https://api.weixin.qq.com/sns/jscode2session",
 							data: {
-								appid: 'wxb94d23ca3a2c2c18',
-								secret: '16b50d187249cb8fa8abc4d70c2e7ba2',
+								appid: 'wxb31c921feae5104b',
+								secret: '3d5c7804f02111884dec198030d4c394',
 								js_code: code,
 								grant_type: 'authorization_code'
 							},
 							success(res) {
+								console.log(res)
+								console.log('appid')
 								uni.setStorageSync("openid", res.data.openid)
 								that.getuserInfo()
 							}
@@ -187,14 +190,25 @@
 				})
 			},
 			getuserInfo() { //授权
+			var flag=uni.getStorageSync('flag')
+			var userInfo=uni.getStorageSync('userInfo')
 				wx.getSetting({
 					success: res => {
 						if (res.authSetting['scope.userInfo']) {
 							// 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-							console.log("已授权")
+							if(!flag&&!userInfo) {
+								uni.redirectTo({
+									url:'../login/login'
+								})
+							}
+							if(!flag&&userInfo) {
+								uni.redirectTo({
+									url:'../getPhone/getPhone'
+								})
+							}
 						} else {
 							console.log("未授权")
-							// 未授权，跳转到授权页面
+							// 未授权，跳转到授权页面							
 							wx.redirectTo({
 								url: "../login/login"
 							})
@@ -259,9 +273,11 @@
 					},
 					data: {},
 					success(res) {
+						console.log(res)
+						console.log("滚动")
 						uni.hideLoading()
 						if (res.data.status == 200) {
-							if (res.data.data[0].isEnable == 0 && res.data.data[0].rollContent !== '') {
+							if (res.data.data.length!==0) {
 								that.rollContent = res.data.data[0].rollContent
 							} else {
 								that.flag = false
@@ -269,7 +285,7 @@
 						} else {
 							uni.showToast({
 								title: res.data.message,
-								icon:'none'
+								icon: 'none'
 							})
 						}
 					}

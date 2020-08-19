@@ -15,7 +15,8 @@
     "pages/newdetails/newdetails",
     "pages/robt/robt",
     "pages/webview/webview",
-    "pages/newlist/newlist"
+    "pages/newlist/newlist",
+    "pages/getPhone/getPhone"
   ],
   "subPackages": [],
   "window": {

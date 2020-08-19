@@ -50,8 +50,8 @@
   width: 100%;
 }
 .text_detail.data-v-3e159eb4 {
-  font-size: 20rpx;
-  color: #333333;
+  font-size: 24rpx;
+  color: #666666;
   font-weight: 900;
   margin-top: 6rpx;
   display: -webkit-box;
@@ -96,12 +96,14 @@
 }
 .main_left view.data-v-3e159eb4 {
   margin-top: 36rpx;
+  color: #666666;
 }
 .main_right.data-v-3e159eb4 {
   float: right;
 }
 .main_right view.data-v-3e159eb4 {
   margin-top: 36rpx;
+  color: #666666;
 }
 .main.data-v-3e159eb4 {
   padding-left: 60rpx;
@@ -116,6 +118,13 @@
   color: #CA0000;
   font-size: 18rpx;
   text-align: center;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
 }
 .titles.data-v-3e159eb4 {
   height: 96rpx;

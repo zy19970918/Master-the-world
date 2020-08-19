@@ -18,7 +18,6 @@
 				text: "",
 				text_title:'',
 				newsid: "" //新闻详情页的id
-
 			}
 		},
 		onLoad(options) {
@@ -93,7 +92,6 @@
 		color: #333333;
 		letter-spacing: 1rpx;
 		margin-top: 50rpx;
-
 		.p_class {
 			line-height: 46rpx;
 			text-indent: 60rpx;

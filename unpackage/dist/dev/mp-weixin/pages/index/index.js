@@ -201,6 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 {
   data: function data() {
     return {
@@ -317,12 +318,14 @@ __webpack_require__.r(__webpack_exports__);
             method: 'GET',
             url: "https://api.weixin.qq.com/sns/jscode2session",
             data: {
-              appid: 'wxb94d23ca3a2c2c18',
-              secret: '16b50d187249cb8fa8abc4d70c2e7ba2',
+              appid: 'wxb31c921feae5104b',
+              secret: '3d5c7804f02111884dec198030d4c394',
               js_code: code,
               grant_type: 'authorization_code' },
 
             success: function success(res) {
+              console.log(res);
+              console.log('appid');
               uni.setStorageSync("openid", res.data.openid);
               that.getuserInfo();
             } });
@@ -331,14 +334,25 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     getuserInfo: function getuserInfo() {//授权
+      var flag = uni.getStorageSync('flag');
+      var userInfo = uni.getStorageSync('userInfo');
       wx.getSetting({
         success: function success(res) {
           if (res.authSetting['scope.userInfo']) {
             // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-            console.log("已授权");
+            if (!flag && !userInfo) {
+              uni.redirectTo({
+                url: '../login/login' });
+
+            }
+            if (!flag && userInfo) {
+              uni.redirectTo({
+                url: '../getPhone/getPhone' });
+
+            }
           } else {
             console.log("未授权");
-            // 未授权，跳转到授权页面
+            // 未授权，跳转到授权页面							
             wx.redirectTo({
               url: "../login/login" });
 
@@ -403,9 +417,11 @@ __webpack_require__.r(__webpack_exports__);
 
         data: {},
         success: function success(res) {
+          console.log(res);
+          console.log("滚动");
           uni.hideLoading();
           if (res.data.status == 200) {
-            if (res.data.data[0].isEnable == 0 && res.data.data[0].rollContent !== '') {
+            if (res.data.data.length !== 0) {
               that.rollContent = res.data.data[0].rollContent;
             } else {
               that.flag = false;

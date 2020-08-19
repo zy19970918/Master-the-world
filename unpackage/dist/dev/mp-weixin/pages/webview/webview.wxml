@@ -1,1 +1,1 @@
-<view class="container"><block wx:if="{{img_chat!=='null'}}"><view class="wechat"><image class="felx_img" src="{{link_url}}" mode></image><view class="text_bar">扫码进入微信小程序</view></view></block><block wx:else><web-view src="{{link_url}}"></web-view></block></view>
+<view class="container"><block wx:if="{{img_chat!=='null'}}"><view class="wechat"><image class="felx_img" src="{{img_chat}}" mode></image><view class="text_bar">扫码进入微信小程序</view></view></block><block wx:else><web-view src="{{link_url}}"></web-view></block></view>

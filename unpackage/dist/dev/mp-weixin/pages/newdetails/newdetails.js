@@ -151,7 +151,6 @@ var _default =
       text_title: '',
       newsid: "" //新闻详情页的id
     };
-
   },
   onLoad: function onLoad(options) {
     console.log(options);

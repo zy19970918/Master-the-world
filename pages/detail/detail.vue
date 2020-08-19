@@ -5,8 +5,8 @@
 				{{detaileInfo.companyName}}
 			</view>
 			<view class="text_detail">
-				<view class="">代理费:<text>{{detaileInfo.agencyFee}}元/时</text></view>
-				<view class="">管理费方式:<text v-if="detaileInfo.manageFee==0">长期</text><text v-else>一次性</text></view>
+				<view class=""><text style="color:#D24C1F;">代理费:</text><text>{{detaileInfo.agencyFee}}元/时</text></view>
+				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==0">长期</text><text v-else>一次性</text></view>
 			</view>
 			<view class="video">
 				<image src="../../static/images/shipin.png" mode=""></image>
@@ -21,11 +21,11 @@
 				<view class="main">
 					<view class="main_left">
 						<!-- 	<view class="">男女比例:<text>男女不限</text></view> -->
-						<view class=""><text style="color:#D24C1F;">班&ensp;&ensp;&ensp;&ensp;次:</text><text v-if="detaileInfo.workType==0">两班倒</text> <text v-if="detaileInfo.workTypeDay==1">长白班</text></view>
+						<view class=""><text style="color:#D24C1F;">班&ensp;&ensp;&ensp;&ensp;次:</text><text v-if="detaileInfo.workType==1">两班倒</text> <text v-if="detaileInfo.workTypeDay==1">长白班</text></view>
 						<!-- <view class="">食宿费用:<text>500元/月</text></view> -->
-						<view class=""><text style="color: #D24C1F;">工期要求:</text><text v-if="detaileInfo.workRequire==1">短期工</text><text v-if="detaileInfo.workRequireLong==0">长期工</text></view>
+						<view class=""><text style="color: #D24C1F;">工期要求:</text><text v-if="detaileInfo.workRequire==1">短期工</text><text v-if="detaileInfo.workRequireLong==1">长期工</text></view>
 						<view class=""><text style="color:#D24C1F;">少数名族:</text><text>可接受</text></view>
-						<view class=""><text style="color:#D24C1F;">工&ensp;&ensp;&ensp;&ensp;价:</text><text v-if="detaileInfo.studentWorker==0">可接受</text><text v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
+						<view class=""><text style="color:#D24C1F;">工&ensp;&ensp;&ensp;&ensp;价:</text><text>{{detaileInfo.wageFee}}</text></view>
 					</view>
 					<view class="main_right">
 						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>不限</text></view>
@@ -38,12 +38,12 @@
 						<view class="" ><text style="color:#D24C1F;">文化程度:</text><text>{{detaileInfo.agriculture}}</text></view>
 						<!-- <view class="">包&ensp;食&ensp;宿:<text>外宿食宿</text></view> -->
 						<view class=""><text><text style="color:#D24C1F;">夫&ensp;妻&ensp;房:</text></text><text v-if="detaileInfo.spouseHouse==1">无</text><text v-if="detaileInfo.spouseHouseHusband==1">有</text></view>
-						<view class=""><text><text style="color:#D24C1F;">学&ensp;生&ensp;工:</text></text><text v-if="detaileInfo.studentWorker==0">可接受</text><text v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
+						<view class=""><text><text style="color:#D24C1F;">学&ensp;生&ensp;工:</text></text><text v-if="detaileInfo.studentWorker==1">可接受</text><text v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
 					</view>
 				</view>
 				<image class="btn_img" src="../../static/images/xiakuang.png" mode=""></image>
 				<view class="bottom_txt">
-					*本厂由（{{detaileInfo.companyName}}所签一手单，详情请咨询并保留聊天记录。
+					*本厂由<text style="font-weight: 900; font-size: 38rpx;">({{detaileInfo.companyName}})</text>所签一手单，详情请咨询并保留聊天记录。
 				</view>
 				<view class="title titles" @click="tourldetail(detaileInfo.resourceId)">
 					<image src="../../static/images/zixun.png" mode=""></image>
@@ -173,8 +173,8 @@
 	}
 
 	.text_detail {
-		font-size: 20rpx;
-		color: #333333;
+		font-size: 24rpx;
+		color: #666666;
 		font-weight: 900;
 		margin-top: 6rpx;
 		display: flex;
@@ -223,6 +223,7 @@
 
 		view {
 			margin-top: 36rpx;
+			color: #666666;
 		}
 	}
 
@@ -231,6 +232,7 @@
 
 		view {
 			margin-top: 36rpx;
+			color: #666666;
 		}
 	}
 
@@ -249,6 +251,10 @@
 		color: #CA0000;
 		font-size: 18rpx;
 		text-align: center;
+		word-break:keep-all;           /* 不换行 */
+		white-space:nowrap;          /* 不换行 */
+		overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+		text-overflow:ellipsis
 	}
 
 	.titles {

@@ -63,7 +63,11 @@
 			"path": "pages/newlist/newlist",
 			"style": {}
 		}
-	],
+	    ,{
+            "path" : "pages/getPhone/getPhone",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "一手天下",

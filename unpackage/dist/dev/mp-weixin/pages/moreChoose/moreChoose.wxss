@@ -79,10 +79,12 @@
   left: 55rpx;
 }
 .top_text.data-v-62eed7c6 {
-  font-size: 36rpx;
+  font-size: 26rpx;
   color: #333333;
   font-weight: 900;
   text-align: center;
+  margin-top: 10rpx;
+  white-space: nowrap;
 }
 .text.data-v-62eed7c6 {
   font-size: 20rpx;

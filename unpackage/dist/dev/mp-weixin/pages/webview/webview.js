@@ -154,7 +154,7 @@ var _default =
 
 
   onLoad: function onLoad(options) {
-    this.link_url = "http://" + options.link_add;
+    this.link_url = options.link_add;
     this.img_chat = options.img_chat;
   } };exports.default = _default;
 
