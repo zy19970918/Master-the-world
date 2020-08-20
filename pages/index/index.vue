@@ -72,7 +72,8 @@
 				loading: false,
 				showValue: 'name', // 需要显示的数据，必须与infoList中的name对应
 				searchValue: '',
-				infoList: []
+				infoList: [],
+				video: ''
 			}
 		},
 		onLoad() {
@@ -80,6 +81,7 @@
 			this.getbannerlist()
 			this.getnews()
 			this.getGun()
+			this.getVideo()
 		},
 		created() {
 
@@ -117,13 +119,15 @@
 			getbannerlist() { //获取轮播
 				var that = this
 				uni.request({
-					url: "http://118.178.89.161:9999//person/queryBanner",
+					url: "http://118.178.89.161:9999/person/queryBanner",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
 					},
 					data: {},
 					success(res) {
+						console.log(res)
+
 						if (res.data.status == 200) {
 							res.data.data.forEach(item => {
 								if (item.bannerType == 1) {
@@ -141,6 +145,29 @@
 					},
 					fail(eer) {
 						console.log(err)
+					}
+				})
+			},
+			getVideo() {
+				var that = this
+				uni.request({
+					url: "http://118.178.89.161:9999/banner/queryVedio",
+					method: 'POST',
+					header: {
+						"Content-Type": "application/json"
+					},
+					data: {},
+					success(res) {
+						console.log("Lubbock")
+						console.log(res)
+						if (res.data.status == 200) {
+							that.video = res.data.data.pictureAddr
+						} else {
+							uni.showToast({
+								title: '请求失败',
+								icon: 'none'
+							})
+						}
 					}
 				})
 			},
@@ -190,20 +217,20 @@
 				})
 			},
 			getuserInfo() { //授权
-			var flag=uni.getStorageSync('flag')
-			var userInfo=uni.getStorageSync('userInfo')
+				var flag = uni.getStorageSync('flag')
+				var userInfo = uni.getStorageSync('userInfo')
 				wx.getSetting({
 					success: res => {
 						if (res.authSetting['scope.userInfo']) {
 							// 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-							if(!flag&&!userInfo) {
+							if (!flag && !userInfo) {
 								uni.redirectTo({
-									url:'../login/login'
+									url: '../login/login'
 								})
 							}
-							if(!flag&&userInfo) {
+							if (!flag && userInfo) {
 								uni.redirectTo({
-									url:'../getPhone/getPhone'
+									url: '../getPhone/getPhone'
 								})
 							}
 						} else {
@@ -277,7 +304,7 @@
 						console.log("滚动")
 						uni.hideLoading()
 						if (res.data.status == 200) {
-							if (res.data.data.length!==0) {
+							if (res.data.data.length !== 0) {
 								that.rollContent = res.data.data[0].rollContent
 							} else {
 								that.flag = false

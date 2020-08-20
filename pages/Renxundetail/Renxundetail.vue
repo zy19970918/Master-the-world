@@ -91,6 +91,7 @@
 				})  
 			},
 			add() {
+				console.log("呵呵")
 			 wx.openLocation({
 			      latitude:this.detailInfo.lat,
 			      longitude:this.detailInfo.lng,

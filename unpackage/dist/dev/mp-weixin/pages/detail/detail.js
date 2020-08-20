@@ -202,12 +202,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
-      swiperlist: [
-      {
+      swiperlist: [{
         url: 'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315' },
 
       {

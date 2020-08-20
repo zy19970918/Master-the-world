@@ -59,5 +59,6 @@
       "desc": "用于规划路线"
     }
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap3.json"
 }

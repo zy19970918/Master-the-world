@@ -34,7 +34,7 @@
 					<image class="img_one" src="../../static/images/qiyeweixin.png" mode=""></image>
 				</view>
 			</view>
-			<view class="left_img">
+			<view class="left_img" @click="bigimg(content_info.contactQcode)">
 				<image class="img_two" :src="content_info.contactQcode"
 				 mode=""></image>
 			</view>
@@ -50,7 +50,7 @@
 					<image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image>
 				</view>
 			</view>
-			<view class="left_img">
+			<view class="left_img" @click="bigimg(content_info.complaintQcode)">
 				<image class="img_two" :src="content_info.complaintQcode"
 				 mode=""></image>
 			</view>
@@ -66,13 +66,12 @@
 					<image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image>
 				</view>
 			</view>
-			<view class="left_img">
+			<view class="left_img" @click="bigimg(content_info.recommendQcode)">
 				<image class="img_two" :src="content_info.recommendQcode"
 				 mode=""></image>
 			</view>
 		</view>
 		<view class="lianxi">
-
 			<view class="">
 				<image class="img_lx laowu" src="../../static/images/laowujiaoliu.png" mode=""></image>
 				<view class="sec">
@@ -83,7 +82,7 @@
 				</view>
 			</view>
 			<view class="left_img">
-				<image class="img_two" :src="content_info.communicationQcode"
+				<image class="img_two" @click="bigimg(content_info.communicationQcode)"  :src="content_info.communicationQcode"
 				 mode=""></image>
 			</view>
 		</view>
@@ -130,6 +129,14 @@
 							})
 						}
 					}
+				})
+			},
+			bigimg(item) {
+				console.log(item)
+				// const str=items.toString()
+				wx.previewImage({
+					 current:item,// 当前显示图片的http链接
+					urls:[item] // 需要预览的图片http链接列表
 				})
 			},
 			openfile:util.throttle (function(url) { //打开pdf文件

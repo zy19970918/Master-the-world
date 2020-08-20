@@ -221,7 +221,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
 {
@@ -263,6 +262,14 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
           }
         } });
 
+    },
+    bigimg: function bigimg(item) {
+      console.log(item);
+      // const str=items.toString()
+      wx.previewImage({
+        current: item, // 当前显示图片的http链接
+        urls: [item] // 需要预览的图片http链接列表
+      });
     },
     openfile: util.throttle(function (url) {//打开pdf文件
       var str = '';

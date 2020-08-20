@@ -271,7 +271,6 @@
 			},
 			//菜单开关
 			togglePage(index) {
-				console.log(index)
 				if (index == this.showPage) {
 					this.hidePageLayer(true);
 					this.hideMask();

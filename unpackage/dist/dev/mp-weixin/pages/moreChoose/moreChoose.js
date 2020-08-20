@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   simpleAddress: function() {
-    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 338))
+    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 191))
   }
 }
 var render = function() {
@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 338));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 348));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
+var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 191));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 201));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
 var _default = {
   data: function data() {
     return {
@@ -273,41 +273,25 @@ var _default = {
         arrAge.forEach(function (item, index) {
           console.log(index);
           if (item == "2") {
-            ageOne = 1;
-          } else {
-            ageOne = 0;
+            ageThree = 1;
           }
           if (item == "1") {
             ageTwo = 1;
-          } else {
-            ageTwo = 0;
           }
           if (item == "0") {
-            ageThree = 1;
-          } else {
-            ageThree = 0;
+            ageOne = 1;
           }
         });
 
         var sex;
-        var sexMan;
         var sexWoman;
         var sexArr = that.case.value[0][1];
         sexArr.forEach(function (item) {
           if (item == "0") {
-            sexMan = 1;
-          } else {
-            sexMan = 0;
+            sex = 1;
           }
           if (item == "1") {
             sexWoman = 1;
-          } else {
-            sexWoman = 0;
-          }
-          if (item == "2") {
-            sex = 1;
-          } else {
-            sex = 0;
           }
         });
         var manageFee;
@@ -316,13 +300,9 @@ var _default = {
         Feearr.forEach(function (item) {
           if (item == "0") {
             manageFee = 1;
-          } else {
-            manageFee = 0;
           }
           if (item = "1") {
             manageFeeOne = 1;
-          } else {
-            manageFeeOne = 0;
           }
         });
         var workType;
@@ -331,13 +311,9 @@ var _default = {
         workarr.forEach(function (item) {
           if (item == 0) {
             workType = 1;
-          } else {
-            workType = 0;
           }
           if (item == 1) {
             workTypeDay = 1;
-          } else {
-            workTypeDay = 0;
           }
         });
         var spouseHouse;
@@ -346,13 +322,9 @@ var _default = {
         spouseArr.forEach(function (item) {
           if (item == 0) {
             spouseHouse = 1;
-          } else {
-            spouseHouse = 0;
           }
           if (item == 1) {
             spouseHouseHusband = 1;
-          } else {
-            spouseHouseHusband = 0;
           }
         });
         var workRequire;
@@ -361,13 +333,9 @@ var _default = {
         workAyy.forEach(function (item) {
           if (item == 0) {
             workRequireLong = 1;
-          } else {
-            workRequireLong = 0;
           }
           if (item == 1) {
             workRequire = 1;
-          } else {
-            workRequire = 0;
           }
         });
         var studentWorker;
@@ -376,13 +344,9 @@ var _default = {
         studebtArr.forEach(function (item) {
           if (item == 0) {
             studentWorker = 1;
-          } else {
-            studentWorker = 0;
           }
           if (item == 1) {
             studentNotWorker = 1;
-          } else {
-            studentNotWorker = 0;
           }
         });
         var nationals;
@@ -391,13 +355,9 @@ var _default = {
         natArry.forEach(function (item) {
           if (item == 0) {
             nationals = 1;
-          } else {
-            nationals = 0;
           }
           if (item == 1) {
             nationalsNot = 1;
-          } else {
-            nationalsNot = 0;
           }
         });
         uni.showLoading({
@@ -414,7 +374,6 @@ var _default = {
             ageTwo: ageTwo,
             ageThree: ageThree,
             sex: sex,
-            sexMan: sexMan,
             sexWoman: sexWoman,
             manageFee: manageFee,
             manageFeeOne: manageFeeOne,
@@ -495,63 +454,45 @@ var _default = {
           return false;
         }
         var arry = e.value[0][1].toString();
+        var arrAge = e.value[0][0];
         var ageOne;
         var ageTwo;
         var ageThree;
-        var arrAge = e.value[0][0];
         arrAge.forEach(function (item, index) {
-          console.log(index);
-          if (item == "2") {
+          if (item == 0) {
             ageOne = 1;
-          } else {
-            ageOne = 0;
           }
-          if (item == "1") {
+          console.log(ageOne);
+          if (item == 1) {
             ageTwo = 1;
-          } else {
-            ageTwo = 0;
           }
-          if (item == "0") {
+          if (item == 2) {
             ageThree = 1;
-          } else {
-            ageThree = 0;
           }
         });
-
         var sex;
-        var sexMan;
         var sexWoman;
         var sexArr = e.value[0][1];
         sexArr.forEach(function (item) {
           if (item == "0") {
-            sexMan = 1;
-          } else {
-            sexMan = 0;
+            sex = 1;
           }
           if (item == "1") {
             sexWoman = 1;
-          } else {
-            sexWoman = 0;
-          }
-          if (item == "2") {
-            sex = 1;
-          } else {
-            sex = 0;
           }
         });
         var manageFee;
         var manageFeeOne;
         var Feearr = e.value[0][2];
+        console.log(Feearr);
         Feearr.forEach(function (item) {
           if (item == "0") {
             manageFee = 1;
-          } else {
-            manageFee = 0;
+            console.log(manageFee);
           }
-          if (item = "1") {
+          if (item == "1") {
             manageFeeOne = 1;
-          } else {
-            manageFeeOne = 0;
+            console.log(manageFeeOne);
           }
         });
         var workType;
@@ -560,13 +501,9 @@ var _default = {
         workarr.forEach(function (item) {
           if (item == 0) {
             workType = 1;
-          } else {
-            workType = 0;
           }
           if (item == 1) {
             workTypeDay = 1;
-          } else {
-            workTypeDay = 0;
           }
         });
         var spouseHouse;
@@ -575,13 +512,9 @@ var _default = {
         spouseArr.forEach(function (item) {
           if (item == 0) {
             spouseHouse = 1;
-          } else {
-            spouseHouse = 0;
           }
           if (item == 1) {
             spouseHouseHusband = 1;
-          } else {
-            spouseHouseHusband = 0;
           }
         });
         var workRequire;
@@ -590,13 +523,9 @@ var _default = {
         workAyy.forEach(function (item) {
           if (item == 0) {
             workRequireLong = 1;
-          } else {
-            workRequireLong = 0;
           }
           if (item == 1) {
             workRequire = 1;
-          } else {
-            workRequire = 0;
           }
         });
         var studentWorker;
@@ -605,13 +534,9 @@ var _default = {
         studebtArr.forEach(function (item) {
           if (item == 0) {
             studentWorker = 1;
-          } else {
-            studentWorker = 0;
           }
           if (item == 1) {
             studentNotWorker = 1;
-          } else {
-            studentNotWorker = 0;
           }
         });
         var nationals;
@@ -620,13 +545,9 @@ var _default = {
         natArry.forEach(function (item) {
           if (item == 0) {
             nationals = 1;
-          } else {
-            nationals = 0;
           }
           if (item == 1) {
             nationalsNot = 1;
-          } else {
-            nationalsNot = 0;
           }
         });
         uni.showLoading({
@@ -689,19 +610,13 @@ var _default = {
         arrAge.forEach(function (item, index) {
           console.log(index);
           if (item == "2") {
-            ageOne = 1;
-          } else {
-            ageOne = 0;
+            ageThree = 1;
           }
           if (item == "1") {
             ageTwo = 1;
-          } else {
-            ageTwo = 0;
           }
           if (item == "0") {
-            ageThree = 1;
-          } else {
-            ageThree = 0;
+            ageOne = 1;
           }
         });
 
@@ -712,18 +627,12 @@ var _default = {
         sexArr.forEach(function (item) {
           if (item == "0") {
             sexMan = 1;
-          } else {
-            sexMan = 0;
           }
           if (item == "1") {
             sexWoman = 1;
-          } else {
-            sexWoman = 0;
           }
           if (item == "2") {
             sex = 1;
-          } else {
-            sex = 0;
           }
         });
         var manageFee;
@@ -732,13 +641,9 @@ var _default = {
         Feearr.forEach(function (item) {
           if (item == "0") {
             manageFee = 1;
-          } else {
-            manageFee = 0;
           }
-          if (item = "1") {
+          if (item == "1") {
             manageFeeOne = 1;
-          } else {
-            manageFeeOne = 0;
           }
         });
         var workType;
@@ -747,13 +652,9 @@ var _default = {
         workarr.forEach(function (item) {
           if (item == 0) {
             workType = 1;
-          } else {
-            workType = 0;
           }
           if (item == 1) {
             workTypeDay = 1;
-          } else {
-            workTypeDay = 0;
           }
         });
         var spouseHouse;
@@ -762,13 +663,9 @@ var _default = {
         spouseArr.forEach(function (item) {
           if (item == 0) {
             spouseHouse = 1;
-          } else {
-            spouseHouse = 0;
           }
           if (item == 1) {
             spouseHouseHusband = 1;
-          } else {
-            spouseHouseHusband = 0;
           }
         });
         var workRequire;
@@ -777,13 +674,9 @@ var _default = {
         workAyy.forEach(function (item) {
           if (item == 0) {
             workRequireLong = 1;
-          } else {
-            workRequireLong = 0;
           }
           if (item == 1) {
             workRequire = 1;
-          } else {
-            workRequire = 0;
           }
         });
         var studentWorker;
@@ -792,13 +685,9 @@ var _default = {
         studebtArr.forEach(function (item) {
           if (item == 0) {
             studentWorker = 1;
-          } else {
-            studentWorker = 0;
           }
           if (item == 1) {
             studentNotWorker = 1;
-          } else {
-            studentNotWorker = 0;
           }
         });
         var nationals;
@@ -807,13 +696,9 @@ var _default = {
         natArry.forEach(function (item) {
           if (item == 0) {
             nationals = 1;
-          } else {
-            nationals = 0;
           }
           if (item == 1) {
             nationalsNot = 1;
-          } else {
-            nationalsNot = 0;
           }
         });
         uni.showLoading({
@@ -830,7 +715,6 @@ var _default = {
             ageTwo: ageTwo,
             ageThree: ageThree,
             sex: sex,
-            sexMan: sexMan,
             sexWoman: sexWoman,
             manageFee: manageFee,
             manageFeeOne: manageFeeOne,

@@ -22,7 +22,7 @@
 					<view class="top_text" style="width: 208rpx;word-break:keep-all; white-space:nowrap;overflow:hidden; text-overflow:ellipsis;">{{item.companyName}}</view>
 					<view class="text">代理费:<text class="text_defult">{{item.agencyFee}}元/天</text></view>
 					<view class="" v-if="item.ageOne==1&&item.ageTwo==0&&item.ageThree==0">
-						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18岁-50岁</text></view>
+						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">18岁-35岁</text></view>
 					</view>
 					<view class="" v-if="item.ageOne==0&&item.ageTwo==1&&item.ageThree==0">
 						<view class="text">年&ensp;&ensp;龄:<text class="text_defult">35岁-50岁</text></view>
@@ -137,42 +137,26 @@
 					arrAge.forEach((item, index) => {
 						console.log(index)
 						if (item == "2") {
-							ageOne = 1
-						} else {
-							ageOne = 0
+							ageThree = 1
 						}
 						if (item == "1") {
 							ageTwo = 1
-						} else {
-							ageTwo = 0
 						}
 						if (item == "0") {
-							ageThree = 1
-						} else {
-							ageThree = 0
+							 ageOne= 1
 						}
 					})
 
 					var sex
-					var sexMan
 					var sexWoman
 					var sexArr = that.case.value[0][1]
 					sexArr.forEach(item => {
 						if (item == "0") {
-							sexMan = 1
-						} else {
-							sexMan = 0
-						}
+							sex = 1
+						} 
 						if (item == "1") {
 							sexWoman = 1
-						} else {
-							sexWoman = 0
-						}
-						if (item == "2") {
-							sex = 1
-						} else {
-							sex = 0
-						}
+						} 
 					})
 					var manageFee
 					var manageFeeOne
@@ -180,13 +164,9 @@
 					Feearr.forEach(item => {
 						if (item == "0") {
 							manageFee = 1
-						} else {
-							manageFee = 0
 						}
 						if (item = "1") {
 							manageFeeOne = 1
-						} else {
-							manageFeeOne = 0
 						}
 					})
 					var workType
@@ -195,13 +175,9 @@
 					workarr.forEach(item => {
 						if (item == 0) {
 							workType = 1
-						} else {
-							workType = 0
 						}
 						if (item == 1) {
 							workTypeDay = 1
-						} else {
-							workTypeDay = 0
 						}
 					})
 					var spouseHouse
@@ -210,13 +186,9 @@
 					spouseArr.forEach(item => {
 						if (item == 0) {
 							spouseHouse = 1
-						} else {
-							spouseHouse = 0
 						}
 						if (item == 1) {
 							spouseHouseHusband = 1
-						} else {
-							spouseHouseHusband = 0
 						}
 					})
 					var workRequire
@@ -225,14 +197,10 @@
 					workAyy.forEach(item => {
 						if (item == 0) {
 							workRequireLong = 1
-						} else {
-							workRequireLong = 0
-						}
+						} 
 						if (item == 1) {
 							workRequire = 1
-						} else {
-							workRequire = 0
-						}
+						} 
 					})
 					var studentWorker
 					var studentNotWorker
@@ -240,13 +208,9 @@
 					studebtArr.forEach(item => {
 						if (item == 0) {
 							studentWorker = 1
-						} else {
-							studentWorker = 0
-						}
+						} 
 						if (item == 1) {
 							studentNotWorker = 1
-						} else {
-							studentNotWorker = 0
 						}
 					})
 					var nationals
@@ -255,13 +219,9 @@
 					natArry.forEach(item => {
 						if (item == 0) {
 							nationals = 1
-						} else {
-							nationals = 0
 						}
 						if (item == 1) {
 							nationalsNot = 1
-						} else {
-							nationalsNot = 0
 						}
 					})
 					uni.showLoading({
@@ -278,7 +238,6 @@
 							ageTwo,
 							ageThree,
 							sex,
-							sexMan,
 							sexWoman,
 							manageFee,
 							manageFeeOne,
@@ -359,64 +318,46 @@
 						return false
 					}
 					var arry = e.value[0][1].toString()
+					var arrAge = e.value[0][0]
 					var ageOne
 					var ageTwo
 					var ageThree
-					var arrAge = e.value[0][0]
 					arrAge.forEach((item, index) => {
-						console.log(index)
-						if (item == "2") {
+						if (item == 0) {
 							ageOne = 1
-						} else {
-							ageOne = 0
-						}
-						if (item == "1") {
+						} 
+						console.log(ageOne)
+						if (item == 1) {
 							ageTwo = 1
-						} else {
-							ageTwo = 0
-						}
-						if (item == "0") {
-							ageThree = 1
-						} else {
-							ageThree = 0
-						}
+						} 
+						if (item == 2) {
+							ageThree =1
+						} 
 					})
-
 					var sex
-					var sexMan
 					var sexWoman
 					var sexArr = e.value[0][1]
 					sexArr.forEach(item => {
 						if (item == "0") {
-							sexMan = 1
-						} else {
-							sexMan = 0
-						}
+							sex = 1
+						} 
 						if (item == "1") {
 							sexWoman = 1
-						} else {
-							sexWoman = 0
-						}
-						if (item == "2") {
-							sex = 1
-						} else {
-							sex = 0
-						}
+						} 
 					})
 					var manageFee
 					var manageFeeOne
 					var Feearr = e.value[0][2]
+					console.log(Feearr)
 					Feearr.forEach(item => {
 						if (item == "0") {
 							manageFee = 1
-						} else {
-							manageFee = 0
+							console.log(manageFee)
 						}
-						if (item = "1") {
+						if (item == "1") {
 							manageFeeOne = 1
-						} else {
-							manageFeeOne = 0
-						}
+							console.log(manageFeeOne)
+						} 
 					})
 					var workType
 					var workTypeDay
@@ -424,14 +365,10 @@
 					workarr.forEach(item => {
 						if (item == 0) {
 							workType = 1
-						} else {
-							workType = 0
-						}
+						} 
 						if (item == 1) {
 							workTypeDay = 1
-						} else {
-							workTypeDay = 0
-						}
+						} 
 					})
 					var spouseHouse
 					var spouseHouseHusband
@@ -439,14 +376,10 @@
 					spouseArr.forEach(item => {
 						if (item == 0) {
 							spouseHouse = 1
-						} else {
-							spouseHouse = 0
 						}
 						if (item == 1) {
 							spouseHouseHusband = 1
-						} else {
-							spouseHouseHusband = 0
-						}
+						} 
 					})
 					var workRequire
 					var workRequireLong
@@ -454,14 +387,10 @@
 					workAyy.forEach(item => {
 						if (item == 0) {
 							workRequireLong = 1
-						} else {
-							workRequireLong = 0
-						}
+						} 
 						if (item == 1) {
 							workRequire = 1
-						} else {
-							workRequire = 0
-						}
+						} 
 					})
 					var studentWorker
 					var studentNotWorker
@@ -469,14 +398,10 @@
 					studebtArr.forEach(item => {
 						if (item == 0) {
 							studentWorker = 1
-						} else {
-							studentWorker = 0
-						}
+						} 
 						if (item == 1) {
 							studentNotWorker = 1
-						} else {
-							studentNotWorker = 0
-						}
+						} 
 					})
 					var nationals
 					var nationalsNot
@@ -484,13 +409,9 @@
 					natArry.forEach(item => {
 						if (item == 0) {
 							nationals = 1
-						} else {
-							nationals = 0
 						}
 						if (item == 1) {
 							nationalsNot = 1
-						} else {
-							nationalsNot = 0
 						}
 					})
 					uni.showLoading({
@@ -553,20 +474,14 @@
 					arrAge.forEach((item, index) => {
 						console.log(index)
 						if (item == "2") {
-							ageOne = 1
-						} else {
-							ageOne = 0
-						}
+							ageThree = 1
+						} 
 						if (item == "1") {
 							ageTwo = 1
-						} else {
-							ageTwo = 0
-						}
+						} 
 						if (item == "0") {
-							ageThree = 1
-						} else {
-							ageThree = 0
-						}
+							 ageOne= 1
+						} 
 					})
 
 					var sex
@@ -576,19 +491,13 @@
 					sexArr.forEach(item => {
 						if (item == "0") {
 							sexMan = 1
-						} else {
-							sexMan = 0
-						}
+						} 
 						if (item == "1") {
 							sexWoman = 1
-						} else {
-							sexWoman = 0
-						}
+						} 
 						if (item == "2") {
 							sex = 1
-						} else {
-							sex = 0
-						}
+						} 
 					})
 					var manageFee
 					var manageFeeOne
@@ -596,14 +505,10 @@
 					Feearr.forEach(item => {
 						if (item == "0") {
 							manageFee = 1
-						} else {
-							manageFee = 0
-						}
-						if (item = "1") {
+						} 
+						if (item == "1") {
 							manageFeeOne = 1
-						} else {
-							manageFeeOne = 0
-						}
+						} 
 					})
 					var workType
 					var workTypeDay
@@ -611,13 +516,9 @@
 					workarr.forEach(item => {
 						if (item == 0) {
 							workType = 1
-						} else {
-							workType = 0
-						}
+						} 
 						if (item == 1) {
 							workTypeDay = 1
-						} else {
-							workTypeDay = 0
 						}
 					})
 					var spouseHouse
@@ -626,14 +527,10 @@
 					spouseArr.forEach(item => {
 						if (item == 0) {
 							spouseHouse = 1
-						} else {
-							spouseHouse = 0
-						}
+						} 
 						if (item == 1) {
 							spouseHouseHusband = 1
-						} else {
-							spouseHouseHusband = 0
-						}
+						} 
 					})
 					var workRequire
 					var workRequireLong
@@ -641,13 +538,9 @@
 					workAyy.forEach(item => {
 						if (item == 0) {
 							workRequireLong = 1
-						} else {
-							workRequireLong = 0
-						}
+						} 
 						if (item == 1) {
 							workRequire = 1
-						} else {
-							workRequire = 0
 						}
 					})
 					var studentWorker
@@ -656,13 +549,9 @@
 					studebtArr.forEach(item => {
 						if (item == 0) {
 							studentWorker = 1
-						} else {
-							studentWorker = 0
-						}
+						} 
 						if (item == 1) {
 							studentNotWorker = 1
-						} else {
-							studentNotWorker = 0
 						}
 					})
 					var nationals
@@ -671,13 +560,9 @@
 					natArry.forEach(item => {
 						if (item == 0) {
 							nationals = 1
-						} else {
-							nationals = 0
 						}
 						if (item == 1) {
 							nationalsNot = 1
-						} else {
-							nationalsNot = 0
 						}
 					})
 					uni.showLoading({
@@ -694,7 +579,6 @@
 							ageTwo,
 							ageThree,
 							sex,
-							sexMan,
 							sexWoman,
 							manageFee,
 							manageFeeOne,

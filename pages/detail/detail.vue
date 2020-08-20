@@ -1,12 +1,13 @@
 <template>
 	<view class="content">
 		<view class="topbar">
-			<view class="title" style="font-size: 38rpx; width: auto;">
+			<view class="title" style="font-size: 38rpx; width: auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
 				{{detaileInfo.companyName}}
 			</view>
 			<view class="text_detail">
 				<view class=""><text style="color:#D24C1F;">代理费:</text><text>{{detaileInfo.agencyFee}}元/时</text></view>
-				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==0">长期</text><text v-else>一次性</text></view>
+				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==0">长期</text><text
+					 v-else>一次性</text></view>
 			</view>
 			<view class="video">
 				<image src="../../static/images/shipin.png" mode=""></image>
@@ -21,10 +22,12 @@
 				<view class="main">
 					<view class="main_left">
 						<!-- 	<view class="">男女比例:<text>男女不限</text></view> -->
-						<view class=""><text style="color:#D24C1F;">班&ensp;&ensp;&ensp;&ensp;次:</text><text v-if="detaileInfo.workType==1">两班倒</text> <text v-if="detaileInfo.workTypeDay==1">长白班</text></view>
+						<view class=""><text style="color:#D24C1F;">班&ensp;&ensp;&ensp;&ensp;次:</text><text v-if="detaileInfo.workType==1">两班倒</text>
+							<text v-if="detaileInfo.workTypeDay==1">长白班</text></view>
 						<!-- <view class="">食宿费用:<text>500元/月</text></view> -->
-						<view class=""><text style="color: #D24C1F;">工期要求:</text><text v-if="detaileInfo.workRequire==1">短期工</text><text v-if="detaileInfo.workRequireLong==1">长期工</text></view>
-						<view class=""><text style="color:#D24C1F;">少数名族:</text><text>可接受</text></view>
+						<view class=""><text style="color: #D24C1F;">工期要求:</text><text v-if="detaileInfo.workRequire==1">短期工</text><text
+							 v-if="detaileInfo.workRequireLong==1">长期工</text></view>
+						<view class=""><text style="color:#D24C1F;">少数名族:</text><text v-if="detaileInfo.nationalsNot==1">不可接受</text><text v-if="detaileInfo.nationals==1">可接受</text></view>
 						<view class=""><text style="color:#D24C1F;">工&ensp;&ensp;&ensp;&ensp;价:</text><text>{{detaileInfo.wageFee}}</text></view>
 					</view>
 					<view class="main_right">
@@ -35,10 +38,12 @@
 						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==0"><text style="color:#D24C1F;">年龄要求:</text><text>18-50岁</text></view>
 						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==0&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>18-35岁&ensp;&ensp;50岁以上</text></view>
 						<view class="" v-if="detaileInfo.ageOne==0&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>35岁以上</text></view>
-						<view class="" ><text style="color:#D24C1F;">文化程度:</text><text>{{detaileInfo.agriculture}}</text></view>
+						<view class=""><text style="color:#D24C1F;">文化程度:</text><text>{{detaileInfo.agriculture}}</text></view>
 						<!-- <view class="">包&ensp;食&ensp;宿:<text>外宿食宿</text></view> -->
-						<view class=""><text><text style="color:#D24C1F;">夫&ensp;妻&ensp;房:</text></text><text v-if="detaileInfo.spouseHouse==1">无</text><text v-if="detaileInfo.spouseHouseHusband==1">有</text></view>
-						<view class=""><text><text style="color:#D24C1F;">学&ensp;生&ensp;工:</text></text><text v-if="detaileInfo.studentWorker==1">可接受</text><text v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
+						<view class=""><text><text style="color:#D24C1F;">夫&ensp;妻&ensp;房:</text></text><text v-if="detaileInfo.spouseHouse==1">无</text><text
+							 v-if="detaileInfo.spouseHouseHusband==1">有</text></view>
+						<view class=""><text><text style="color:#D24C1F;">学&ensp;生&ensp;工:</text></text><text v-if="detaileInfo.studentWorker==1">可接受</text><text
+							 v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
 					</view>
 				</view>
 				<image class="btn_img" src="../../static/images/xiakuang.png" mode=""></image>
@@ -51,19 +56,19 @@
 				<view class="title titles one">
 					<image class="imge_bar" src="../../static/images/gongzuohuangjing.png" mode=""></image>
 				</view>
-				<swiper v-if="detaileInfo.imgAddrs.length<=1" class="swiper" :indicator-dots="false" acceleration  :display-multiple-items="1" :circular="true"  :autoplay="true" :interval="2000"
-				 circular :duration="8000">
+				<swiper v-if="detaileInfo.imgAddrs.length<=1" class="swiper" :indicator-dots="false" acceleration
+				 :display-multiple-items="1" :circular="true" :autoplay="true" :interval="2000" circular :duration="8000">
 					<swiper-item class="swiper_item" v-for="(item,index) in detaileInfo.imgAddrs" :key="index">
 						<image class="swiper_img" :src="item" mode=""></image>
 					</swiper-item>
 
 				</swiper>
-				<swiper v-if="detaileInfo.imgAddrs.length>1" class="swiper" :indicator-dots="false" acceleration  :display-multiple-items="2" :circular="true"  :autoplay="true" :interval="2000"
-				 circular :duration="8000">
+				<swiper v-if="detaileInfo.imgAddrs.length>1" class="swiper" :indicator-dots="false" acceleration
+				 :display-multiple-items="2" :circular="true" :autoplay="true" :interval="2000" circular :duration="8000">
 					<swiper-item class="swiper_item" v-for="(item,index) in detaileInfo.imgAddrs" :key="index">
 						<image class="swiper_img" :src="item" mode=""></image>
 					</swiper-item>
-				
+
 				</swiper>
 			</view>
 		</view>
@@ -74,18 +79,17 @@
 	export default {
 		data() {
 			return {
-				swiperlist: [
-					{
-						url:'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
+				swiperlist: [{
+						url: 'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
 					},
 					{
-						url:'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/4f3c7aabf068ba17fcab87c6c0375122e07b73c9.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
+						url: 'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/4f3c7aabf068ba17fcab87c6c0375122e07b73c9.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
 					},
 					{
-						url:'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
+						url: 'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
 					},
 					{
-						url:'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
+						url: 'https://pic.raolibao.com/881/portal/attachment/35057/2019/12/20/0eed129ecae82f77eb84fe5a5ce573787b222c31.jpg?x-oss-process=image/resize,m_fill,limit_0,w_500,h_315'
 					},
 				],
 				detaileInfo: {},
@@ -251,10 +255,13 @@
 		color: #CA0000;
 		font-size: 18rpx;
 		text-align: center;
-		word-break:keep-all;           /* 不换行 */
-		white-space:nowrap;          /* 不换行 */
-		overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
-		text-overflow:ellipsis
+		word-break: keep-all;
+		/* 不换行 */
+		white-space: nowrap;
+		/* 不换行 */
+		overflow: hidden;
+		/* 内容超出宽度时隐藏超出部分的内容 */
+		text-overflow: ellipsis
 	}
 
 	.titles {

@@ -1,12 +1,12 @@
 <template>
 	<view class="container">
-		<view v-if="img_chat!=='null'" class="wechat">
+		<view v-if="img_chat!==''" class="wechat">
 			<image class="felx_img" :src="img_chat" mode=""></image>
 		<view class="text_bar">
 			扫码进入微信小程序
 		</view>
 		</view>
-	 <web-view v-else  :src="link_url"></web-view>
+	 <web-view :src="link_url"></web-view>
 	</view>
 </template>
 
