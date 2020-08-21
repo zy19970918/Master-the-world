@@ -142,6 +142,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
@@ -154,8 +156,18 @@ var _default =
 
 
   onLoad: function onLoad(options) {
-    this.link_url = options.link_add;
-    this.img_chat = options.img_chat;
+    if (options.link_add && options.img_chat) {
+      this.img_chat = options.img_chat;
+      console.log("执行");
+    }
+    if (options.link_add && !options.img_chat) {
+      this.link_url = options.link_add;
+      console.log("执行2");
+    }
+    if (!options.link_add && options.img_chat) {
+      this.img_chat = options.img_chat;
+      console.log("执行3");
+    }
   } };exports.default = _default;
 
 /***/ }),

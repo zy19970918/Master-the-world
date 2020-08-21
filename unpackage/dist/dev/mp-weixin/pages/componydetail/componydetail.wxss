@@ -47,6 +47,7 @@
   color: #333333;
   font-size: 30rpx;
   font-weight: 600;
+  min-height: 314rpx;
 }
 .swiper_img.data-v-70b3d300 {
   width: 298rpx;

@@ -39,8 +39,8 @@
 			<view class="footer">
 				<image class="footer_img" src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrEOW2Bib7rmuU9yt3T9tzQ1vW5I8s69x4iIjUEKSFeZS2OUq.JWf2aQ8OSEWsbjZNz474LE*voP9E*awNzvqNRM4!/b&bo=xwJAAgAAAAADF7U!&rf=viewer_4"
 				 mode=""></image>
-				<image class="footer_one" :src="Imglist[0].pictureAddr" mode="scaleToFill" @click="torobt"></image>
-				<image class="footer_two" :src="Imglist[1].pictureAddr" mode="scaleToFill" @click="toadurl"></image>
+				<image class="footer_one" :src="hrimg.pictureAddr" mode="scaleToFill" @click="torobt"></image>
+				<image class="footer_two" :src="zhanlv.pictureAddr" mode="scaleToFill" @click="toadurl"></image>
 				<swiper class="bottom_swiper" vertical :autoplay="true" :circular="true" :interval="3000" :duration="1000">
 					<swiper-item v-for="item in newList" :key="item.newsId">
 						<view class="mation" @click="toNewsdtails"><text>{{item.newsTitle}}</text></view>
@@ -66,7 +66,8 @@
 				bannerList: [], //轮播图数据
 				newList: [], //新闻资讯滚动
 				rollContent: "", //滚动信息
-				Imglist: [],
+				hrimg: '',
+				zhanlv: '',
 				rippleStyle: '',
 				falgs: false,
 				loading: false,
@@ -132,8 +133,10 @@
 							res.data.data.forEach(item => {
 								if (item.bannerType == 1) {
 									that.bannerList.push(item)
-								} else {
-									that.Imglist.push(item)
+								} else if (item.bannerType == 2) {
+									that.hrimg = item
+								} else if (item.bannerType == 3) {
+									that.zhanlv = item
 								}
 							})
 						} else {

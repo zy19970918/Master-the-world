@@ -210,7 +210,8 @@ __webpack_require__.r(__webpack_exports__);
       bannerList: [], //轮播图数据
       newList: [], //新闻资讯滚动
       rollContent: "", //滚动信息
-      Imglist: [],
+      hrimg: '',
+      zhanlv: '',
       rippleStyle: '',
       falgs: false,
       loading: false,
@@ -276,8 +277,10 @@ __webpack_require__.r(__webpack_exports__);
             res.data.data.forEach(function (item) {
               if (item.bannerType == 1) {
                 that.bannerList.push(item);
-              } else {
-                that.Imglist.push(item);
+              } else if (item.bannerType == 2) {
+                that.hrimg = item;
+              } else if (item.bannerType == 3) {
+                that.zhanlv = item;
               }
             });
           } else {

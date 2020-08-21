@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<!-- <image src="http://118.178.89.161:8080/uploads/7f023ed2-cd1d-4679-be47-015d983bd7aa-3.jpg" mode=""></image> -->
 		<view class="title">
 			{{swipertyp1.dishonestyName}}
 		</view>
@@ -7,7 +8,7 @@
 			<view class="tip">
 				违约原因
 			</view>
-			<view class="text">
+			<view class="text" style="min-height: 50rpx;">
 				{{swipertyp1.introduct}}
 			</view>
 		</view>
@@ -16,9 +17,15 @@
 				公司资质
 			</view>
 			<view class="text">
-				<swiper class="swiper" :indicator-dots="false" :circular="false"  display-multiple-items="2" :autoplay="false"
+				<swiper class="swiper" :indicator-dots="false" :circular="false" v-if="swipertyp1.imgAddrsOne.length>1" display-multiple-items="2" :autoplay="false"
 				  :duration="8000">
-					<swiper-item class="swiper_item" v-for="(item,index) in swipertyp1.imgAddrs"  @click="bigimg(swipertyp1.imgAddrs,item)" :key="index">
+					<swiper-item class="swiper_item" v-for="(item,index) in swipertyp1.imgAddrsOne"  @click="bigimg(swipertyp1.imgAddrsOne,item)" :key="index">
+						<image class="swiper_img" :src="item" mode="aspectFill"></image>
+					</swiper-item>
+				</swiper>
+				<swiper class="swiper" :indicator-dots="false" :circular="false" v-if="swipertyp1.imgAddrsOne.length<=1"  display-multiple-items="1" :autoplay="false"
+				  :duration="8000">
+					<swiper-item class="swiper_item" v-for="(item,index) in swipertyp1.imgAddrsOne"  @click="bigimg(swipertyp1.imgAddrsOne,item)" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
@@ -29,9 +36,15 @@
 				合同详情
 			</view>
 			<view class="text">
-				<swiper class="swiper" :indicator-dots="false" acceleration display-multiple-items="2" :autoplay="false" :interval="1000"
+				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp2.imgAddrsTwo.length>1" display-multiple-items="2" :autoplay="false" :interval="1000"
 				  :duration="8000">
-					<swiper-item @click="bigimg(swipertyp2.imgAddrs,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrs" :key="index">
+					<swiper-item @click="bigimg(swipertyp2.imgAddrsTwo,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrsTwo" :key="index">
+						<image class="swiper_img" :src="item" mode="aspectFill"></image>
+					</swiper-item>
+				</swiper>
+				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp2.imgAddrsTwo.length<=1" display-multiple-items="1" :autoplay="false" :interval="1000"
+				  :duration="8000">
+					<swiper-item @click="bigimg(swipertyp2.imgAddrsTwo,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrsTwo" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
@@ -42,9 +55,15 @@
 				违约证明
 			</view>
 			<view class="text">
-				<swiper class="swiper" :indicator-dots="false" acceleration display-multiple-items="2" :autoplay="false" :interval="1000"
+				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp3.imgAddrsThree.length>1" display-multiple-items="2" :autoplay="false" :interval="1000"
 				  :duration="8000">
-					<swiper-item @click="bigimg(swipertyp3.imgAddrs,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrs" :key="index">
+					<swiper-item @click="bigimg(swipertyp3.imgAddrsThree,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrsThree" :key="index">
+						<image class="swiper_img" :src="item" mode="aspectFill"></image>
+					</swiper-item>
+				</swiper>
+				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp3.imgAddrsThree.length<=1" display-multiple-items="1" :autoplay="false" :interval="1000"
+				  :duration="8000">
+					<swiper-item @click="bigimg(swipertyp3.imgAddrsThree,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrsThree" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
@@ -91,6 +110,7 @@
 					success(res) {
 					if(res.data.status==200) {
 						uni.hideLoading()
+						console.log(res)
 						res.data.data.forEach(item=>{
 							if(item.imgType==1) {
 								that.swipertyp1=item
@@ -144,6 +164,7 @@
 		color: #333333;
 		font-size: 30rpx;
 		font-weight: 600;
+		min-height: 314rpx;
 	}
 
 	.swiper_img {

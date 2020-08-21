@@ -1,12 +1,14 @@
 <template>
 	<view class="container">
-		<view v-if="img_chat!==''" class="wechat">
+		<view v-if="img_chat" class="wechat">
 			<image class="felx_img" :src="img_chat" mode=""></image>
 		<view class="text_bar">
 			扫码进入微信小程序
 		</view>
 		</view>
-	 <web-view :src="link_url"></web-view>
+	<view v-if="link_url" class="">
+		<web-view :src="link_url"></web-view>
+	</view>
 	</view>
 </template>
 
@@ -22,8 +24,18 @@
 			
 		},
 		onLoad(options) {
-			this.link_url=options.link_add
-			this.img_chat=options.img_chat
+			if(options.link_add&&options.img_chat) {
+				this.img_chat=options.img_chat
+					console.log("执行")
+			}
+			if(options.link_add&&!options.img_chat) {
+				this.link_url=options.link_add
+				console.log("执行2")
+			}
+			if(!options.link_add&&options.img_chat) {
+				this.img_chat=options.img_chat
+				console.log("执行3")
+			}
 		}
 	}
 </script>

@@ -185,6 +185,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -223,6 +242,7 @@ var _default =
         success: function success(res) {
           if (res.data.status == 200) {
             uni.hideLoading();
+            console.log(res);
             res.data.data.forEach(function (item) {
               if (item.imgType == 1) {
                 that.swipertyp1 = item;

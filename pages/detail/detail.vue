@@ -6,7 +6,7 @@
 			</view>
 			<view class="text_detail">
 				<view class=""><text style="color:#D24C1F;">代理费:</text><text>{{detaileInfo.agencyFee}}元/时</text></view>
-				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==0">长期</text><text
+				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==1">长期</text><text
 					 v-else>一次性</text></view>
 			</view>
 			<view class="video">
