@@ -139,7 +139,7 @@
 					urls:[item] // 需要预览的图片http链接列表
 				})
 			},
-			openfile:util.throttle (function(url) { //打开pdf文件
+		 	openfile:util.throttle (function(url) { //打开pdf文件
 				var str = ''
 				if (url == 1) {
 					str = this.fattention
@@ -159,36 +159,46 @@
 				if (url == 6) {
 					str = this.brand
 				}
-				console.log(str)
-			    const downloadTask=	wx.downloadFile({
-				  url:str, //下载的文件地址
-				  success: function (res) {
-					  console.log("下载")
-					  uni.hideLoading()
-					  uni.showToast({
-					  	title:"下载完成"
-					  })
-				    const filePath = res.tempFilePath
-				    wx.openDocument({
-				      filePath: filePath,
-				      success: function (res) {
-				        console.log('打开文档成功')
-				      },
-					  fail:function(err) {
-						  console.log("错误的回调")
-						  console.log(err)
+				wx.getSystemInfo({
+				  success (res) {
+				      if(res.system.indexOf("iOS")) {
+						  console.log("安卓")
+						  const downloadTask=wx.downloadFile({
+						    url:str, //下载的文件地址
+						    success: function (res) {
+						  	  console.log("下载")
+						  	  uni.hideLoading()
+						  	  uni.showToast({
+						  	  	title:"下载完成"
+						  	  })
+						      const filePath = res.tempFilePath
+						      wx.openDocument({
+						        filePath: filePath,
+						        success: function (res) {
+						          console.log('打开文档成功')
+						        },
+						  	  fail:function(err) {
+						  		  console.log("错误的回调")
+						  		  console.log(err)
+						  	  }
+						      })
+						    }
+						  })
+						  downloadTask.onProgressUpdate((res) => {
+						  	uni.showLoading({
+						  		title: "下载中"+res.progress+"%"
+						  	})
+						    console.log('下载进度', res.progress)
+						  })
+					  }else {  
+						 uni.navigateTo({
+						 	url:`../webview/webview?link_add=${str}`
+						 })
 					  }
-				    })
 				  }
 				})
-				downloadTask.onProgressUpdate((res) => {
-					uni.showLoading({
-						title: "下载中"+res.progress+"%"
-					})
-				  console.log('下载进度', res.progress)
-				})
-			},2000) 
-		},
+		 	},2000) 
+		 },
 		onLoad() {
 			this.getAttetion()
 		}

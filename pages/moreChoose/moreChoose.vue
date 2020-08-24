@@ -805,9 +805,9 @@
 	}
 
 	.img_bars {
-		height: 867rpx;
+		height: 85vh;
 		width: 714rpx;
-		padding-top: 48rpx;
+		margin-top: 60rpx;
 		padding-bottom: 48rpx;
 
 		image {

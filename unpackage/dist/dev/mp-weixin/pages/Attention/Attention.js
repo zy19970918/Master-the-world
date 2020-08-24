@@ -291,34 +291,44 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
       if (url == 6) {
         str = this.brand;
       }
-      console.log(str);
-      var downloadTask = wx.downloadFile({
-        url: str, //下载的文件地址
+      wx.getSystemInfo({
         success: function success(res) {
-          console.log("下载");
-          uni.hideLoading();
-          uni.showToast({
-            title: "下载完成" });
+          if (res.system.indexOf("iOS")) {
+            console.log("安卓");
+            var downloadTask = wx.downloadFile({
+              url: str, //下载的文件地址
+              success: function success(res) {
+                console.log("下载");
+                uni.hideLoading();
+                uni.showToast({
+                  title: "下载完成" });
 
-          var filePath = res.tempFilePath;
-          wx.openDocument({
-            filePath: filePath,
-            success: function success(res) {
-              console.log('打开文档成功');
-            },
-            fail: function fail(err) {
-              console.log("错误的回调");
-              console.log(err);
-            } });
+                var filePath = res.tempFilePath;
+                wx.openDocument({
+                  filePath: filePath,
+                  success: function success(res) {
+                    console.log('打开文档成功');
+                  },
+                  fail: function fail(err) {
+                    console.log("错误的回调");
+                    console.log(err);
+                  } });
 
+              } });
+
+            downloadTask.onProgressUpdate(function (res) {
+              uni.showLoading({
+                title: "下载中" + res.progress + "%" });
+
+              console.log('下载进度', res.progress);
+            });
+          } else {
+            uni.navigateTo({
+              url: "../webview/webview?link_add=".concat(str) });
+
+          }
         } });
 
-      downloadTask.onProgressUpdate(function (res) {
-        uni.showLoading({
-          title: "下载中" + res.progress + "%" });
-
-        console.log('下载进度', res.progress);
-      });
     }, 2000) },
 
   onLoad: function onLoad() {

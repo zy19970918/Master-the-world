@@ -144,9 +144,9 @@
   width: 100%;
 }
 .img_bars.data-v-62eed7c6 {
-  height: 867rpx;
+  height: 85vh;
   width: 714rpx;
-  padding-top: 48rpx;
+  margin-top: 60rpx;
   padding-bottom: 48rpx;
 }
 .img_bars image.data-v-62eed7c6 {

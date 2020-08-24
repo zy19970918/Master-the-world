@@ -17,7 +17,7 @@
 				
 			}
 		},
-		methods: {
+		methods: { 
 			add(e) {
 				console.log(e)
 			}
