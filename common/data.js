@@ -41,22 +41,15 @@ export default [
 	{
 		"name":'单选',
 		"type": 'filter',
-		"submenu": [{
-				"name": "年龄",
-				"submenu": [{
-						"name": "18-35岁",
-						"value": "0"
-					},
-					{
-						"name": "35岁-50岁",
-						"value": "1"
-					},
-					{
-						"name": "50岁以上",
-						"value": "2"
-					}
-				]
-			},
+		"submenu": [
+			{
+					"name": "年龄",
+					"submenu": [{
+							"name": "大龄工(选择后仅显示50+大龄工单)",
+							"value": "50"
+						}
+					]
+				},
 			{
 					"name": "性别",
 					"submenu": [{
@@ -98,11 +91,7 @@ export default [
 				"submenu": [{
 						"name": "有",
 						"value": "1"
-					},
-					{
-						"name": "无",
-						"value": "0"
-					},
+					}
 				]
 			},
 			{
@@ -123,12 +112,7 @@ export default [
 				"submenu": [{
 						"name": "可接受",
 						"value": "0"
-					},
-					{
-						"name": "不接受",
-						"value": "1"
-					},
-					
+					},	
 				]
 			},
 			{
@@ -136,12 +120,7 @@ export default [
 				"submenu": [{
 						"name": "可接受",
 						"value": "0"
-					},
-					{
-						"name": "不接受",
-						"value": "1"
-					},
-					
+					}				
 				]
 			}
 		]

@@ -100,10 +100,12 @@
 }
 .main_right.data-v-3e159eb4 {
   float: right;
+  margin-right: 10rpx;
 }
 .main_right view.data-v-3e159eb4 {
   margin-top: 36rpx;
   color: #666666;
+  text-align: left;
 }
 .main.data-v-3e159eb4 {
   padding-left: 60rpx;
@@ -116,7 +118,7 @@
 }
 .bottom_txt.data-v-3e159eb4 {
   color: #CA0000;
-  font-size: 18rpx;
+  font-size: 22rpx;
   text-align: center;
   word-break: keep-all;
   /* 不换行 */
@@ -145,5 +147,13 @@
 }
 .swiper.data-v-3e159eb4 {
   height: 171rpx;
+}
+.image_add.data-v-3e159eb4 {
+  height: 48rpx !important;
+  width: 176rpx !important;
+  padding: 8rpx !important;
+  box-sizing: content-box;
+  border-radius: 16rpx !important;
+  box-shadow: inset 2rpx 2rpx 7rpx 0px rgba(0, 0, 0, 0.6), inset -2rpx -2rpx 7rpx 0px white, -2rpx -2rpx 7rpx 0px white, 2px 2px 7rpx 0px rgba(0, 0, 0, 0.6) !important;
 }
 

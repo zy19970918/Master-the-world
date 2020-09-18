@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<video src="https://cloud.video.taobao.com//play/u/740635139/p/1/e/6/t/1/264061731886.mp4" poster="https://pic.raolibao.com/881/block/881_global_banner02/b144467428121cac9109b1bc560c8192c0100475.jpg?x-oss-process=image/resize,m_fill,limit_0,w_1188,h_488"
+		<video :src="video" poster="https://pic.raolibao.com/881/block/881_global_banner02/b144467428121cac9109b1bc560c8192c0100475.jpg?x-oss-process=image/resize,m_fill,limit_0,w_1188,h_488"
 		 autoplay controls show-progress object-fit="fill"></video>
 		<view class="main_bar">
 			<view class="top" v-if="flag">
@@ -14,7 +14,7 @@
 			</view>
 			<view class="imput_search">
 				<image class="img" src="../../static/images/kuangjiabeijing.png" mode="scaleToFill"></image>
-				<image class="img_bar" src="../../static/images/gengduoxuanze.png" @click="toChoose" mode="widthFix"></image>
+				<image class="img_bar" src="../../static/images/wx_20200901175506.png" @click="toChoose" mode="widthFix"></image>
 				<!-- <image class="jiantou" src="" mode=""></image> -->
 				<lv-select class="mSearch" style="position: absolute; top:88rpx; display: flex; justify-content: space-between; left: 140rpx;"
 				 @handleSearch="handleSearch" @change="change" placeholder="请输入信息" :infoList="infoList" :showValue="showValue"
@@ -24,7 +24,7 @@
 				<image src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrED3l.bnRL6WL0YDfWJMX1IjCgDhhyZXEBVIO.5uVJLmNvqA4V*.C3LheVOH634bHdMz6dTqykmF30AI8UJKES1w!/b&bo=xwIzAgAAAAADF8Y!&rf=viewer_4"
 				 style="width: 100%; height: 100%;" mode="widthFix"></image>
 				<view class="contens">
-					<image class="img_left" src="../../static/images/renzibanner.png" mode="" @click="toRenxun"></image>
+					<image class="img_left" src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/bqQfVz5yrrGYSXMvKr.cqXiakcKzfT3CsTC0YwGDvzdIA8lN2sOOFOc2vsT1AgWY83Lq38LYMUonwXv2xxWqkDKr8XD6XgjK3mnfF5nsQds!/b&bo=7wGTAAAAAAADB18!&rf=viewer_4" mode="" @click="toRenxun"></image>
 					<view class="pic_content" @click="toRenxun">
 						查看详情
 					</view>
@@ -39,8 +39,8 @@
 			<view class="footer">
 				<image class="footer_img" src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/TmEUgtj9EK6.7V8ajmQrEOW2Bib7rmuU9yt3T9tzQ1vW5I8s69x4iIjUEKSFeZS2OUq.JWf2aQ8OSEWsbjZNz474LE*voP9E*awNzvqNRM4!/b&bo=xwJAAgAAAAADF7U!&rf=viewer_4"
 				 mode=""></image>
-				<image class="footer_one" :src="hrimg.pictureAddr" mode="scaleToFill" @click="torobt"></image>
-				<image class="footer_two" :src="zhanlv.pictureAddr" mode="scaleToFill" @click="toadurl"></image>
+				<image class="footer_one" :src="zhanlv.pictureAddr" mode="scaleToFill" @click="torobt"></image>
+				<image class="footer_two" :src="hrimg.pictureAddr" mode="scaleToFill" @click="toadurl"></image>
 				<swiper class="bottom_swiper" vertical :autoplay="true" :circular="true" :interval="3000" :duration="1000">
 					<swiper-item v-for="item in newList" :key="item.newsId">
 						<view class="mation" @click="toNewsdtails"><text>{{item.newsTitle}}</text></view>
@@ -120,7 +120,7 @@
 			getbannerlist() { //获取轮播
 				var that = this
 				uni.request({
-					url: "http://118.178.89.161:9999/person/queryBanner",
+					url: "http://www.35logo.cn:9999/person/queryBanner",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -248,7 +248,7 @@
 			},
 			torobt() {
 				uni.request({
-					url: "http://118.178.89.161:9999/client/query",
+					url: "http://www.35logo.cn:9999/client/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -266,7 +266,7 @@
 			getnews() { //新闻资讯
 				var that = this
 				uni.request({
-					url: "http://118.178.89.161:9999/news/query",
+					url: "http://www.35logo.cn:9999/news/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -296,7 +296,7 @@
 					title: "加载中"
 				})
 				uni.request({
-					url: "http://118.178.89.161:9999/roll/query",
+					url: "http://www.35logo.cn:9999/roll/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -410,6 +410,11 @@
 		position: absolute;
 		top: 38rpx;
 		right: 21rpx;
+		// border-radius: 16rpx;
+		// box-shadow: inset 2rpx 2rpx 7rpx 0px rgba(0, 0, 0, 0.6),
+		// 			inset -2rpx -2rpx 7rpx 0px rgba(255,255, 255, 1),
+		// 			-2rpx -2rpx 7rpx 0px rgba(255,255, 255, 1),
+		// 			2px 2px 7rpx 0px rgba(0, 0, 0, 0.6);
 	}
 
 	.content_bar {
@@ -459,7 +464,7 @@
 		height: 43rpx;
 		width: 145rpx;
 		position: absolute;
-		top: 88rpx;
+		top: 84rpx;
 		line-height: 43rpx;
 		left: 170rpx;
 		border-radius: 20rpx;
@@ -468,8 +473,8 @@
 		text-align: center;
 		font-size: 12px;
 		color: #FFFFFF;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAkCAMAAAC+ASjXAAAA9lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFAUAAAAYGAoAAAAcHAkgHAkgGwlqYCVoXyiAci2djjmfjjmfkDuyoEGzokG0okKzoULFs0jGs0jHtEnWwU7WwU/VwU7XwU7Xwk7cxlHdxlHdyFHdx1HeyVLfyVLeyFHeyFLgylPhy1PgylLgy1Lhy1MRDrxOAAAAUXRSTlMAAQIDBAUGBwgJCgsMDQ8QERITFBUWGBkbHB0eHyAhIiMkJigpKy4vMDEzNDQ1NTY3NzhSU2B4eHqRkZKTtLS129vd3d3u7/Hy9PT19v39/v4KigW/AAABzUlEQVRYw82Y6VbCMBBGSdM1FkoXoIAULIuCoCibuCCgsrjn/V/GAHqooH+TuS+QeybbfBOLbUEISRhjmSNsOYktG/uLlY2sarpBDjhCDF1T5ZXVvpCEFZ3EraTjel6KE57nOkkrTnSFOe0WiPmYlpv284Vi6YgbpWIh76ddy2ROv8qEJFklCc8Pwmqt3jhttc650GqdNuq1ahj4XoKocqRMTEgz7UxQaffvpst3ypGP5fSu364EGdvUIkqICTnZsDl8okJ4GjbDrMOUfowQVk0nV+6MqTDGnXLOMVWMvvdMIXa23JtTgcx75axNlM2+IawnMmFnQYWy6ISZhL4pkqSYXnA2oYKZnAWeqUibEll+5YYK56biW+siIZm4QXsm3mh2Gbhkdd2QGk+HfQqAqzAdV5mRpFl+dQTB6L7qWxo7SFhP5mtTCEYPtXxSx8zIsA9PXiEYvZwc2sbayCnUIQjRt3rBMWDWCNw5gnfX4L1H6zf7AtSbvf7XbgH9a/D+fij9UXfbH8HrIX/67K7APnvSjfbZ2yxyLSqLXO9kkUheG4wenz95ynw+P44G+3ktmmmPeWfa478yLcDcvzMbSXHj/9kIxPkRwBkbGL4Au4F9kDZRBAEAAAAASUVORK5CYII=);
-	}
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAkCAYAAACJ39jlAAAE5ElEQVR4nO2c32/bVBTHv7ZrN2l+NB1sRUJNRgAtJQxeqARSH0DlBRHeEGzay6RlD4j9eKgm/gWgmmAMJGCaNGlMBQkhIfZIhRAVe6u00q5sg2hpNYmWrU3TpEnjOObBvsn1jZOGsdpOuR/pKrZ1HZ0rf3Wuz/U5V0DnCDbHdtc43YFuc2x3bVt6OuhDC4Y0kTm3ExXHu9CioVuNOmb7tqSdiGhhENFI5jH5FWEVlN39HG/AioEWDmkac15rc3+dViJivY5k9qWbBKuYuDfqDmgvRItHA1BlGhGV3XRXx05EtHhEs48MQDGbTP3SQrLzRhxvQnshIiDVbBWqqTDERHulJiGxImK9DxFMLwAfAN/jj/rCJ9/c/9Jz8dAre8LKs35FHJQkIfBQh8hxBE3Ti6VKbXk1X5mbzWz8dP7bO9fu3ivnAZTNtoWGmIAWQmKjK1ZAvQD8APoGQnLo7LvDbz3/VDjdK4t7dmxkHNdQq3ruRnbj8vinC5f/Wt1aB7AJoARDTCqs01tdSKyIiICI9+kDEEinhpLpVPTDoF+KOzIajqsUSlrm4tXF9y5cXZoHUIAhJuKV2PckSOYv8UK0B+oDEDxzOP5iOhX9wqeIjzk3DI6bKLI4MJKIvDYQkuemZ9dWYI3W2CUAi4hIBKbAmMKCx1NDB9Op6Jc9khB0bAQcTyCKQm9yf+jVqqZfm7mVX4U1/LcIiY6qSCSmAPDtjSjhY6noB/yl+f+LJAmB429E398bUcIwAisFhkYs0bho9m8S0blTyaP8HYgT8Enxc6eSR2EvIgBWEdWns9igPzwcCx5x1lyOVxmOBY/EBv1hNEQkgRFR08Li+KH4mNwjRFywl+NB5B4hcuZwfAxG0EU8Ud0bsdOZBEA+EA2MumArx8M8PRQYReMrRdN0xi4ySv0BOeGCnRwPEwnKCbT4zEV7ovq05lfEfS7YyfEwPlnchxZZGyLVr/4Vnof1HBZTE7aZGrSI6p/7NU3fdMIwTvdgasI2JUSkLtbzS8pqbcU58zjdQFmt/Y02K9ZNuSW5grrggp0cD5MrqDfQyD2yCIn2RERE6u2l4rQLdnI8jKkJNh0EQMMTETdVBaBOTGam1Kqec8FWjgdRq/r6xGRmCs2Zjk2eiOTYVrLLpfxCtnDFBXs5HuTmUuGr7HIpDyOfiOReWzwR0PBGVbNj+fQn85cKJS3jsL0cj1Esa5mTH89fgpEuS0Rkm5QGMPVlm2UNAvDbSCLyuigKikM2czyEpunFz7/Pnvhldm0RRnZjGTbvRXRSGo0AADO38rmgv+d68onQy5Io+JwxneMF1Kqeu/Lj3dPnv8vOACii2RPVkWzuJ+gA8Ovc2sr9vPrzC4n+EUUWH9kpozneoVDSbk9M/vnOhR+WZmEIqIRG1ce2ifptqz0+OvHM2wefDB3j1R67ky21tnr9j/zF8c8WvlnbUDfwANUe5Lxt3Vls0B8ePxQfOxANjPYH5IRZd9a3w+Pj7ACapm+WKrXl9aL6+83F4vTZrzNTZhRmV3dmKyDAvmJ1uwpYUv1ql6DEK2C7A7YOv4rOKmCbBAS0fui8Fn/38qC1+LYCAto/cHZXELrRu4Ow28t08t8c52m1KwhZaG61K0jbzRyAzh40359o99HJ/kTbiofwbx463yltd/HQdkrjcP4z/wC1jt4mUQqP5gAAAABJRU5ErkJggg==);
+ 	}
 
 	.footer {
 		width: 711rpx;
@@ -488,7 +493,7 @@
 			width: 600rpx;
 			height: 107rpx;
 			position: absolute;
-			top: 111rpx;
+			top: 91rpx;
 			left: 56rpx;
 		}
 
@@ -496,7 +501,7 @@
 			width: 600rpx;
 			height: 107rpx;
 			position: absolute;
-			top: 292rpx;
+			top: 272rpx;
 			left: 56rpx;
 		}
 	}
@@ -519,6 +524,7 @@
 		font-size: 18rpx;
 		font-family: SourceHanSansCN-Regular;
 		color: #FFFCFE;
+		letter-spacing:4rpx;
 		height: 100%;
 		width: 100%;
 		background-color: #D9BB92;

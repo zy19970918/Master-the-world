@@ -18,13 +18,13 @@
 			</view>
 			<view class="text">
 				<swiper class="swiper" :indicator-dots="false" :circular="false" v-if="swipertyp1.imgAddrsOne.length>1" display-multiple-items="2" :autoplay="false"
-				  :duration="8000">
+				  >
 					<swiper-item class="swiper_item" v-for="(item,index) in swipertyp1.imgAddrsOne"  @click="bigimg(swipertyp1.imgAddrsOne,item)" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
 				<swiper class="swiper" :indicator-dots="false" :circular="false" v-if="swipertyp1.imgAddrsOne.length<=1"  display-multiple-items="1" :autoplay="false"
-				  :duration="8000">
+				  >
 					<swiper-item class="swiper_item" v-for="(item,index) in swipertyp1.imgAddrsOne"  @click="bigimg(swipertyp1.imgAddrsOne,item)" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
@@ -37,13 +37,13 @@
 			</view>
 			<view class="text">
 				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp2.imgAddrsTwo.length>1" display-multiple-items="2" :autoplay="false" :interval="1000"
-				  :duration="8000">
+				  >
 					<swiper-item @click="bigimg(swipertyp2.imgAddrsTwo,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrsTwo" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
 				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp2.imgAddrsTwo.length<=1" display-multiple-items="1" :autoplay="false" :interval="1000"
-				  :duration="8000">
+				  >
 					<swiper-item @click="bigimg(swipertyp2.imgAddrsTwo,item)" class="swiper_item" v-for="(item,index) in swipertyp2.imgAddrsTwo" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
@@ -56,13 +56,13 @@
 			</view>
 			<view class="text">
 				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp3.imgAddrsThree.length>1" display-multiple-items="2" :autoplay="false" :interval="1000"
-				  :duration="8000">
+				  >
 					<swiper-item @click="bigimg(swipertyp3.imgAddrsThree,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrsThree" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
 				</swiper>
 				<swiper class="swiper" :indicator-dots="false" acceleration v-if="swipertyp3.imgAddrsThree.length<=1" display-multiple-items="1" :autoplay="false" :interval="1000"
-				  :duration="8000">
+				  >
 					<swiper-item @click="bigimg(swipertyp3.imgAddrsThree,item)" class="swiper_item" v-for="(item,index) in swipertyp3.imgAddrsThree" :key="index">
 						<image class="swiper_img" :src="item" mode="aspectFill"></image>
 					</swiper-item>
@@ -99,7 +99,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url: "http://118.178.89.161:9999/dishonest/queryDetail",
+					url: "http://www.35logo.cn:9999/dishonest/queryDetail",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

@@ -32,7 +32,7 @@
 					title: "加载中"
 				})
 				uni.request({
-					url: "http://118.178.89.161:9999/news/queryDetail",
+					url: "http://www.35logo.cn:9999/news/queryDetail",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -73,7 +73,7 @@
 			font-size: 30rpx;
 			font-weight: 900;
 			letter-spacing: 5rpx;
-			text-align: center;
+			text-align: left;
 			margin-top: 35rpx;
 		}
 

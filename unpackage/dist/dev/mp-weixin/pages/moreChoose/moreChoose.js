@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/moreChoose/moreChoose"],{
 
 /***/ 44:
-/*!*************************************************************************!*\
-  !*** F:/MasterWorld/main.js?{"page":"pages%2FmoreChoose%2FmoreChoose"} ***!
-  \*************************************************************************/
+/*!*********************************************************************************!*\
+  !*** E:/project/MasterWorld/main.js?{"page":"pages%2FmoreChoose%2FmoreChoose"} ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17,9 +17,9 @@ createPage(_moreChoose.default);
 /***/ }),
 
 /***/ 45:
-/*!******************************************************!*\
-  !*** F:/MasterWorld/pages/moreChoose/moreChoose.vue ***!
-  \******************************************************/
+/*!**************************************************************!*\
+  !*** E:/project/MasterWorld/pages/moreChoose/moreChoose.vue ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -58,9 +58,9 @@ component.options.__file = "pages/moreChoose/moreChoose.vue"
 /***/ }),
 
 /***/ 46:
-/*!*************************************************************************************************!*\
-  !*** F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=template&id=62eed7c6&scoped=true& ***!
-  \*************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=template&id=62eed7c6&scoped=true& ***!
+  \*********************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,9 +80,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 47:
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=template&id=62eed7c6&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=template&id=62eed7c6&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   simpleAddress: function() {
-    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 191))
+    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 197))
   }
 }
 var render = function() {
@@ -111,9 +111,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 48:
-/*!*******************************************************************************!*\
-  !*** F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
+/*!***************************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -127,9 +127,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 49:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -186,24 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 191));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 201));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
+var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 197));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 207));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
 var _default = {
   data: function data() {
     return {
@@ -215,8 +198,12 @@ var _default = {
       city: '', //选择城市
       flag: false,
       addr: '', //地区选择，
-      case: '' //条件筛选
-    };
+      case: {
+        value: [""] },
+      //条件筛选
+      ageOne: 0,
+      ageTwo: '' };
+
   },
   methods: {
     add: function add() {
@@ -237,7 +224,7 @@ var _default = {
     recommend: function recommend() {//厂商推荐
       var that = this;
       uni.request({
-        url: "http://118.178.89.161:9999/company/recommend",
+        url: "http://www.35logo.cn:9999/company/recommend",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -262,27 +249,9 @@ var _default = {
       this.addr = e;
       this.city = e.labelArr[1];
       var that = this;
-      if (that.case) {
-        console.log("存在");
+      if (this.ifArrayNone(that.case.value[0]) || this.$refs.child.flags) {
+        console.log("存在leo ");
         console.log(that.case);
-        var count = 0;
-        var ageOne;
-        var ageTwo;
-        var ageThree;
-        var arrAge = that.case.value[0][0];
-        arrAge.forEach(function (item, index) {
-          console.log(index);
-          if (item == "2") {
-            ageThree = 1;
-          }
-          if (item == "1") {
-            ageTwo = 1;
-          }
-          if (item == "0") {
-            ageOne = 1;
-          }
-        });
-
         var sex;
         var sexWoman;
         var sexArr = that.case.value[0][1];
@@ -363,54 +332,96 @@ var _default = {
         uni.showLoading({
           title: "加载中" });
 
-        uni.request({
-          url: "http://118.178.89.161:9999/company/query",
-          method: 'POST',
-          header: {
-            "Content-Type": "application/json" },
+        if (this.$refs.child.flags) {
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
 
-          data: {
-            ageOne: ageOne,
-            ageTwo: ageTwo,
-            ageThree: ageThree,
-            sex: sex,
-            sexWoman: sexWoman,
-            manageFee: manageFee,
-            manageFeeOne: manageFeeOne,
-            workType: workType,
-            workTypeDay: workTypeDay,
-            spouseHouse: spouseHouse,
-            spouseHouseHusband: spouseHouseHusband,
-            workRequire: workRequire,
-            workRequireLong: workRequireLong,
-            studentWorker: studentWorker,
-            studentNotWorker: studentNotWorker,
-            nationals: nationals,
-            nationalsNot: nationalsNot,
-            city: e.labelArr[1] },
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot,
+              city: e.labelArr[1] },
 
-          success: function success(res) {
-            console.log(res);
-            uni.hideLoading();
-            if (res.data.status == 200 && res.data.data.length !== 0) {
-              that.listDetail = res.data.data;
-              that.flag = true;
-            } else {
-              that.listDetail = "";
-              uni.showToast({
-                title: "未搜索到结果",
-                icon: 'none' });
+            success: function success(res) {
+              console.log(res);
+              uni.hideLoading();
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: 'none' });
 
-            }
-          } });
+              }
+            } });
+
+        } else {
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot,
+              city: e.labelArr[1] },
+
+            success: function success(res) {
+              console.log(res);
+              uni.hideLoading();
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: 'none' });
+
+              }
+            } });
+
+        }
 
       } else {
-        console.log("不存在");
         uni.showLoading({
           title: "加载中" });
 
         uni.request({
-          url: "http://118.178.89.161:9999/company/query",
+          url: "http://www.35logo.cn:9999/company/query",
           method: 'POST',
           header: {
             "Content-Type": "application/json" },
@@ -437,315 +448,814 @@ var _default = {
 
 
 
+    },
+    ifArrayNone: function ifArrayNone(arrList) {
+      for (var i = 0; i < arrList.length; i++) {
+        if (arrList[i].length > 0) {
+          return true;
+        }
+      }
+      return false;
     },
     duaiyong: function duaiyong() {
       this.$refs.child.togglePage(0);
     },
     confirm: function confirm(e) {//条件筛选
+      var that = this;
+      console.log(e.value[0][0][0]);
+      if (e.value[0][0][0] == 50) {
+        that.ageOne = 1,
+        that.ageTwo = 50;
+      } else {
+        that.ageOne = "",
+        that.ageTwo = "";
+      }
       this.case = e;
       var that = this;
-      if (!that.addr) {
-        console.log("不存在");
-        var count = 0;
-        for (var i = 0; i < e.index[0].length; i++) {
-          count += e.index[0][i].length;
-        }
-        if (count == 0) {
-          return false;
-        }
-        var arry = e.value[0][1].toString();
-        var arrAge = e.value[0][0];
-        var ageOne;
-        var ageTwo;
-        var ageThree;
-        arrAge.forEach(function (item, index) {
-          if (item == 0) {
-            ageOne = 1;
+      if (this.$refs.child.flags) {
+        if (!that.addr) {
+          if (!this.ifArrayNone(e.value[0]) && !this.$refs.child.flags) {//此代码待改
+            this.recommend();
+            return;
           }
-          console.log(ageOne);
-          if (item == 1) {
-            ageTwo = 1;
-          }
-          if (item == 2) {
-            ageThree = 1;
-          }
-        });
-        var sex;
-        var sexWoman;
-        var sexArr = e.value[0][1];
-        sexArr.forEach(function (item) {
-          if (item == "0") {
-            sex = 1;
-          }
-          if (item == "1") {
-            sexWoman = 1;
-          }
-        });
-        var manageFee;
-        var manageFeeOne;
-        var Feearr = e.value[0][2];
-        console.log(Feearr);
-        Feearr.forEach(function (item) {
-          if (item == "0") {
-            manageFee = 1;
-            console.log(manageFee);
-          }
-          if (item == "1") {
-            manageFeeOne = 1;
-            console.log(manageFeeOne);
-          }
-        });
-        var workType;
-        var workTypeDay;
-        var workarr = e.value[0][3];
-        workarr.forEach(function (item) {
-          if (item == 0) {
-            workType = 1;
-          }
-          if (item == 1) {
-            workTypeDay = 1;
-          }
-        });
-        var spouseHouse;
-        var spouseHouseHusband;
-        var spouseArr = e.value[0][4];
-        spouseArr.forEach(function (item) {
-          if (item == 0) {
-            spouseHouse = 1;
-          }
-          if (item == 1) {
-            spouseHouseHusband = 1;
-          }
-        });
-        var workRequire;
-        var workRequireLong;
-        var workAyy = e.value[0][5];
-        workAyy.forEach(function (item) {
-          if (item == 0) {
-            workRequireLong = 1;
-          }
-          if (item == 1) {
-            workRequire = 1;
-          }
-        });
-        var studentWorker;
-        var studentNotWorker;
-        var studebtArr = e.value[0][6];
-        studebtArr.forEach(function (item) {
-          if (item == 0) {
-            studentWorker = 1;
-          }
-          if (item == 1) {
-            studentNotWorker = 1;
-          }
-        });
-        var nationals;
-        var nationalsNot;
-        var natArry = e.value[0][7];
-        natArry.forEach(function (item) {
-          if (item == 0) {
-            nationals = 1;
-          }
-          if (item == 1) {
-            nationalsNot = 1;
-          }
-        });
-        uni.showLoading({
-          title: "加载中" });
-
-        uni.request({
-          url: "http://118.178.89.161:9999/company/query",
-          method: 'POST',
-          header: {
-            "Content-Type": "application/json" },
-
-          data: {
-            ageOne: ageOne,
-            ageTwo: ageTwo,
-            ageThree: ageThree,
-            sex: sex,
-            sexMan: sexMan,
-            sexWoman: sexWoman,
-            manageFee: manageFee,
-            manageFeeOne: manageFeeOne,
-            workType: workType,
-            workTypeDay: workTypeDay,
-            spouseHouse: spouseHouse,
-            spouseHouseHusband: spouseHouseHusband,
-            workRequire: workRequire,
-            workRequireLong: workRequireLong,
-            studentWorker: studentWorker,
-            studentNotWorker: studentNotWorker,
-            nationals: nationals,
-            nationalsNot: nationalsNot },
-
-          success: function success(res) {
-            if (res.data.status == 200 && res.data.data.length !== 0) {
-              uni.hideLoading();
-              that.listDetail = res.data.data;
-              that.flag = true;
-            } else {
-              that.listDetail = "";
-              uni.showToast({
-                title: "未搜索到结果",
-                icon: "none" });
-
+          var count = 0;
+          var sex;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sex = 1;
             }
-          } });
+            if (item == "1") {
+              sexWoman = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          console.log(Feearr);
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+              console.log(manageFee);
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+              console.log(manageFeeOne);
+            }
+          });
 
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              sex: sex,
+              sexMan: sexMan,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        } else {
+          if (!this.$refs.child.flags) {
+            console.log("的点点滴滴");
+            this.onConfirm(this.addr);
+            return false;
+          }
+          var sex;
+          var sexMan;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sexMan = 1;
+            }
+            if (item == "1") {
+              sexWoman = 1;
+            }
+            if (item == "2") {
+              sex = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+            }
+          });
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot,
+              city: that.city },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        }
+      } else if (!this.$refs.child.flags) {
+        console.log("22");
+        if (!that.addr) {
+          console.log("不存在");
+          if (!this.ifArrayNone(e.value[0]) && !this.$refs.child.flags) {//此代码待改
+            this.recommend();
+            return;
+          }
+          var count = 0;
+          var sex;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sex = 1;
+            }
+            if (item == "1") {
+              sexWoman = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          console.log(Feearr);
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+              console.log(manageFee);
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+              console.log(manageFeeOne);
+            }
+          });
+
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexMan: sexMan,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        } else {
+          if (!this.$refs.child.flags) {
+            console.log("的点点滴滴");
+            this.onConfirm(this.addr);
+            return false;
+          }
+          var sex;
+          var sexMan;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sexMan = 1;
+            }
+            if (item == "1") {
+              sexWoman = 1;
+            }
+            if (item == "2") {
+              sex = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+            }
+          });
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot,
+              city: that.city },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        }
       } else {
-        console.log("存在");
-        var count = 0;
-        for (var i = 0; i < e.index[0].length; i++) {
-          count += e.index[0][i].length;
-        }
-        if (count == 0) {
-          return false;
-        }
-        var arry = e.value[0][1].toString();
-        var ageOne;
-        var ageTwo;
-        var ageThree;
-        var arrAge = e.value[0][0];
-        arrAge.forEach(function (item, index) {
-          console.log(index);
-          if (item == "2") {
-            ageThree = 1;
+        console.log("33");
+        if (!that.addr) {
+          console.log("不存在");
+          if (!this.ifArrayNone(e.value[0]) && !this.$refs.child.flags) {//此代码待改
+            this.recommend();
+            return;
           }
-          if (item == "1") {
-            ageTwo = 1;
-          }
-          if (item == "0") {
-            ageOne = 1;
-          }
-        });
-
-        var sex;
-        var sexMan;
-        var sexWoman;
-        var sexArr = e.value[0][1];
-        sexArr.forEach(function (item) {
-          if (item == "0") {
-            sexMan = 1;
-          }
-          if (item == "1") {
-            sexWoman = 1;
-          }
-          if (item == "2") {
-            sex = 1;
-          }
-        });
-        var manageFee;
-        var manageFeeOne;
-        var Feearr = e.value[0][2];
-        Feearr.forEach(function (item) {
-          if (item == "0") {
-            manageFee = 1;
-          }
-          if (item == "1") {
-            manageFeeOne = 1;
-          }
-        });
-        var workType;
-        var workTypeDay;
-        var workarr = e.value[0][3];
-        workarr.forEach(function (item) {
-          if (item == 0) {
-            workType = 1;
-          }
-          if (item == 1) {
-            workTypeDay = 1;
-          }
-        });
-        var spouseHouse;
-        var spouseHouseHusband;
-        var spouseArr = e.value[0][4];
-        spouseArr.forEach(function (item) {
-          if (item == 0) {
-            spouseHouse = 1;
-          }
-          if (item == 1) {
-            spouseHouseHusband = 1;
-          }
-        });
-        var workRequire;
-        var workRequireLong;
-        var workAyy = e.value[0][5];
-        workAyy.forEach(function (item) {
-          if (item == 0) {
-            workRequireLong = 1;
-          }
-          if (item == 1) {
-            workRequire = 1;
-          }
-        });
-        var studentWorker;
-        var studentNotWorker;
-        var studebtArr = e.value[0][6];
-        studebtArr.forEach(function (item) {
-          if (item == 0) {
-            studentWorker = 1;
-          }
-          if (item == 1) {
-            studentNotWorker = 1;
-          }
-        });
-        var nationals;
-        var nationalsNot;
-        var natArry = e.value[0][7];
-        natArry.forEach(function (item) {
-          if (item == 0) {
-            nationals = 1;
-          }
-          if (item == 1) {
-            nationalsNot = 1;
-          }
-        });
-        uni.showLoading({
-          title: "加载中" });
-
-        uni.request({
-          url: "http://118.178.89.161:9999/company/query",
-          method: 'POST',
-          header: {
-            "Content-Type": "application/json" },
-
-          data: {
-            ageOne: ageOne,
-            ageTwo: ageTwo,
-            ageThree: ageThree,
-            sex: sex,
-            sexWoman: sexWoman,
-            manageFee: manageFee,
-            manageFeeOne: manageFeeOne,
-            workType: workType,
-            workTypeDay: workTypeDay,
-            spouseHouse: spouseHouse,
-            spouseHouseHusband: spouseHouseHusband,
-            workRequire: workRequire,
-            workRequireLong: workRequireLong,
-            studentWorker: studentWorker,
-            studentNotWorker: studentNotWorker,
-            nationals: nationals,
-            nationalsNot: nationalsNot,
-            city: that.city },
-
-          success: function success(res) {
-            if (res.data.status == 200 && res.data.data.length !== 0) {
-              uni.hideLoading();
-              that.listDetail = res.data.data;
-              that.flag = true;
-            } else {
-              that.listDetail = "";
-              uni.showToast({
-                title: "未搜索到结果",
-                icon: "none" });
-
+          var count = 0;
+          var sex;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sex = 1;
             }
-          } });
+            if (item == "1") {
+              sexWoman = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          console.log(Feearr);
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+              console.log(manageFee);
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+              console.log(manageFeeOne);
+            }
+          });
 
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexMan: sexMan,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        } else {
+          if (!this.$refs.child.flags) {
+            console.log("的点点滴滴");
+            this.onConfirm(this.addr);
+            return false;
+          }
+          var sex;
+          var sexMan;
+          var sexWoman;
+          var sexArr = e.value[0][1];
+          sexArr.forEach(function (item) {
+            if (item == "0") {
+              sexMan = 1;
+            }
+            if (item == "1") {
+              sexWoman = 1;
+            }
+            if (item == "2") {
+              sex = 1;
+            }
+          });
+          var manageFee;
+          var manageFeeOne;
+          var Feearr = e.value[0][2];
+          Feearr.forEach(function (item) {
+            if (item == "0") {
+              manageFee = 1;
+            }
+            if (item == "1") {
+              manageFeeOne = 1;
+            }
+          });
+          var workType;
+          var workTypeDay;
+          var workarr = e.value[0][3];
+          workarr.forEach(function (item) {
+            if (item == 0) {
+              workType = 1;
+            }
+            if (item == 1) {
+              workTypeDay = 1;
+            }
+          });
+          var spouseHouse;
+          var spouseHouseHusband;
+          var spouseArr = e.value[0][4];
+          spouseArr.forEach(function (item) {
+            if (item == 0) {
+              spouseHouse = 1;
+            }
+            if (item == 1) {
+              spouseHouseHusband = 1;
+            }
+          });
+          var workRequire;
+          var workRequireLong;
+          var workAyy = e.value[0][5];
+          workAyy.forEach(function (item) {
+            if (item == 0) {
+              workRequireLong = 1;
+            }
+            if (item == 1) {
+              workRequire = 1;
+            }
+          });
+          var studentWorker;
+          var studentNotWorker;
+          var studebtArr = e.value[0][6];
+          studebtArr.forEach(function (item) {
+            if (item == 0) {
+              studentWorker = 1;
+            }
+            if (item == 1) {
+              studentNotWorker = 1;
+            }
+          });
+          var nationals;
+          var nationalsNot;
+          var natArry = e.value[0][7];
+          natArry.forEach(function (item) {
+            if (item == 0) {
+              nationals = 1;
+            }
+            if (item == 1) {
+              nationalsNot = 1;
+            }
+          });
+          uni.showLoading({
+            title: "加载中" });
+
+          uni.request({
+            url: "http://www.35logo.cn:9999/company/query",
+            method: 'POST',
+            header: {
+              "Content-Type": "application/json" },
+
+            data: {
+              ageOne: that.ageOne,
+              ageTwo: that.ageTwo,
+              sex: sex,
+              sexWoman: sexWoman,
+              manageFee: manageFee,
+              manageFeeOne: manageFeeOne,
+              workType: workType,
+              workTypeDay: workTypeDay,
+              spouseHouse: spouseHouse,
+              spouseHouseHusband: spouseHouseHusband,
+              workRequire: workRequire,
+              workRequireLong: workRequireLong,
+              studentWorker: studentWorker,
+              studentNotWorker: studentNotWorker,
+              nationals: nationals,
+              nationalsNot: nationalsNot,
+              city: that.city },
+
+            success: function success(res) {
+              if (res.data.status == 200 && res.data.data.length !== 0) {
+                uni.hideLoading();
+                that.listDetail = res.data.data;
+                that.flag = true;
+              } else {
+                that.listDetail = "";
+                uni.showToast({
+                  title: "未搜索到结果",
+                  icon: "none" });
+
+              }
+            } });
+
+        }
       }
-
     },
     getsearch: function getsearch() {//搜索到的工厂信息
       if (this.val == undefined) {
@@ -757,7 +1267,7 @@ var _default = {
 
       var that = this;
       uni.request({
-        url: "http://118.178.89.161:9999/company/condition",
+        url: "http://www.35logo.cn:9999/company/condition",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -795,16 +1305,15 @@ var _default = {
     this.val = options.val;
     this.getsearch();
     this.filterData = _data.default;
-    uni.hideLoading();
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
 /***/ 51:
-/*!****************************************************************************************************************!*\
-  !*** F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=style&index=0&id=62eed7c6&scoped=true&lang=scss& ***!
-  \****************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=style&index=0&id=62eed7c6&scoped=true&lang=scss& ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -818,9 +1327,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 52:
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=style&index=0&id=62eed7c6&scoped=true&lang=scss& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/moreChoose/moreChoose.vue?vue&type=style&index=0&id=62eed7c6&scoped=true&lang=scss& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -1,10 +1,10 @@
 <template>
 	<view class="content_bar">
 		<view class="img">
-			<image class="logo2" src="../../static/images/logo2.png" mode="scaleToFill"></image>
+			<image  class="logo2" src="http://m.qpic.cn/psc?/V11EtE3S2awPyr/bqQfVz5yrrGYSXMvKr.cqezpJv4DPb7eP4rLK15.BaNzSPewYaEBhDfmKsEkuusYDzsEQ.pCDAQ1ljY.dn*ZcWrg76EHdaBjaMAo2lDNWfw!/b&bo=ogQ4BAAAAAADB7g!&rf=viewer_4" mode="aspectFit"></image>
 		</view>
 		<view class="btn">
-			<image class="imgs" src="../../static/images/yishoutianxia.png" mode=""></image>
+			<image class="imgs" src="../../static/images/yishoutianxia.png" mode="aspectFit"></image>
 			<button type="default" class="btns" open-type="contact" @contact='add'>联系客服</button>
 		</view>
 	</view>
@@ -30,14 +30,13 @@
 		box-sizing: border-box;
 	}
 	.img{
-		width: 570rpx;
-		height: 494rpx;
-		margin: 0 auto;
-		margin-top: 177rpx;
+		width: 100% !important;
+		display: flex;
 	}
 	.logo2 {
-		width: 100%;
-		height:100%;
+		margin: 0 auto;
+		margin-top: 177rpx;
+		height: 250px !important;
 	}
 	.btn{
 		height: 118rpx;

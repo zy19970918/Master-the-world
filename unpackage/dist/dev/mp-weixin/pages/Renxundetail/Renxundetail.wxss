@@ -100,7 +100,6 @@
 }
 .main_bar.data-v-3b1ac934 {
   font-size: 30rpx;
-  text-align: center;
   color: #CC0000;
 }
 .main_bar view.data-v-3b1ac934 {
@@ -138,5 +137,8 @@
 }
 .swiper.data-v-3b1ac934 {
   height: 171rpx;
+}
+.main_bar_text.data-v-3b1ac934 {
+  text-align: center;
 }
 

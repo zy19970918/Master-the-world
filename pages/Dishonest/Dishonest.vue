@@ -30,18 +30,18 @@
 			}
 		},
 		methods: {
-			todetail(id) {
-				uni.navigateTo({
-					url:`../componydetail/componydetail?id=${id}`
-				})
-			},
+				todetail(id) {
+							uni.navigateTo({
+								url:`../componydetail/componydetail?id=${id}`
+							})
+						},
 			getdis() { //失信名单
 			uni.showLoading({
 				title:"加载中"
 			})
 			var that=this
 			     uni.request({
-			     	url:"http://118.178.89.161:9999/dishonest/query",
+			     	url:"http://www.35logo.cn:9999/dishonest/query",
 			     	method:'POST',
 			     	header:{
 			     		"Content-Type":"application/json"

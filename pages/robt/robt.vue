@@ -234,7 +234,7 @@
 				// 	this.msgGo()
 				// },2000)
 				uni.request({
-					url:"http://118.178.89.161:9999/client/query",
+					url:"http://www.35logo.cn:9999/client/query",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"

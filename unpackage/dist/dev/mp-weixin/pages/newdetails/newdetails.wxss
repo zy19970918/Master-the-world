@@ -33,7 +33,7 @@
   font-size: 30rpx;
   font-weight: 900;
   letter-spacing: 5rpx;
-  text-align: center;
+  text-align: left;
   margin-top: 35rpx;
 }
 .content .time {

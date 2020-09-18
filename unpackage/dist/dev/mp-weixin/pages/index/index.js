@@ -11,9 +11,9 @@
 /* 9 */,
 /* 10 */,
 /* 11 */
-/*!***************************************************************!*\
-  !*** F:/MasterWorld/main.js?{"page":"pages%2Findex%2Findex"} ***!
-  \***************************************************************/
+/*!***********************************************************************!*\
+  !*** E:/project/MasterWorld/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26,9 +26,9 @@ createPage(_index.default);
 
 /***/ }),
 /* 12 */
-/*!********************************************!*\
-  !*** F:/MasterWorld/pages/index/index.vue ***!
-  \********************************************/
+/*!****************************************************!*\
+  !*** E:/project/MasterWorld/pages/index/index.vue ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66,9 +66,9 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 13 */
-/*!***************************************************************************************!*\
-  !*** F:/MasterWorld/pages/index/index.vue?vue&type=template&id=57280228&scoped=true& ***!
-  \***************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/index/index.vue?vue&type=template&id=57280228&scoped=true& ***!
+  \***********************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,9 +87,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 14 */
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/index/index.vue?vue&type=template&id=57280228&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/index/index.vue?vue&type=template&id=57280228&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -101,10 +101,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniNoticeBar: function() {
-    return __webpack_require__.e(/*! import() | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/components/uni-notice-bar/uni-notice-bar.vue */ 154))
+    return __webpack_require__.e(/*! import() | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/components/uni-notice-bar/uni-notice-bar.vue */ 160))
   },
   lvSelect: function() {
-    return __webpack_require__.e(/*! import() | components/lv-select/lv-select */ "components/lv-select/lv-select").then(__webpack_require__.bind(null, /*! @/components/lv-select/lv-select.vue */ 161))
+    return __webpack_require__.e(/*! import() | components/lv-select/lv-select */ "components/lv-select/lv-select").then(__webpack_require__.bind(null, /*! @/components/lv-select/lv-select.vue */ 167))
   }
 }
 var render = function() {
@@ -120,9 +120,9 @@ render._withStripped = true
 
 /***/ }),
 /* 15 */
-/*!*********************************************************************!*\
-  !*** F:/MasterWorld/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
+/*!*****************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -135,14 +135,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 16 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNoticeBar = function uniNoticeBar() {__webpack_require__.e(/*! require.ensure | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then((function () {return resolve(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ 154));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 168));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 177));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 184));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var lvSelect = function lvSelect() {__webpack_require__.e(/*! require.ensure | components/lv-select/lv-select */ "components/lv-select/lv-select").then((function () {return resolve(__webpack_require__(/*! ../../components/lv-select/lv-select */ 161));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNoticeBar = function uniNoticeBar() {__webpack_require__.e(/*! require.ensure | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then((function () {return resolve(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ 160));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 174));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 183));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 190));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var lvSelect = function lvSelect() {__webpack_require__.e(/*! require.ensure | components/lv-select/lv-select */ "components/lv-select/lv-select").then((function () {return resolve(__webpack_require__(/*! ../../components/lv-select/lv-select */ 167));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
     getbannerlist: function getbannerlist() {//获取轮播
       var that = this;
       uni.request({
-        url: "http://118.178.89.161:9999/person/queryBanner",
+        url: "http://www.35logo.cn:9999/person/queryBanner",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -392,7 +392,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     torobt: function torobt() {
       uni.request({
-        url: "http://118.178.89.161:9999/client/query",
+        url: "http://www.35logo.cn:9999/client/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -410,7 +410,7 @@ __webpack_require__.r(__webpack_exports__);
     getnews: function getnews() {//新闻资讯
       var that = this;
       uni.request({
-        url: "http://118.178.89.161:9999/news/query",
+        url: "http://www.35logo.cn:9999/news/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -440,7 +440,7 @@ __webpack_require__.r(__webpack_exports__);
         title: "加载中" });
 
       uni.request({
-        url: "http://118.178.89.161:9999/roll/query",
+        url: "http://www.35logo.cn:9999/roll/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -492,9 +492,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 17 */
-/*!******************************************************************************************************!*\
-  !*** F:/MasterWorld/pages/index/index.vue?vue&type=style&index=0&id=57280228&lang=scss&scoped=true& ***!
-  \******************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** E:/project/MasterWorld/pages/index/index.vue?vue&type=style&index=0&id=57280228&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -507,9 +507,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 18 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!F:/MasterWorld/pages/index/index.vue?vue&type=style&index=0&id=57280228&lang=scss&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/project/MasterWorld/pages/index/index.vue?vue&type=style&index=0&id=57280228&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -82,6 +82,7 @@
   font-size: 32rpx;
   display: inline-block;
   height: 100%;
+  letter-spacing: 4rpx;
   line-height: 65rpx;
 }
 .content_text.data-v-89fe44f8 {

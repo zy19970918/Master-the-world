@@ -17,6 +17,9 @@
 				canIUse: wx.canIUse('button.open-type.getUserInfo')
 			}
 		},
+		onLoad() {
+			
+		},
 		methods: {
 			bindGetUserInfo() {
 				var that = this

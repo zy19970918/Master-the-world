@@ -16,18 +16,15 @@
 			<view class="si_">
 				<image src="../../static/images/si_.png" @click="openfile(4)" mode=""></image>
 			</view>
-			<view class="wu_">
-				<image src="../../static/images/wu_.png" @click="openfile(5)" mode=""></image>
-			</view>
 			<view class="liu_">
-				<image src="../../static/images/liu_.png" @click="openfile(6)" mode=""></image>
+				<image src="../../static/images/wx20200910174650.png" @click="openfile(6)" mode=""></image>
 			</view>
 		</view>
-		<view class="lianxi">
+		<view class="lianxi" style="margin-top: 43rpx;">
 
 			<view class="">
 				<image class="img_lx" src="../../static/images/lianxiwomen_.png" mode=""></image>
-				<view class="sec">
+				<view class="sec" style="margin-top: 16rpx;">
 					{{content_info.contactWx}}
 				</view>
 				<view class="thre">
@@ -37,6 +34,9 @@
 			<view class="left_img" @click="bigimg(content_info.contactQcode)">
 				<image class="img_two" :src="content_info.contactQcode"
 				 mode=""></image>
+				<view class="" style="text-align: center; font-weight: 700;">
+					请保存扫码
+				</view>
 			</view>
 		</view>
 		<view class="lianxi">
@@ -47,12 +47,15 @@
 					{{content_info.complaintWx}}
 				</view>
 				<view class="thre">
-					<image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image>
+					<!-- <image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image> -->
 				</view>
 			</view>
 			<view class="left_img" @click="bigimg(content_info.complaintQcode)">
 				<image class="img_two" :src="content_info.complaintQcode"
 				 mode=""></image>
+				 <view class="" style="text-align: center; font-weight: 700;">
+				 	请保存扫码
+				 </view>
 			</view>
 		</view>
 		<view class="lianxi">
@@ -63,12 +66,15 @@
 					{{content_info.recommendWx}}
 				</view>
 				<view class="thre">
-					<image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image>
+					<!-- <image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image> -->
 				</view>
 			</view>
 			<view class="left_img" @click="bigimg(content_info.recommendQcode)">
 				<image class="img_two" :src="content_info.recommendQcode"
 				 mode=""></image>
+				 <view class="" style="text-align: center; font-weight: 700;">
+				 	请保存扫码
+				 </view>
 			</view>
 		</view>
 		<view class="lianxi">
@@ -78,12 +84,15 @@
 					{{content_info.communicationWx}}
 				</view>
 				<view class="thre">
-				<image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image>
+				<!-- <image class="img_one" src="../../static/images/gerenweixin.png" mode=""></image> -->
 				</view>
 			</view>
 			<view class="left_img">
 				<image class="img_two" @click="bigimg(content_info.communicationQcode)"  :src="content_info.communicationQcode"
 				 mode=""></image>
+				 <view class="" style="text-align: center; font-weight: 700;">
+				 	请保存扫码
+				 </view>
 			</view>
 		</view>
 	</view>
@@ -107,7 +116,7 @@
 			getAttetion() {
 				var that=this
 				uni.request({
-					url: "http://118.178.89.161:9999/attention/query",
+					url: "http://www.35logo.cn:9999/attention/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -192,7 +201,7 @@
 						  })
 					  }else {  
 						 uni.navigateTo({
-						 	url:`../webview/webview?link_add=${str}`
+						 	url:`../web/web?link_url=${str}`
 						 })
 					  }
 				  }
@@ -200,6 +209,9 @@
 		 	},2000) 
 		 },
 		onLoad() {
+			// this.getAttetion()
+		},
+		onShow() {
 			this.getAttetion()
 		}
 	}
@@ -301,7 +313,7 @@
 		padding-right: 115rpx;
 		display: flex;
 		justify-content: space-between;
-		margin-top: 43rpx;
+		margin-top: 13rpx;
 	}
 
 	.img_lx {
@@ -326,7 +338,7 @@
 		font-size: 36rpx;
 		color: #CC0000;
 		font-weight: 900;
-		margin-top: 16rpx;
+		margin-top: 60rpx;
 	}
 
 	.thre {

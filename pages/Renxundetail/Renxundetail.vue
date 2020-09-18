@@ -7,7 +7,7 @@
 			<view class="video">
 				<image src="../../static/images/shipin.png" mode=""></image>
 				<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
-					<swiper-item v-for="item in detailInfo.imgAddrs" :key="index">
+					<swiper-item @click="bigimg(item)" v-for="item in detailInfo.imgAddrs" :key="index">
 						<image :src="item" mode=""></image>
 					</swiper-item>
 				</swiper>
@@ -29,10 +29,10 @@
 			<view class="content_bar">
 				<image src="../../static/images/shangkuang.png" mode=""></image>
 				<view class="main main_bar">
-					<view class="">座机:<text>{{detailInfo.phone}}</text></view>
-					<view class="">手机:<text>{{detailInfo.mobilePhone}}</text></view>
-					<view class="">微信:<text>{{detailInfo.wechatNo}}</text></view>
-					<view class="adress">
+					<view class="main_bar_text">联系人:<text>{{detailInfo.phone}}</text></view>
+					<view class="main_bar_text">手机:<text>{{detailInfo.mobilePhone}}</text></view>
+					<view class="main_bar_text">微信:<text>{{detailInfo.wechatNo}}</text></view>
+					<view class="adress" style="text-align: center;">
 					   地址:<text>{{detailInfo.companyAddr}}</text>
 					</view>
 					<map style="width: 575rpx; height: 261rpx; margin-top: 10rpx;" show-compass scale="8" show-location="true" :latitude="detailInfo.lat" @tap="add" :longitude="detailInfo.lng"></map>
@@ -57,6 +57,13 @@
 			}
 		},
 		methods: {
+			bigimg(item) {
+				var that=this
+				wx.previewImage({
+					current:item, // 当前显示图片的http链接
+					urls: that.detailInfo.imgAddrs // 需要预览的图片http链接列表
+				})
+			},
 			getRende() {
 				console.log("执行")
 				var that=this
@@ -64,7 +71,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url:"http://118.178.89.161:9999/person/queryDetail",
+					url:"http://www.35logo.cn:9999/person/queryDetail",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"
@@ -198,7 +205,7 @@
 	}
 	.main_bar{
 		font-size: 30rpx;
-		text-align: center;
+		// text-align: center;
 		color: #CC0000;
 		view {
 			margin-top: 21rpx;
@@ -242,5 +249,8 @@
 
 	.swiper {
 		height: 171rpx;
+	}
+	.main_bar_text{
+		text-align: center;
 	}
 </style>

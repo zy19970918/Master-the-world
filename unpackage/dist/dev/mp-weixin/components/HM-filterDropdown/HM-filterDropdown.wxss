@@ -309,7 +309,7 @@
   color: #fff;
 }
 .filter .menu-box .box .labels > view {
-  width: 160rpx;
+  min-width: 160rpx;
   height: 30px;
   border: solid 1rpx #adadad;
   border-radius: 2px;

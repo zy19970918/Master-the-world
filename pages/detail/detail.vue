@@ -5,9 +5,9 @@
 				{{detaileInfo.companyName}}
 			</view>
 			<view class="text_detail">
-				<view class=""><text style="color:#D24C1F;">代理费:</text><text>{{detaileInfo.agencyFee}}元/时</text></view>
-				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==1">长期</text><text
-					 v-else>一次性</text></view>
+				<view class=""><text style="color:#D24C1F;">代理费:</text><text>{{detaileInfo.agencyFee}}</text></view>
+				<view class=""><text style="color:#D24C1F;">管理费方式:</text><text v-if="detaileInfo.manageFee==1">长期</text><text v-if="detaileInfo.manageFeeOne==1"
+					 style="margin-left: 15rpx;">一次性</text></view>
 			</view>
 			<view class="video">
 				<image src="../../static/images/shipin.png" mode=""></image>
@@ -22,51 +22,49 @@
 				<view class="main">
 					<view class="main_left">
 						<!-- 	<view class="">男女比例:<text>男女不限</text></view> -->
-						<view class=""><text style="color:#D24C1F;">班&ensp;&ensp;&ensp;&ensp;次:</text><text v-if="detaileInfo.workType==1">两班倒</text>
-							<text v-if="detaileInfo.workTypeDay==1">长白班</text></view>
+						<view class=""><text style="color:#D24C1F;">班\r\t\r\t\r\t\r\t\r\t\r\t次:</text><text v-if="detaileInfo.workType==1">两班倒</text>
+							<text style="margin-left: 15rpx;" v-if="detaileInfo.workTypeDay==1">长白班</text></view>
 						<!-- <view class="">食宿费用:<text>500元/月</text></view> -->
 						<view class=""><text style="color: #D24C1F;">工期要求:</text><text v-if="detaileInfo.workRequire==1">短期工</text><text
-							 v-if="detaileInfo.workRequireLong==1">长期工</text></view>
-						<view class=""><text style="color:#D24C1F;">少数名族:</text><text v-if="detaileInfo.nationalsNot==1">不可接受</text><text v-if="detaileInfo.nationals==1">可接受</text></view>
-						<view class=""><text style="color:#D24C1F;">工&ensp;&ensp;&ensp;&ensp;价:</text><text>{{detaileInfo.wageFee}}</text></view>
+							 v-if="detaileInfo.workRequireLong==1" style=" margin-left: 10rpx;">长期工</text></view>
+						<view class=""><text style="color:#D24C1F;">少数名族:</text><text v-if="detaileInfo.nationalsNot==1">不接受</text><text
+							 style="" v-if="detaileInfo.nationals==1">可接受</text></view>
+						<view class=""><text style="color:#D24C1F;">工\r\t\r\t\r\t\r\t\r\t\r\t价:</text><text>{{detaileInfo.wageFee}}</text></view>
+						<view class=""><text><text style="color:#D24C1F;">食\r\t\r\t\r\t\r\t\r\t\r\t宿:</text></text><text>{{detaileInfo.live}}</text></view>
 					</view>
 					<view class="main_right">
-						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>不限</text></view>
-						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==0&&detaileInfo.ageThree==0"><text style="color:#D24C1F;">年龄要求:</text><text>18-35岁</text></view>
-						<view class="" v-if="detaileInfo.ageOne==0&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==0"><text style="color:#D24C1F;">年龄要求:</text><text>35-50岁</text></view>
-						<view class="" v-if="detaileInfo.ageOne==0&&detaileInfo.ageTwo==0&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>50岁以上</text></view>
-						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==0"><text style="color:#D24C1F;">年龄要求:</text><text>18-50岁</text></view>
-						<view class="" v-if="detaileInfo.ageOne==1&&detaileInfo.ageTwo==0&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>18-35岁&ensp;&ensp;50岁以上</text></view>
-						<view class="" v-if="detaileInfo.ageOne==0&&detaileInfo.ageTwo==1&&detaileInfo.ageThree==1"><text style="color:#D24C1F;">年龄要求:</text><text>35岁以上</text></view>
+						<view class="">
+							<view class=""><text style="color:#D24C1F;">年\r\t\r\t\r\t\r\t\r\t\r\t龄:</text><text class="">{{detaileInfo.ageTwo}}岁</text></view>
+						</view>
 						<view class=""><text style="color:#D24C1F;">文化程度:</text><text>{{detaileInfo.agriculture}}</text></view>
 						<!-- <view class="">包&ensp;食&ensp;宿:<text>外宿食宿</text></view> -->
-						<view class=""><text><text style="color:#D24C1F;">夫&ensp;妻&ensp;房:</text></text><text v-if="detaileInfo.spouseHouse==1">无</text><text
-							 v-if="detaileInfo.spouseHouseHusband==1">有</text></view>
-						<view class=""><text><text style="color:#D24C1F;">学&ensp;生&ensp;工:</text></text><text v-if="detaileInfo.studentWorker==1">可接受</text><text
-							 v-if="detaileInfo.studentNotWorker==1">不接受</text></view>
+						<view class=""><text><text style="color:#D24C1F;">夫\r\t\r\t妻\r\t\r\t房:</text></text><text v-if="detaileInfo.spouseHouse==1">无</text><text
+							 v-if="detaileInfo.spouseHouseHusband==1" style="margin-left: 15rpx;">有</text></view>
+						<view class=""><text><text style="color:#D24C1F;">学\r\t\r\t生\r\t\r\t工:</text></text><text v-if="detaileInfo.studentWorker==1">接受</text><text
+							 v-if="detaileInfo.studentNotWorker==1" style="margin-left: 15rpx;">不接受</text></view>
 					</view>
 				</view>
 				<image class="btn_img" src="../../static/images/xiakuang.png" mode=""></image>
 				<view class="bottom_txt">
-					*本厂由<text style="font-weight: 900; font-size: 38rpx;">({{detaileInfo.companyName}})</text>所签一手单，详情请咨询并保留聊天记录。
+					*本厂由<text style="font-weight: 900; font-size: 36rpx;">({{detaileInfo.shortName}})</text>所签一手单，详情请咨询并保留聊天记录。
 				</view>
-				<view class="title titles" @click="tourldetail(detaileInfo.resourceId)">
-					<image src="../../static/images/zixun.png" mode=""></image>
+				<view class="title titles" @click="tourldetail(detaileInfo.resourceId)" style="margin-top: 20rpx;">
+					<image class="image_add" src="../../static/images/wx_20200831162034.png" mode="aspectFit" style=""></image>
 				</view>
-				<view class="title titles one">
+				<view class="title titles one" style="margin-left: 250rpx;">
 					<image class="imge_bar" src="../../static/images/gongzuohuangjing.png" mode=""></image>
 				</view>
 				<swiper v-if="detaileInfo.imgAddrs.length<=1" class="swiper" :indicator-dots="false" acceleration
 				 :display-multiple-items="1" :circular="true" :autoplay="true" :interval="2000" circular :duration="8000">
 					<swiper-item class="swiper_item" v-for="(item,index) in detaileInfo.imgAddrs" :key="index">
-						<image class="swiper_img" :src="item" mode=""></image>
+						<image class="swiper_img" :src="item" mode="" @click="bigimg(detaileInfo.imgAddrs,item)"></image>
 					</swiper-item>
 
 				</swiper>
 				<swiper v-if="detaileInfo.imgAddrs.length>1" class="swiper" :indicator-dots="false" acceleration
 				 :display-multiple-items="2" :circular="true" :autoplay="true" :interval="2000" circular :duration="8000">
 					<swiper-item class="swiper_item" v-for="(item,index) in detaileInfo.imgAddrs" :key="index">
-						<image class="swiper_img" :src="item" mode=""></image>
+						<image class="swiper_img" :src="item" mode="" @click="bigimg(detaileInfo.imgAddrs,item)"></image>
 					</swiper-item>
 
 				</swiper>
@@ -97,6 +95,13 @@
 			}
 		},
 		methods: {
+			bigimg(item, items) {
+				const str = items.toString()
+				wx.previewImage({
+					current: str, // 当前显示图片的http链接
+					urls: item // 需要预览的图片http链接列表
+				})
+			},
 			tourldetail(resourceId) {
 				uni.navigateTo({
 					url: `../Renxundetail/Renxundetail?resourceId=${resourceId}`
@@ -108,7 +113,7 @@
 					title: "加载中"
 				})
 				uni.request({
-					url: "http://118.178.89.161:9999/company/query",
+					url: "http://www.35logo.cn:9999/company/queryCompanyDeatil",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -233,10 +238,12 @@
 
 	.main_right {
 		float: right;
+		margin-right: 10rpx;
 
 		view {
 			margin-top: 36rpx;
 			color: #666666;
+			text-align: left;
 		}
 	}
 
@@ -253,7 +260,7 @@
 
 	.bottom_txt {
 		color: #CA0000;
-		font-size: 18rpx;
+		font-size: 22rpx;
 		text-align: center;
 		word-break: keep-all;
 		/* 不换行 */
@@ -287,5 +294,17 @@
 
 	.swiper {
 		height: 171rpx;
+	}
+
+	.image_add {
+		height: 48rpx !important;
+		width: 176rpx !important;
+		padding: 8rpx !important;
+		box-sizing: content-box;
+		border-radius: 16rpx !important;
+		box-shadow: inset 2rpx 2rpx 7rpx 0px rgba(0, 0, 0, 0.6),
+			inset -2rpx -2rpx 7rpx 0px rgba(255, 255, 255, 1),
+			-2rpx -2rpx 7rpx 0px rgba(255, 255, 255, 1),
+			2px 2px 7rpx 0px rgba(0, 0, 0, 0.6) !important;
 	}
 </style>

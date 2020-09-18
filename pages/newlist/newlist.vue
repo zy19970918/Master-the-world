@@ -40,7 +40,7 @@
 			getneslist() {
 					var that = this
 					uni.request({
-						url: "http://118.178.89.161:9999/news/query",
+						url: "http://www.35logo.cn:9999/news/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"
@@ -128,6 +128,7 @@
 			font-size: 32rpx;
 			display: inline-block;
 			height: 100%;
+			letter-spacing:4rpx;
 			line-height: 65rpx;
 		}
 	}

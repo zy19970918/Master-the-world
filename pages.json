@@ -67,6 +67,10 @@
             "path" : "pages/getPhone/getPhone",
             "style" : {}
         }
+        ,{
+            "path" : "pages/web/web",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

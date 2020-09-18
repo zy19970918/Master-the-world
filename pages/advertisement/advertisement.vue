@@ -8,7 +8,7 @@
 			<view class="">
 				<view class="" style="white-space: nowrap; width: 320rpx; text-align: center; word-break: 	keep-all; overflow: hidden; text-overflow: ellipsis; font-size: 30rpx; color: #333333; font-weight: 900;">{{item.cooperationName}}</view>
 			</view>
-			<view class="btns" @click="add(item.linkAddr,item.qrcode)">
+			<view class="btns" @click="add(item.linkAddr,item.qrcode,item.cooperationName)">
 				点击跳转
 			</view>
 		</view>
@@ -23,9 +23,9 @@
 			}
 		},
 		methods: {
-			add(a,b) {
+			add(a,b,c) {
 				uni.navigateTo({
-					url: `../webview/webview?link_add=${a}&img_chat=${b}`
+					url: `../webview/webview?link_add=${a}&img_chat=${b}&cooperationName=${c}`
 				})
 			},
 			getzhanlv() { //战略合作伙伴 
@@ -34,7 +34,7 @@
 				title:"加载中"
 			})
 				uni.request({
-					url: "http://118.178.89.161:9999/cooperation/query",
+					url: "http://www.35logo.cn:9999/cooperation/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -44,6 +44,7 @@
 						"pageSize": "10"
 					},
 					success(res) {
+						console.log(res)
 						if(res.data.status==200) {
 							uni.hideLoading()
 							that.advList=res.data.data

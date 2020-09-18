@@ -24,6 +24,9 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.inpust.data-v-2ecb7cc4 {
+  color: #fff;
+}
 .small.data-v-2ecb7cc4 {
   -webkit-transform: scale(0.9, 0.9);
           transform: scale(0.9, 0.9);
@@ -47,7 +50,7 @@
           transform: scale(0.8, 0.8);
 }
 .uni-flex.data-v-2ecb7cc4 {
-  width: 100%;
+  width: 106%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -63,13 +66,14 @@
 .uni-search-form.data-v-2ecb7cc4 {
   position: relative;
   width: 60%;
-  margin: 10rpx;
+  margin: 8rpx;
   padding: 10rpx 0;
   padding-left: 70rpx;
   font-size: 30rpx;
   color: #999999;
   margin-right: 200rpx;
   padding-right: 46rpx;
+  box-shadow: 0 0 6rpx #fff;
 }
 .uniRound.data-v-2ecb7cc4 {
   border-radius: 5px;
@@ -87,7 +91,7 @@
 .uni-icon-clear.data-v-2ecb7cc4 {
   position: absolute;
   top: 50%;
-  right: 0rpx;
+  right: 8rpx;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }

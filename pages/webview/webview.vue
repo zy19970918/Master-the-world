@@ -6,8 +6,8 @@
 			扫码进入微信小程序
 		</view>
 		</view>
-	<view v-if="link_url" class="">
-		<web-view :src="link_url"></web-view>
+	<view class="" style="text-align: center;font-size: 36rpx; color: rgb(96,141,250); font-weight: 600; margin-top: 30rpx;" @click="towabview">
+		点击跳转{{name}}官网
 	</view>
 	</view>
 </template>
@@ -17,25 +17,22 @@
 		data() {
 			return {
 				link_url:'',//跳转的网页，
-				img_chat:''//弹出的二维码
+				img_chat:'',//弹出的二维码
+				name:''
 			}
 		},
 		methods: {
-			
+			towabview() {
+				uni.navigateTo({
+					url:`../web/web?link_url=${this.link_url}`
+				})
+			}
 		},
 		onLoad(options) {
-			if(options.link_add&&options.img_chat) {
+			console.log(options)
 				this.img_chat=options.img_chat
-					console.log("执行")
-			}
-			if(options.link_add&&!options.img_chat) {
 				this.link_url=options.link_add
-				console.log("执行2")
-			}
-			if(!options.link_add&&options.img_chat) {
-				this.img_chat=options.img_chat
-				console.log("执行3")
-			}
+			    this.name=options.cooperationName
 		}
 	}
 </script>

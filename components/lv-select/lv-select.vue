@@ -2,7 +2,7 @@
 	<view style="position: relative; display: inline-block !important;" :class="size === 'small' ? 'small' : ''">
 		<view class="uni-flex" :class="{unishadow :uniShadow}">
 			<view class="uni-search-form uni-circular uni-background">
-				<icon type="search" size="14" class="uni-icon-position"/>
+				<icon type="search" size="14" color="#fff"  class="uni-icon-position"/>
 				<input class="inpust"
 				 placeholder-style="font-size:22rpx; color:#fff;"
 					type="text" 
@@ -11,7 +11,7 @@
 					@input="onInput"
 					@focus="onFocus"
 				></input>
-				<icon v-if="isShowClearIcon" type="clear" size="16" class="uni-icon-clear" @tap="clearInputValue"/>
+				<icon v-if="isShowClearIcon" type="clear" color="#fff"  size="12" class="uni-icon-clear" @tap="clearInputValue"/>
 			</view>
 			<view class="uni-action">
 				<button 
@@ -20,7 +20,7 @@
 					:class="[type === 'primary' ? 'uni-primary' : (type === 'success' ? 'uni-success' : (type === 'warning' ? 'uni-warning' : 'uni-error'))]" 
 					hover-class="hover" 
 					@click="handleSearch"
-				>搜索</button>
+				><image src="../../static/images/sousuo.png" mode="aspectFit"></image></button>
 			</view>
 		</view>
 		<view v-if="isShowSelect">
@@ -161,6 +161,9 @@
 	}
 </script>
 <style scoped lang="scss">
+	.inpust{
+		color:#fff;
+	}
 	// $selectWidth: 75%; // 下拉选择框宽度
 	.small {
 		transform: scale(.9, .9);
@@ -182,7 +185,7 @@
 		transform: scale(0.8,0.8);
 	}
 	.uni-flex{
-		width: 100%;
+		width: 106%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -195,13 +198,14 @@
 	.uni-search-form{
 		position: relative;
 		width: 60%;
-		margin: 10rpx;
+		margin: 8rpx;
 		padding: 10rpx 0;
 		padding-left: 70rpx;
 		font-size: 30rpx;
 		color: #999999;
 		margin-right: 200rpx;
 		padding-right: 46rpx;
+		box-shadow: 0 0 6rpx #fff;
 	}
 	.uniRound{
 		border-radius: 5px;
@@ -218,7 +222,7 @@
 	.uni-icon-clear{
 		position: absolute;
 		top: 50%;
-		right: 0rpx;
+		right: 8rpx;
 		transform: translate(0,-50%);
 	}
 
