@@ -1,1 +1,0 @@
-<view class="content"><view class="titles">{{''+text_title.newsTitle+''}}</view><view class="time">{{''+text_title.newsTimeStr+''}}</view><view class="contenttext"><rich-text nodes="{{text}}"></rich-text></view></view>

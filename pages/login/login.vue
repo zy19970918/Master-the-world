@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="auth">
-			<image src="http://img03.sogoucdn.com/v2/thumb/resize/w/100/h/100?appid=100520147&url=http%3A%2F%2Fdl.app.sogou.com%2Fpc_logo%2F4669602030091557924.png"
+			<image src="https://img03.sogoucdn.com/v2/thumb/resize/w/100/h/100?appid=100520147&url=http%3A%2F%2Fdl.app.sogou.com%2Fpc_logo%2F4669602030091557924.png"
 			 class="img" mode="aspectFill"></image>
 			<!-- 		<view class="title">微信授权页面</view> -->
 			<view class="describe">点击下方按钮进行个人信息授权</view>
@@ -28,56 +28,116 @@
 					success(res) {
 						console.log(res)
 						const code = res.code
+						// wx.request({
+						// 	url: `https://api.weixin.qq.com/sns/jscode2session?appid=${appId}&secret=3d5c7804f02111884dec198030d4c394&js_code=${code}&grant_type=authorization_code`,
+						// 	method: 'GET',
+						// 	success(res) {
+						// 		console.log(res)
+						// 		uni.setStorageSync("session_key", res.data.session_key)
+						// 		wx.getSetting({
+						// 			success: (res) => {
+						// 				console.log("是否执行")
+						// 				console.log(res)
+						// 				if (res.authSetting['scope.userInfo'] && flag) {
+						// 					wx.getUserInfo({
+						// 						success: res => {
+						// 							console.log(res)
+						// 							console.log("地址")
+						// 							// 可以将 res 发送给后台解码出 unionId
+						// 							wx.setStorageSync('userInfo', res.userInfo)
+						// 							// this.globalData.userInfo = res.userInfo
+						// 							// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+						// 							// 所以此处加入 callback 以防止这种情况
+						// 							if (that.userInfoReadyCallback) {
+						// 								that.userInfoReadyCallback(res)
+						// 							}
+						// 						}
+						// 					})
+						// 					wx.reLaunch({
+						// 						url: '../index/index',
+						// 					})
+						// 				} else if(res.authSetting['scope.userInfo'] && !flag) {
+						// 					wx.getUserInfo({
+						// 						success: res => {
+						// 							console.log(res)
+						// 							console.log("地址")
+						// 							// 可以将 res 发送给后台解码出 unionId
+						// 							wx.setStorageSync('userInfo', res.userInfo)
+						// 							// this.globalData.userInfo = res.userInfo
+						// 							// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+						// 							// 所以此处加入 callback 以防止这种情况
+						// 							if (that.userInfoReadyCallback) {
+						// 								that.userInfoReadyCallback(res)
+						// 							}
+						// 						}
+						// 					})
+						// 					wx.reLaunch({
+						// 						url: '../getPhone/getPhone',
+						// 					})
+						// 				}
+						// 			}
+						// 		})
+						// 	}
+						// })
 						wx.request({
-							url: `https://api.weixin.qq.com/sns/jscode2session?appid=${appId}&secret=3d5c7804f02111884dec198030d4c394&js_code=${code}&grant_type=authorization_code`,
-							method: 'GET',
+							url:'http://192.168.101.13:8080/wechat/getOpenId',
+							header:{
+								'content-type': 'application/x-www-form-urlencoded'
+							},
+							method:'POST',
+							data:{
+								js_code:code
+							},
 							success(res) {
-								console.log(res)
-								uni.setStorageSync("session_key", res.data.session_key)
-								wx.getSetting({
-									success: (res) => {
-										console.log("是否执行")
-										console.log(res)
-										if (res.authSetting['scope.userInfo'] && flag) {
-											wx.getUserInfo({
-												success: res => {
-													console.log(res)
-													console.log("地址")
-													// 可以将 res 发送给后台解码出 unionId
-													wx.setStorageSync('userInfo', res.userInfo)
-													// this.globalData.userInfo = res.userInfo
-													// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-													// 所以此处加入 callback 以防止这种情况
-													if (that.userInfoReadyCallback) {
-														that.userInfoReadyCallback(res)
-													}
+							 uni.setStorageSync("session_key", res.data.data.sessionKey)
+							 uni.setStorageSync('openid',res.data.data.openid)
+							wx.getSetting({
+								success: (res) => {
+									console.log("是否执行")
+									console.log(res)
+									if (res.authSetting['scope.userInfo'] && flag) {
+										wx.getUserInfo({
+											success: res => {
+												console.log(res)
+												console.log("地址")
+												// 可以将 res 发送给后台解码出 unionId
+												wx.setStorageSync('userInfo', res.userInfo)
+												// this.globalData.userInfo = res.userInfo
+												// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+												// 所以此处加入 callback 以防止这种情况
+												if (that.userInfoReadyCallback) {
+													that.userInfoReadyCallback(res)
 												}
-											})
-											wx.reLaunch({
-												url: '../index/index',
-											})
-										} else if(res.authSetting['scope.userInfo'] && !flag) {
-											wx.getUserInfo({
-												success: res => {
-													console.log(res)
-													console.log("地址")
-													// 可以将 res 发送给后台解码出 unionId
-													wx.setStorageSync('userInfo', res.userInfo)
-													// this.globalData.userInfo = res.userInfo
-													// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-													// 所以此处加入 callback 以防止这种情况
-													if (that.userInfoReadyCallback) {
-														that.userInfoReadyCallback(res)
-													}
+											}
+										})
+										wx.reLaunch({
+											url: '../index/index',
+										})
+									} else if(res.authSetting['scope.userInfo'] && !flag) {
+										wx.getUserInfo({
+											success: res => {
+												console.log(res)
+												console.log("地址")
+												// 可以将 res 发送给后台解码出 unionId
+												wx.setStorageSync('userInfo', res.userInfo)
+												// this.globalData.userInfo = res.userInfo
+												// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+												// 所以此处加入 callback 以防止这种情况
+												if (that.userInfoReadyCallback) {
+													that.userInfoReadyCallback(res)
 												}
-											})
-											wx.reLaunch({
-												url: '../getPhone/getPhone',
-											})
-										}
+											}
+										})
+										wx.reLaunch({
+											url: '../getPhone/getPhone',
+										})
 									}
-								})
+								}
+							})	
+								console.log(res)
+								console.log("呵呵")
 							}
+							
 						})
 					}
 				})

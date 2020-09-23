@@ -78,7 +78,7 @@
 			}
 		},
 		onLoad() {
-			this.login()
+			this.getuserInfo()
 			this.getbannerlist()
 			this.getnews()
 			this.getGun()
@@ -195,30 +195,30 @@
 					url: "../advertisement/advertisement"
 				})
 			},
-			login() {
-				var that = this
-				wx.login({
-					success(res) {
-						const code = res.code
-						wx.request({
-							method: 'GET',
-							url: "https://api.weixin.qq.com/sns/jscode2session",
-							data: {
-								appid: 'wxb31c921feae5104b',
-								secret: '3d5c7804f02111884dec198030d4c394',
-								js_code: code,
-								grant_type: 'authorization_code'
-							},
-							success(res) {
-								console.log(res)
-								console.log('appid')
-								uni.setStorageSync("openid", res.data.openid)
-								that.getuserInfo()
-							}
-						})
-					}
-				})
-			},
+			// login() {
+			// 	var that = this
+			// 	wx.login({
+			// 		success(res) {
+			// 			const code = res.code
+			// 			wx.request({
+			// 				method: 'GET',
+			// 				url: "https://api.weixin.qq.com/sns/jscode2session",
+			// 				data: {
+			// 					appid: 'wxb31c921feae5104b',
+			// 					secret: '3d5c7804f02111884dec198030d4c394',
+			// 					js_code: code,
+			// 					grant_type: 'authorization_code'
+			// 				},
+			// 				success(res) {
+			// 					console.log(res)
+			// 					console.log('appid')
+			// 					uni.setStorageSync("openid", res.data.openid)
+			// 					that.getuserInfo()
+			// 				}
+			// 			})
+			// 		}
+			// 	})
+			// },
 			getuserInfo() { //授权
 				var flag = uni.getStorageSync('flag')
 				var userInfo = uni.getStorageSync('userInfo')
