@@ -99,7 +99,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url: "http://www.35logo.cn:9999/dishonest/queryDetail",
+					url: "https://ystx.劳务一手单.com/api/dishonest/queryDetail",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

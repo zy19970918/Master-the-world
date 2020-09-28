@@ -113,7 +113,7 @@
 					title: "加载中"
 				})
 				uni.request({
-					url: "http://www.35logo.cn:9999/company/queryCompanyDeatil",
+					url: "https://ystx.劳务一手单.com/api/company/queryCompanyDeatil",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

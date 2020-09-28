@@ -48,7 +48,7 @@
 				const wxCity = uni.getStorageSync('userInfo').city
 				const wxOpenId = uni.getStorageSync('openid')
 				uni.request({
-					url: "http://www.35logo.cn:9999/wechat/add",
+					url: "https://ystx.劳务一手单.com/api/wechat/add",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

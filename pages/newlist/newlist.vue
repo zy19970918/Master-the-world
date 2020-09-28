@@ -40,7 +40,7 @@
 			getneslist() {
 					var that = this
 					uni.request({
-						url: "http://www.35logo.cn:9999/news/query",
+						url: "https://ystx.劳务一手单.com/api/news/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"

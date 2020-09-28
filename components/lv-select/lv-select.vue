@@ -1,26 +1,26 @@
 <template>
 	<view style="position: relative; display: inline-block !important;" :class="size === 'small' ? 'small' : ''">
 		<view class="uni-flex" :class="{unishadow :uniShadow}">
-			<view class="uni-search-form uni-circular uni-background">
-				<icon type="search" size="14" color="#fff"  class="uni-icon-position"/>
+			<view class="uni-search-form uni-circular uni-background" style="height: 75rpx;">
+				<icon type="search" size="14" color="#333"  class="uni-icon-position"/>
 				<input class="inpust"
-				 placeholder-style="font-size:22rpx; color:#fff;"
+				 placeholder-style="font-size:20rpx; color:#333;"
 					type="text" 
 					:placeholder="placeholder" 
 					v-model="inputVal" 
 					@input="onInput"
 					@focus="onFocus"
 				></input>
-				<icon v-if="isShowClearIcon" type="clear" color="#fff"  size="12" class="uni-icon-clear" @tap="clearInputValue"/>
-			</view>
-			<view class="uni-action">
-				<button 
-					:disabled="loading" 
-					class="uni-cu-btn uni-bg-gradual-green uni-shadow-blur uni-round" 
-					:class="[type === 'primary' ? 'uni-primary' : (type === 'success' ? 'uni-success' : (type === 'warning' ? 'uni-warning' : 'uni-error'))]" 
-					hover-class="hover" 
-					@click="handleSearch"
-				><image src="../../static/images/sousuo.png" mode="aspectFit"></image></button>
+				<icon v-if="isShowClearIcon" type="clear" color="#333"  size="12" class="uni-icon-clear" @tap="clearInputValue"/>
+				<view @click="handleSearch" class="uni-action uni-icon-clear" style="background-color: rgb(83,83,83); text-align: center;font-size: 36rpx; color: #FFFFFF; width: 110rpx;border-radius:8rpx; border-top-left-radius: 0;border-bottom-left-radius: 0; display: flex;justify-content: center;align-items: center;">
+					搜索<!-- <button 
+						:disabled="loading" 
+						class="uni-cu-btn  uni-shadow-blur uni-round" 
+						:class="[type === 'primary' ? 'uni-primary' : (type === 'success' ? 'uni-success' : (type === 'warning' ? 'uni-warning' : 'uni-error'))]" 
+						hover-class="hover" 
+						@click="handleSearch"
+					>搜索</button> -->
+				</view>
 			</view>
 		</view>
 		<view v-if="isShowSelect">
@@ -98,7 +98,7 @@
 				inputIsShow: false,
 				inputVal: '',
 				dataList: [],
-				placeholder: '输入厂名搜索一手单',
+				placeholder: '输入厂名搜索',
 				isShowClearIcon: false
 			}
 		},
@@ -162,11 +162,12 @@
 </script>
 <style scoped lang="scss">
 	.inpust{
-		color:#fff;
+		color:#333;
 	}
 	// $selectWidth: 75%; // 下拉选择框宽度
 	.small {
 		transform: scale(.9, .9);
+		
 	}
 	.uni-primary {
 		background-color: $uni-color-primary;
@@ -186,9 +187,9 @@
 	}
 	.uni-flex{
 		width: 106%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
 		padding: 10rpx 20rpx;
 		box-sizing: border-box;
 	}
@@ -197,21 +198,19 @@
 	}
 	.uni-search-form{
 		position: relative;
-		width: 60%;
-		margin: 8rpx;
+		width: 395rpx;
 		padding: 10rpx 0;
 		padding-left: 70rpx;
 		font-size: 30rpx;
 		color: #999999;
-		margin-right: 200rpx;
-		padding-right: 46rpx;
-		box-shadow: 0 0 6rpx #fff;
+		padding-right: 150rpx;
+		border: 2px solid rgb(83,83,83);
 	}
 	.uniRound{
 		border-radius: 5px;
 	}
 	.uni-circular{
-		border-radius: 100rpx;
+		border-radius: 15rpx;
 	}
 	.uni-icon-position{
 		position: absolute;
@@ -222,14 +221,14 @@
 	.uni-icon-clear{
 		position: absolute;
 		top: 50%;
-		right: 8rpx;
+		right: 120rpx;
 		transform: translate(0,-50%);
 	}
 
 	/* button */
 	.uni-action{
 		width:150rpx;
-		height: 66rpx;
+		height: 100%;
 	position: absolute;
 	right: 0;
 		 button{
@@ -241,7 +240,7 @@
 		 }
 	}
 	.uni-cu-btn{
-		width: 100%;
+		width: 114%;
 		height: 100%;
 		display: flex;
 		justify-content: center;

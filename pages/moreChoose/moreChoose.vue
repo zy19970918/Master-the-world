@@ -88,7 +88,7 @@
 			recommend() { //厂商推荐
 				var that = this
 				uni.request({
-					url: "http://www.35logo.cn:9999/company/recommend",
+					url: "https://ystx.劳务一手单.com/api/company/recommend",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -198,7 +198,7 @@
 					})
 					if (this.$refs.child.flags) {
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -239,7 +239,7 @@
 						})
 					} else {
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -285,7 +285,7 @@
 						title: "加载中"
 					})
 					uni.request({
-						url: "http://www.35logo.cn:9999/company/query",
+						url: "https://ystx.劳务一手单.com/api/company/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"
@@ -428,7 +428,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -556,7 +556,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -689,7 +689,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -818,7 +818,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -951,7 +951,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -1080,7 +1080,7 @@
 							title: "加载中"
 						})
 						uni.request({
-							url: "http://www.35logo.cn:9999/company/query",
+							url: "https://ystx.劳务一手单.com/api/company/query",
 							method: 'POST',
 							header: {
 								"Content-Type": "application/json"
@@ -1131,7 +1131,7 @@
 				})
 				var that = this
 				uni.request({
-					url: "http://www.35logo.cn:9999/company/condition",
+					url: "https://ystx.劳务一手单.com/api/company/condition",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

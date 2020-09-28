@@ -2,8 +2,8 @@
 	<view class="container">
 		<view v-if="img_chat" class="wechat">
 			<image class="felx_img" :src="img_chat" mode=""></image>
-		<view class="text_bar">
-			扫码进入微信小程序
+		<view class="text_bar" @click="tochengxu">
+			点击进入微信小程序
 		</view>
 		</view>
 	<view class="" style="text-align: center;font-size: 36rpx; color: rgb(96,141,250); font-weight: 600; margin-top: 30rpx;" @click="towabview">
@@ -25,6 +25,11 @@
 			towabview() {
 				uni.navigateTo({
 					url:`../web/web?link_url=${this.link_url}`
+				})
+			},
+			tochengxu() {
+				wx.navigateToMiniProgram({
+					appId:'wxd26f46560a42f999'
 				})
 			}
 		},

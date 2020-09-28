@@ -80,7 +80,7 @@
 						// 	}
 						// })
 						wx.request({
-							url:'http://192.168.101.13:8080/wechat/getOpenId',
+							url:'https://ystx.劳务一手单.com/api/wechat/getOpenId',
 							header:{
 								'content-type': 'application/x-www-form-urlencoded'
 							},
