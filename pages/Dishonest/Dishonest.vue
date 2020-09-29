@@ -41,7 +41,7 @@
 			})
 			var that=this
 			     uni.request({
-			     	url:"https://ystx.劳务一手单.com/api/dishonest/query",
+			     	url:"https://ystx.xn--4gqr6isbv1bn21d.com/api/dishonest/query",
 			     	method:'POST',
 			     	header:{
 			     		"Content-Type":"application/json"

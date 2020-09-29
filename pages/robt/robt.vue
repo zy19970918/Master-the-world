@@ -234,7 +234,7 @@
 				// 	this.msgGo()
 				// },2000)
 				uni.request({
-					url:"https://ystx.劳务一手单.com/api/client/query",
+					url:"https://ystx.xn--4gqr6isbv1bn21d.com/api/client/query",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"

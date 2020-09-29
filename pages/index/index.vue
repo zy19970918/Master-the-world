@@ -15,7 +15,7 @@
 			<view class="imput_search">
 				<image class="img" src="../../static/images/wx_20200928141523.png" mode="scaleToFill"></image>
 				<!-- <image class="img_bar" src="../../static/images/847406b8295b8609067354ca66169f5.png" @click="toChoose" style="height: 68rpx;"></image> -->
-				<view class="img_bar"  @click="toChoose" style="display: inline-block; background-color: rgb(178,27,32); height: 76rpx; border-radius: 15rpx; color: #FFFFFF;font-size:28rpx;text-align: center; line-height: 76rpx;">
+				<view class="img_bar" @click="toChoose" style="display: inline-block; background-color: rgb(178,27,32); height: 76rpx; border-radius: 15rpx; color: #FFFFFF;font-size:28rpx;text-align: center; line-height: 76rpx;">
 					查看全部一手单
 				</view>
 				<!-- <image class="jiantou" src="" mode=""></image> -->
@@ -98,7 +98,7 @@
 		onLoad() {
 			var that = this
 			uni.request({
-				url: 'https://ystx.劳务一手单.com/api/dishonestback/queryWarn',
+				url: 'https://ystx.xn--4gqr6isbv1bn21d.com/api/dishonestback/queryWarn',
 				method: 'POST',
 				success(res) {
 					// console.log(res)
@@ -151,7 +151,7 @@
 			getbannerlist() { //获取轮播
 				var that = this
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/person/queryBanner",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/person/queryBanner",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -185,7 +185,7 @@
 			getVideo() {
 				var that = this
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/banner/queryVedio",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/banner/queryVedio",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -255,7 +255,7 @@
 			},
 			torobt() {
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/client/query",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/client/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -273,7 +273,7 @@
 			getnews() { //新闻资讯
 				var that = this
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/news/query",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/news/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -303,7 +303,7 @@
 					title: "加载中"
 				})
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/roll/query",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/roll/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"
@@ -480,7 +480,6 @@
 		line-height: 43rpx;
 		left: 170rpx;
 		border-radius: 20rpx;
-		z-index: 9999;
 		background-size: 100% 100%;
 		text-align: center;
 		font-size: 12px;

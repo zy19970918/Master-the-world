@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   simpleAddress: function() {
-    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 197))
+    return Promise.all(/*! import() | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then(__webpack_require__.bind(null, /*! @/components/simple-address/simple-address.vue */ 204))
   }
 }
 var render = function() {
@@ -186,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 197));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 207));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
+var _data = _interopRequireDefault(__webpack_require__(/*! @/common/data.js */ 50));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var simpleAddress = function simpleAddress() {Promise.all(/*! require.ensure | components/simple-address/simple-address */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/simple-address/simple-address")]).then((function () {return resolve(__webpack_require__(/*! @/components/simple-address/simple-address.vue */ 204));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HMfilterDropdown = function HMfilterDropdown() {__webpack_require__.e(/*! require.ensure | components/HM-filterDropdown/HM-filterDropdown */ "components/HM-filterDropdown/HM-filterDropdown").then((function () {return resolve(__webpack_require__(/*! @/components/HM-filterDropdown/HM-filterDropdown.vue */ 214));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);}; //筛选菜单数据
 var _default = {
   data: function data() {
     return {
@@ -224,7 +224,7 @@ var _default = {
     recommend: function recommend() {//厂商推荐
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/company/recommend",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/recommend",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -334,7 +334,7 @@ var _default = {
 
         if (this.$refs.child.flags) {
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -375,7 +375,7 @@ var _default = {
 
         } else {
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -421,7 +421,7 @@ var _default = {
           title: "加载中" });
 
         uni.request({
-          url: "https://ystx.劳务一手单.com/api/company/query",
+          url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
           method: 'POST',
           header: {
             "Content-Type": "application/json" },
@@ -564,7 +564,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -692,7 +692,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -825,7 +825,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -954,7 +954,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -1087,7 +1087,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -1216,7 +1216,7 @@ var _default = {
             title: "加载中" });
 
           uni.request({
-            url: "https://ystx.劳务一手单.com/api/company/query",
+            url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/query",
             method: 'POST',
             header: {
               "Content-Type": "application/json" },
@@ -1267,7 +1267,7 @@ var _default = {
 
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/company/condition",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/company/condition",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },

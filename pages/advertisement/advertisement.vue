@@ -34,7 +34,7 @@
 				title:"加载中"
 			})
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/cooperation/query",
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/cooperation/query",
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

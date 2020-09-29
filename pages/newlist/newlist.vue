@@ -13,7 +13,7 @@
 						{{item.newsTitle}}
 					</view>
 					<view class="time">
-						2019-2-30
+						{{item.newsTimeStr}}
 					</view>
 				</view>
 			</view>
@@ -40,7 +40,7 @@
 			getneslist() {
 					var that = this
 					uni.request({
-						url: "https://ystx.劳务一手单.com/api/news/query",
+						url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/news/query",
 						method: 'POST',
 						header: {
 							"Content-Type": "application/json"

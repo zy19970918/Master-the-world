@@ -214,7 +214,7 @@ var appId = 'wxb31c921feae5104b';var _default =
           // 	}
           // })
           wx.request({
-            url: 'https://ystx.劳务一手单.com/api/wechat/getOpenId',
+            url: 'https://ystx.xn--4gqr6isbv1bn21d.com/api/wechat/getOpenId',
             header: {
               'content-type': 'application/x-www-form-urlencoded' },
 

@@ -71,7 +71,7 @@
 					title:"加载中"
 				})
 				uni.request({
-					url:"https://ystx.劳务一手单.com/api/person/queryDetail",
+					url:"https://ystx.xn--4gqr6isbv1bn21d.com/api/person/queryDetail",
 					method:'POST',
 					header:{
 						"Content-Type":"application/json"

@@ -142,7 +142,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNoticeBar = function uniNoticeBar() {__webpack_require__.e(/*! require.ensure | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then((function () {return resolve(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ 160));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 174));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 183));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 190));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var lvSelect = function lvSelect() {__webpack_require__.e(/*! require.ensure | components/lv-select/lv-select */ "components/lv-select/lv-select").then((function () {return resolve(__webpack_require__(/*! ../../components/lv-select/lv-select */ 167));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pop = function pop() {__webpack_require__.e(/*! require.ensure | components/ming-pop/ming-pop */ "components/ming-pop/ming-pop").then((function () {return resolve(__webpack_require__(/*! ../../components/ming-pop/ming-pop.vue */ 258));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNoticeBar = function uniNoticeBar() {__webpack_require__.e(/*! require.ensure | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then((function () {return resolve(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ 160));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 174));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 183));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 190));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var lvSelect = function lvSelect() {__webpack_require__.e(/*! require.ensure | components/lv-select/lv-select */ "components/lv-select/lv-select").then((function () {return resolve(__webpack_require__(/*! ../../components/lv-select/lv-select */ 167));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pop = function pop() {__webpack_require__.e(/*! require.ensure | components/ming-pop/ming-pop */ "components/ming-pop/ming-pop").then((function () {return resolve(__webpack_require__(/*! ../../components/ming-pop/ming-pop.vue */ 197));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -242,7 +242,7 @@ __webpack_require__.r(__webpack_exports__);
   onLoad: function onLoad() {
     var that = this;
     uni.request({
-      url: 'https://ystx.劳务一手单.com/api/dishonestback/queryWarn',
+      url: 'https://ystx.xn--4gqr6isbv1bn21d.com/api/dishonestback/queryWarn',
       method: 'POST',
       success: function success(res) {
         // console.log(res)
@@ -295,7 +295,7 @@ __webpack_require__.r(__webpack_exports__);
     getbannerlist: function getbannerlist() {//获取轮播
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/person/queryBanner",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/person/queryBanner",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -329,7 +329,7 @@ __webpack_require__.r(__webpack_exports__);
     getVideo: function getVideo() {
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/banner/queryVedio",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/banner/queryVedio",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -399,7 +399,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     torobt: function torobt() {
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/client/query",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/client/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -417,7 +417,7 @@ __webpack_require__.r(__webpack_exports__);
     getnews: function getnews() {//新闻资讯
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/news/query",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/news/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -447,7 +447,7 @@ __webpack_require__.r(__webpack_exports__);
         title: "加载中" });
 
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/roll/query",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/roll/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },

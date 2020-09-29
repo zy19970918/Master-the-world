@@ -248,7 +248,7 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
     getAttetion: function getAttetion() {
       var that = this;
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/attention/query",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/attention/query",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
@@ -283,22 +283,22 @@ var util = __webpack_require__(/*! ../../untils/until.js */ 25);var _default =
     openfile: util.throttle(function (url) {//打开pdf文件
       var str = '';
       if (url == 1) {
-        str = this.fattention;
+        str = this.fattention.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       if (url == 2) {
-        str = this.conbook;
+        str = this.conbook.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       if (url == 3) {
-        str = this.why_world;
+        str = this.why_world.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       if (url == 4) {
-        str = this.why_tle;
+        str = this.why_tle.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       if (url == 5) {
-        str = this.spot_text;
+        str = this.spot_text.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       if (url == 6) {
-        str = this.brand;
+        str = this.brand.replace('http://118.178.89.161:8080', 'https://ystx.xn--4gqr6isbv1bn21d.com');
       }
       wx.getSystemInfo({
         success: function success(res) {

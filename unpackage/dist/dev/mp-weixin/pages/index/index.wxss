@@ -148,7 +148,6 @@ swiper swiper-item image.data-v-57280228 {
   line-height: 43rpx;
   left: 170rpx;
   border-radius: 20rpx;
-  z-index: 9999;
   background-size: 100% 100%;
   text-align: center;
   font-size: 12px;

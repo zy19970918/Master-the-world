@@ -43,7 +43,7 @@
 			getRen() {
 				var that = this
 				uni.request({
-					url: "https://ystx.劳务一手单.com/api/person/queryResource", //人资列表
+					url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/person/queryResource", //人资列表
 					method: 'POST',
 					header: {
 						"Content-Type": "application/json"

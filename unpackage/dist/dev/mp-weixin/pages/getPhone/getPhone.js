@@ -182,7 +182,7 @@ var appId = 'wxb31c921feae5104b';var _default =
       var wxCity = uni.getStorageSync('userInfo').city;
       var wxOpenId = uni.getStorageSync('openid');
       uni.request({
-        url: "https://ystx.劳务一手单.com/api/wechat/add",
+        url: "https://ystx.xn--4gqr6isbv1bn21d.com/api/wechat/add",
         method: 'POST',
         header: {
           "Content-Type": "application/json" },
